@@ -1,6 +1,8 @@
 import HeaderBanner from "../Components/HeaderBanner";
 import ParallaxSection from "../Components/ParallaxSection";
-import giveImage from "../assets/img/test-image.webp";
+import giveImage1 from "../assets/img/Give-1.jpg";
+import giveImage2 from "../assets/img/Give-2.jpg";
+import giveImage3 from "../assets/img/Give-3.jpg";
 import { Wallet, Landmark, Smartphone, HandCoins } from "lucide-react";
 
 export default function Give() {
@@ -9,7 +11,7 @@ export default function Give() {
       <HeaderBanner
         title="Give"
         desc="Be a blessing by giving and supporting God's work through our ministry."
-        image={giveImage}
+        image={giveImage3}
       />
 
       <section className="max-w-7xl mx-auto px-6 py-16">
@@ -78,7 +80,7 @@ export default function Give() {
           </p>
           <ul className="list-disc list-inside space-y-2 text-gray-700">
             <li>Helps you grow in your faith.</li>
-            <li>Supports the ministry of Cornerstone.</li>
+            <li>Supports the ministries of TRGC.</li>
             <li>Allows you to be part of God's impact in making our community better.</li>
             <li>Puts God first in all things, including your finances.</li>
           </ul>
@@ -87,7 +89,7 @@ export default function Give() {
         {/* Right: Image */}
         <div className="md:w-1/2">
           <img
-            src={giveImage}
+            src={giveImage1}
             alt="Giving"
             className="w-full h-auto rounded-lg shadow-lg"
           />
@@ -99,7 +101,7 @@ export default function Give() {
         desc={`“Bring the whole tithe into the storehouse, that there may be food in my house. Test me in this,” says the Lord Almighty, 
               “and see if I will not throw open the floodgates of heaven and pour out so much blessing that there will not be room enough to store it.”
               — Malachi 3:10 NIV`}
-        image={giveImage}
+        image={giveImage2}
       />
 
       <section className="max-w-7xl mx-auto px-6 py-16">

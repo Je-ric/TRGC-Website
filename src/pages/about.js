@@ -1,6 +1,8 @@
 import { useState } from "react";
+import HeaderBanner from "../Components/HeaderBanner";
 import MissionImage from '../assets/img/Mission.jpg';
 import VisionImage from '../assets/img/Vision.jpg';
+import Church from '../assets/img/Church.jpg';
 
 export default function About() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -50,20 +52,11 @@ export default function About() {
 
   return (
     <div>
-      {/* About the Church */}
-      <section className="relative h-96 md:h-[500px] w-full">
-        <img
-          src="https://images.unsplash.com/photo-1603133872877-c07f1f32bdfb?auto=format&fit=crop&w=1600&q=80"
-          alt="About the Church"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-center px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">About the Church</h2>
-          <p className="text-white max-w-3xl">
-            Founded in 1997, Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor beatae, iure iste fugiat rem id assumenda! Repellat, amet aperiam expedita praesentium molestiae dignissimos, illum perspiciatis aspernatur voluptate pariatur distinctio assumenda?
-          </p>
-        </div>
-      </section>
+      <HeaderBanner
+        title="About"
+        desc="Learn more about our church, our mission, and what we believe."
+        image={Church}
+      />
 
       {/* ============================================================================================================================== */}
 

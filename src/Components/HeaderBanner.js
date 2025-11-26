@@ -9,7 +9,8 @@ export default function HeaderBanner({ title, desc, image }) {
             }}
         >
             {/* Overlay - Undecided sa color*/}
-            <div className="absolute inset-0 bg-[#800000]/70"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-[#800000]/70 via-[#800000]/40 to-transparent"></div>
+
 
             {/* Content */}
             <div className="relative z-10 px-4">
