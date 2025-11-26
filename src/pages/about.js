@@ -1,4 +1,6 @@
 import { useState } from "react";
+import MissionImage from '../assets/img/Mission.jpg';
+import VisionImage from '../assets/img/Vision.jpg';
 
 export default function About() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -47,7 +49,7 @@ export default function About() {
   ];
 
   return (
-    <div className="space-y-16">
+    <div>
       {/* About the Church */}
       <section className="relative h-96 md:h-[500px] w-full">
         <img
@@ -58,88 +60,104 @@ export default function About() {
         <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-center px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">About the Church</h2>
           <p className="text-white max-w-3xl">
-            Founded in 1995, TRGC is a Christ-centered community dedicated to worship, teaching the Bible,
-            and serving others. Our church is a place where everyone is welcome.
+            Founded in 1997, Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor beatae, iure iste fugiat rem id assumenda! Repellat, amet aperiam expedita praesentium molestiae dignissimos, illum perspiciatis aspernatur voluptate pariatur distinctio assumenda?
           </p>
         </div>
       </section>
 
-      <section className="bg-[#232323] py-16 px-6">
-      {/* Section Title */}
-      <div className="max-w-6xl mx-auto text-center mb-12">
-        <h2 className="text-4xl font-bold text-white mb-4">What We Believe</h2>
-      </div>
+      {/* ============================================================================================================================== */}
 
-      {/* Accordion */}
-      <div className="max-w-6xl mx-auto divide-y divide-gray-700 space-y-4">
-        {beliefs.map((belief, index) => (
-          <div key={index}>
-            {/* Accordion Header */}
-            <button
-              onClick={() => toggleAccordion(index)}
-              className="w-full px-6 py-5 flex justify-between items-center rounded-md bg-white text-black hover:bg-gray-200 transition-colors duration-300 focus:outline-none"
-            >
-              <h3 className="text-xl font-semibold">{belief.title}</h3>
-              <svg
-                className={`w-6 h-6 transform transition-transform duration-300 ${
-                  openIndex === index ? "rotate-180" : ""
-                }`}
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
+      <section className="bg-[#232323] py-16 mx-auto">
+
+        <div className="max-w-6xl mx-auto text-center mb-12">
+          <h2 className="text-4xl font-bold text-white mb-4">What We Believe</h2>
+        </div>
+
+        {/* Accordion */}
+        <div className="max-w-6xl mx-auto divide-y divide-gray-700 space-y-4">
+          {beliefs.map((belief, index) => (
+            <div key={index}>
+              {/* Accordion Header */}
+              <button
+                onClick={() => toggleAccordion(index)}
+                className="w-full px-6 py-5 flex justify-between items-center rounded-md bg-white text-black hover:bg-gray-200 transition-colors duration-300 focus:outline-none"
               >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
+                <h3 className="text-xl font-semibold">{belief.title}</h3>
+                <svg
+                  className={`w-6 h-6 transform transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""
+                    }`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
 
-            {/* Accordion Content */}
-            <div
-              className={`overflow-hidden transition-all duration-500 ${
-                openIndex === index ? "max-h-96 py-6 px-6" : "max-h-0 px-6"
-              }`}
-              style={{ backgroundColor: "#232323" }}
-            >
-              <p className="text-gray-300 leading-relaxed">{belief.content}</p>
+              {/* Accordion Content */}
+              <div
+                className={`overflow-hidden transition-all duration-500 ${openIndex === index ? "max-h-96 py-6 px-6" : "max-h-0 px-6"
+                  }`}
+                style={{ backgroundColor: "#232323" }}
+              >
+                <p className="text-gray-300 leading-relaxed">{belief.content}</p>
+              </div>
             </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ============================================================================================================================== */}
+
+      <section className="bg-gray-900">
+        {/* Mission */}
+        <div className="flex flex-col md:flex-row items-center">
+          <div className="md:w-1/2 flex justify-center">
+            <img
+              src={MissionImage}
+              alt="Mission"
+              className="w-full h-full object-cover"
+            />
           </div>
-        ))}
-      </div>
-    </section>
 
-      {/* Mission */}
-      <section className="relative h-96 md:h-[500px] w-full">
-        <img
-          src="https://images.unsplash.com/photo-1601838094015-197d5fa71505?auto=format&fit=crop&w=1600&q=80"
-          alt="Mission"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-center px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Mission</h2>
-          <p className="text-white max-w-3xl">
-            Our mission is to make disciples of all nations, cultivate a Christ-centered community,
-            and demonstrate God’s love through service and outreach.
-          </p>
+          <div className="md:w-1/2 text-left space-y-6 px-10">
+            <h2 className="text-3xl md:text-4xl font-bold text-indigo-400">Mission</h2>
+            <ul className="text-gray-300 md:text-lg space-y-4 list-disc list-inside">
+              <li>To equip and train every living saint for purposes of righteousness and lifestyle (2 Tim. 3:16-17) through holiness.</li>
+              <li>To rebuild and restructure according to the original biblical pattern — apostolic foundation, prophetic ministries, and Church (Eph. 2:20, Eph. 4:11).</li>
+              <li>To revive father and son relationship (Mal. 4:6), guided by Kingdom laws, principles, and divine order, binding with the spirit of love and harmony (Mat. 5-7).</li>
+              <li>To raise up a new breed of people without greed, worthy of each calling as love-slaves to Christ and the Great Commission (Mat. 28:18-20).</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Vision */}
+        <div className="flex flex-col md:flex-row-reverse items-center">
+          <div className="md:w-1/2 flex justify-center">
+            <img
+              src={VisionImage}
+              alt="Vision"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          <div className="md:w-1/2 text-left space-y-6 px-10">
+            <h2 className="text-3xl md:text-4xl font-bold text-indigo-400">Vision</h2>
+            <ul className="text-gray-300 md:text-lg space-y-4 list-disc list-inside">
+              <li>Church empowerment (Acts 18) and regaining genuine Kingdom identity (Rev. 22:1-5).</li>
+              <li>Unified faith among believers.</li>
+              <li>Attaining maturity through the knowledge of the Son of God.</li>
+              <li>The fullness of Christ in the lives of the saints as heirs of the promised kingdom (Eph. 4:13).</li>
+              <li>A glorious church as the bride of our Lord Jesus Christ (Rev. 19:7).</li>
+            </ul>
+          </div>
         </div>
       </section>
 
-      {/* Vision */}
-      <section className="relative h-96 md:h-[500px] w-full">
-        <img
-          src="https://images.unsplash.com/photo-1520697222864-90c8a55f3d9c?auto=format&fit=crop&w=1600&q=80"
-          alt="Vision"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center text-center px-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Vision</h2>
-          <p className="text-white max-w-3xl">
-            Our vision is to be a thriving spiritual family where every member grows in faith,
-            serves with joy, and impacts our community for Christ.
-          </p>
-        </div>
-      </section>
 
-      <section></section>
+
+
     </div>
   );
 }
