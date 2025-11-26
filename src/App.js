@@ -5,7 +5,6 @@ import Leadership from './pages/Leadership';
 import Ministry from './pages/Ministry';
 import Give from './pages/Give';
 import Events from './pages/Events';
-import History from './pages/History';
 
 function App() {
   return (
@@ -18,7 +17,6 @@ function App() {
         <Link to="/ministry">Ministry</Link>
         <Link to="/give">Give</Link>
         <Link to="/events">Events</Link>
-        <Link to="/history">History</Link>
       </nav>
 
       {/* Page content */}
@@ -29,7 +27,6 @@ function App() {
         <Route path="/ministry" element={<Ministry />} />
         <Route path="/give" element={<Give />} />
         <Route path="/events" element={<Events />} />
-        <Route path="/history" element={<History />} />
       </Routes>
     </Router>
   );
