@@ -3,52 +3,52 @@ export default function Ministry() {
     {
       title: "Youth",
       description: "Equipping the next generation to grow in faith and leadership.",
-      image: "/images/youth.jpg",
+      image: "img/Give-1.jpg",
     },
     {
       title: "Worship",
       description: "Leading the congregation in heartfelt worship and praise.",
-      image: "/images/worship.jpg",
+      image: "img/Give-1.jpg",
     },
     {
       title: "Finance",
       description: "Managing church resources responsibly and transparently.",
-      image: "/images/finance.jpg",
+      image: "img/Give-1.jpg",
     },
     {
       title: "Children",
       description: "Nurturing children in faith through fun and engaging programs.",
-      image: "/images/children.jpg",
+      image: "img/Give-1.jpg",
     },
     {
       title: "Parents",
       description: "Supporting parents in raising spiritually grounded families.",
-      image: "/images/parents.jpg",
+      image: "img/Give-1.jpg",
     },
     {
       title: "Senior",
       description: "Caring for the senior members of our church community.",
-      image: "/images/senior.jpg",
+      image: "img/Give-1.jpg",
     },
     {
       title: "MIS",
       description: "Managing church data and information systems efficiently.",
-      image: "/images/mis.jpg",
+      image: "img/Give-1.jpg",
     },
     {
       title: "Technical",
       description: "Handling audio, video, lighting, and technical setups.",
-      image: "/images/technical.jpg",
+      image: "img/Give-1.jpg",
     },
     {
       title: "Intercessory",
       description: "Praying for the needs of the congregation and the world.",
-      image: "/images/intercessory.jpg",
+      image: "img/Give-1.jpg",
     },
     {
       title: "Ushering",
       description: "Welcoming and guiding members and guests during services.",
-      image: "/images/ushering.jpg",
+      image: "img/Give-1.jpg",
     },
   ];
 

@@ -1,8 +1,5 @@
 import HeaderBanner from "../Components/HeaderBanner";
 import ParallaxSection from "../Components/ParallaxSection";
-import giveImage1 from "../assets/img/Give-1.jpg";
-import giveImage2 from "../assets/img/Give-2.jpg";
-import giveImage3 from "../assets/img/Give-3.jpg";
 import DiagonalGrid from '../Components/ui/DiagonalGrid';
 import VolcanicEmber from '../Components/ui/VolcanicEmber';
 import { Wallet, Landmark, Smartphone, HandCoins } from "lucide-react";
@@ -13,7 +10,7 @@ export default function Give() {
       <HeaderBanner
         title="Give"
         desc="Be a blessing by giving and supporting God's work through our ministry."
-        image={giveImage3}
+        image="img/Give-3.jpg"
       />
 
       <DiagonalGrid>
@@ -60,7 +57,7 @@ export default function Give() {
           {/* Right: Image */}
           <div className="md:w-1/2">
             <img
-              src={giveImage1}
+              src="img/Give-3.jpg"
               alt="Giving"
               className="w-full h-auto rounded-lg shadow-lg"
             />
@@ -141,7 +138,7 @@ export default function Give() {
         desc={`“Bring the whole tithe into the storehouse, that there may be food in my house. Test me in this,” says the Lord Almighty, 
               “and see if I will not throw open the floodgates of heaven and pour out so much blessing that there will not be room enough to store it.”
               — Malachi 3:10 NIV`}
-        image={giveImage2}
+        image="img/Give-2.jpg"
       />
     </div>
 

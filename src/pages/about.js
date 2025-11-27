@@ -1,10 +1,5 @@
 import { useState } from "react";
 import HeaderBanner from "../Components/HeaderBanner";
-import MissionImage from '../assets/img/Mission.jpg';
-import VisionImage from '../assets/img/Vision.jpg';
-import Church from '../assets/img/Church.jpg';
-import LogoImage from '../assets/img/Logo.jpg';
-// import CosmicNoise from "../Components/ui/CosmicNoise";
 import PrismaticAurora from "../Components/ui/PrismaticAurora";
 import {
   FaCross,
@@ -79,7 +74,7 @@ export default function About() {
     <div>
       <HeaderBanner
         title="About"
-        image={Church}
+        image="img/Church.jpg"
       />
 
 
@@ -196,7 +191,7 @@ export default function About() {
             {/* Mission - Image */}
             <div className="flex justify-center w-full h-full">
               <img
-                src={MissionImage}
+                src="img/Mission.jpg"
                 alt="Mission"
                 className="w-full h-full object-cover"
               />
@@ -261,7 +256,7 @@ export default function About() {
             {/* Vision - Image (NOW SECOND) */}
             <div className="flex justify-center w-full h-full order-2 lg:order-none">
               <img
-                src={VisionImage}
+                src="img/Vision.jpg"
                 alt="Vision"
                 className="w-full h-full object-cover"
               />
@@ -282,7 +277,7 @@ export default function About() {
           {/* Logo */}
           <div className="md:w-1/2 flex justify-center">
             <img
-              src={LogoImage} // <-- import this at the top of the file
+              src="img/Logo.jpg"
               alt="Church Logo"
               className="w-72 h-72 object-contain drop-shadow-xl"
             />
