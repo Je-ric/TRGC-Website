@@ -21,15 +21,6 @@ export default function Give() {
 
           {/* Tithes */}
           <div className="flex-1 min-w-[250px] p-6 rounded-2xl bg-white border border-gray-100 text-center">
-            <div className="flex flex-col items-center gap-3 mb-4">
-              <div className="p-3 rounded-full bg-indigo-50">
-                {/* Placeholder icon */}
-                <svg className="w-7 h-7 text-indigo-600" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 1L3 5v6c0 5 4 9 9 9s9-4 9-9V5l-9-4z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold">Tithes</h3>
-            </div>
 
             <div className="space-y-1 text-gray-700">
               <p className="font-medium">When you tithe, you’re trusting God with your finances.</p>

@@ -14,7 +14,7 @@ export default function HeaderBanner({ title, desc, image }) {
 
             {/* Content */}
             <div className="relative z-10 px-4">
-                <h1 className="text-4xl md:text-5xl font-bold text-white">
+                <h1 className="text-8xl md:text-6xl font-extrabold uppercase text-white">
                     {title}
                 </h1>
 

@@ -59,10 +59,10 @@ export default function About() {
       />
 
 
-      <section className="bg-[#232323] py-20 px-6">
+      <section className="bg-white] py-20 px-6">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Who We Are</h2>
-          <p className="text-gray-300 max-w-3xl mx-auto text-lg leading-relaxed">
+          <h2 className="text-4xl font-bold text-black mb-6">Who We Are</h2>
+          <p className="text-black max-w-3xl mx-auto text-lg leading-relaxed">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate odio quibusdam, placeat exercitationem adipisci eos sint reprehenderit, repudiandae cumque numquam, similique unde obcaecati reiciendis facilis tenetur. Omnis dolor cumque exercitationem.
           </p>
         </div>
@@ -115,7 +115,7 @@ export default function About() {
 
       {/* ============================================================================================================================== */}
 
-      <section className="bg-gray-900">
+      <section className="bg-black text-white">
         {/* Mission */}
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 flex justify-center">
@@ -127,8 +127,8 @@ export default function About() {
           </div>
 
           <div className="md:w-1/2 text-left space-y-6 px-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-indigo-400">Mission</h2>
-            <ul className="text-gray-300 md:text-lg space-y-4 list-disc list-inside">
+            <h2 className="text-3xl md:text-4xl font-bold">Mission</h2>
+            <ul className="md:text-lg space-y-4 list-disc list-inside">
               <li>To equip and train every living saint for purposes of righteousness and lifestyle (2 Tim. 3:16-17) through holiness.</li>
               <li>To rebuild and restructure according to the original biblical pattern — apostolic foundation, prophetic ministries, and Church (Eph. 2:20, Eph. 4:11).</li>
               <li>To revive father and son relationship (Mal. 4:6), guided by Kingdom laws, principles, and divine order, binding with the spirit of love and harmony (Mat. 5-7).</li>
@@ -148,8 +148,8 @@ export default function About() {
           </div>
 
           <div className="md:w-1/2 text-left space-y-6 px-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-indigo-400">Vision</h2>
-            <ul className="text-gray-300 md:text-lg space-y-4 list-disc list-inside">
+            <h2 className="text-3xl md:text-4xl font-bold">Vision</h2>
+            <ul className="md:text-lg space-y-4 list-disc list-inside">
               <li>Church empowerment (Acts 18) and regaining genuine Kingdom identity (Rev. 22:1-5).</li>
               <li>Unified faith among believers.</li>
               <li>Attaining maturity through the knowledge of the Son of God.</li>
