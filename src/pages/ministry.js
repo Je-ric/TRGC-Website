@@ -96,6 +96,8 @@ export default function Ministry() {
           "
             />
 
+            <div className="absolute inset-0 bg-black/50 z-5 pointer-events-none"></div>
+
             {/* Default visible text (title + description) */}
             <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-6 z-10 pointer-events-none
                         transition-opacity duration-500 opacity-100 group-hover:opacity-0">
