@@ -1,72 +1,113 @@
 export default function Ministry() {
   const ministries = [
     {
-      title: "Youth",
-      description: "Equipping the next generation to grow in faith and leadership.",
-      image: "img/Give-1.jpg",
-    },
-    {
-      title: "Worship",
-      description: "Leading the congregation in heartfelt worship and praise.",
-      image: "img/Give-1.jpg",
-    },
-    {
-      title: "Finance",
-      description: "Managing church resources responsibly and transparently.",
-      image: "img/Give-1.jpg",
-    },
-    {
       title: "Children",
       description: "Nurturing children in faith through fun and engaging programs.",
-      image: "img/Give-1.jpg",
+      image: "img/test-image.webp",
+      leader: "John Doe",
+    },
+    {
+      title: "Youth",
+      description: "Equipping the next generation to grow in faith and leadership.",
+      image: "img/test-image.webp",
+      leader: "John Doe",
     },
     {
       title: "Parents",
       description: "Supporting parents in raising spiritually grounded families.",
-      image: "img/Give-1.jpg",
+      image: "img/test-image.webp",
+      leader: "John Doe",
     },
     {
       title: "Senior",
       description: "Caring for the senior members of our church community.",
-      image: "img/Give-1.jpg",
+      image: "img/test-image.webp",
+      leader: "John Doe",
     },
     {
-      title: "MIS",
-      description: "Managing church data and information systems efficiently.",
-      image: "img/Give-1.jpg",
+      title: "Music",
+      description: "Leading the congregation in heartfelt worship and praise.",
+      image: "img/test-image.webp",
+      leader: "John Doe",
     },
     {
       title: "Technical",
       description: "Handling audio, video, lighting, and technical setups.",
-      image: "img/Give-1.jpg",
+      image: "img/test-image.webp",
+      leader: "John Doe",
     },
     {
-      title: "Intercessory",
-      description: "Praying for the needs of the congregation and the world.",
-      image: "img/Give-1.jpg",
+      title: "Finance",
+      description: "Managing church resources responsibly and transparently.",
+      image: "img/test-image.webp",
+      leader: "John Doe",
+    },
+    {
+      title: "MIS",
+      description: "Managing church data and information systems efficiently.",
+      image: "img/test-image.webp",
+      leader: "John Doe",
     },
     {
       title: "Ushering",
       description: "Welcoming and guiding members and guests during services.",
-      image: "img/Give-1.jpg",
+      image: "img/test-image.webp",
+      leader: "John Doe",
+    },
+    {
+      title: "Intercessory",
+      description: "Praying for the needs of the congregation and the world.",
+      image: "img/test-image.webp",
+      leader: "John Doe",
+    },
+    {
+      title: "Evangelism",
+      description: "Spreading the gospel and reaching out to the community.",
+      image: "img/test-image.webp",
+      leader: "John Doe",
+    },
+    {
+      title: "Facilities",
+      description: "Maintaining and managing church buildings and grounds.",
+      image: "img/test-image.webp",
+      leader: "John Doe",
     },
   ];
 
   return (
-    <div className="p-8 max-w-[1200px] mx-auto">
-      <h1 className="text-4xl font-bold mb-8 text-center">Ministries</h1>
+    <div className="w-full">
+      <h1 className="text-5xl font-extrabold mb-10 text-center">Ministries</h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
         {ministries.map((ministry) => (
-          <div key={ministry.title} className="bg-gray-900 rounded-lg overflow-hidden shadow-lg">
+          <div
+            key={ministry.title}
+            className="relative group w-full h-[28rem] overflow-hidden cursor-pointer"
+          >
+            {/* Image */}
             <img
               src={ministry.image}
               alt={ministry.title}
-              className="w-full h-48 object-cover"
+              className="
+            w-full h-full object-cover object-center 
+            filter opacity-90 grayscale 
+            transition-all duration-500 
+            group-hover:grayscale-0 group-hover:scale-110 group-hover:blur-sm
+          "
             />
-            <div className="p-6">
-              <h2 className="text-2xl font-semibold mb-2">{ministry.title}</h2>
-              <p className="text-white/80">{ministry.description}</p>
+
+            {/* Default visible text (title + description) */}
+            <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-6 z-10 pointer-events-none
+                        transition-opacity duration-500 opacity-100 group-hover:opacity-0">
+              <h2 className="text-3xl md:text-4xl font-bold">{ministry.title}</h2>
+              <p className="text-white/90 mt-4 text-lg md:text-xl">{ministry.description}</p>
+            </div>
+
+            {/* Hover overlay - shows all info including leader */}
+            <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-6 bg-gradient-to-t from-black/60 via-red/40 to-blue/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
+              <h2 className="text-3xl md:text-4xl font-bold">{ministry.title}</h2>
+              <p className="text-white/90 mt-4 text-lg md:text-xl">{ministry.description}</p>
+              <p className="text-white font-bold text-2xl mt-6">{ministry.leader}</p>
             </div>
           </div>
         ))}
