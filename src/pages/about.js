@@ -3,6 +3,7 @@ import HeaderBanner from "../Components/HeaderBanner";
 import MissionImage from '../assets/img/Mission.jpg';
 import VisionImage from '../assets/img/Vision.jpg';
 import Church from '../assets/img/Church.jpg';
+import LogoImage from '../assets/img/Logo.jpg';
 
 export default function About() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -54,11 +55,22 @@ export default function About() {
     <div>
       <HeaderBanner
         title="About"
-        desc="Learn more about our church, our mission, and what we believe."
         image={Church}
       />
 
+
+      <section className="bg-[#232323] py-20 px-6">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">Who We Are</h2>
+          <p className="text-gray-300 max-w-3xl mx-auto text-lg leading-relaxed">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate odio quibusdam, placeat exercitationem adipisci eos sint reprehenderit, repudiandae cumque numquam, similique unde obcaecati reiciendis facilis tenetur. Omnis dolor cumque exercitationem.
+          </p>
+        </div>
+      </section>
+
       {/* ============================================================================================================================== */}
+
+
 
       <section className="bg-[#232323] py-16 mx-auto">
 
@@ -148,6 +160,34 @@ export default function About() {
         </div>
       </section>
 
+
+
+      <section className="bg-[#1a1a1a] py-20 px-6">
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10">
+
+
+          {/* Logo */}
+          <div className="md:w-1/2 flex justify-center">
+            <img
+              src={LogoImage} // <-- import this at the top of the file
+              alt="Church Logo"
+              className="w-72 h-72 object-contain drop-shadow-xl"
+            />
+          </div>
+
+
+          {/* Symbolism Description */}
+          <div className="md:w-1/2 space-y-6">
+            <h2 className="text-3xl font-bold text-indigo-400">Logo Symbolism</h2>
+            <ul className="text-gray-300 list-disc list-inside space-y-3 text-lg">
+              <li><strong>The Inner Circle</strong> — Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+              <li><strong>The Outer Circle</strong> — Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+              <li><strong>The Cross</strong> — Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+              <li><strong>The Rays</strong> — Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
 
 
