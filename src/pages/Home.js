@@ -1,8 +1,52 @@
+import React from "react";
+
 export default function Home() {
   return (
-    <div className="p-8">
-      <h1 className="text-3xl font-bold mb-4">Home</h1>
-      <p>This is the Home page content.</p>
+    <div className="p-8 space-y-10">
+      <div className="space-y-3">
+        <h1 className="text-4xl font-bold">Home</h1>
+        <p className="text-gray-600 text-base">Welcome to the official page. Explore our location, schedule, and community info below.</p>
+      </div>
+
+      {/* Map Section */}
+      <section className="bg-white shadow-lg rounded-2xl p-6 space-y-6 border border-gray-100">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+          <div>
+            <h2 className="text-2xl font-semibold">Find Us</h2>
+            <p className="text-gray-500 text-sm max-w-md mt-2">
+              Visit the TRGC Worship Center. Below is our exact location on Google Maps with easy navigation.
+            </p>
+          </div>
+        </div>
+
+        <div className="w-full h-[450px] rounded-xl overflow-hidden shadow-md">
+          <iframe title="TRGC Worship Center Location Map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3840.535368329474!2d120.89232037459338!3d15.72279284862027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3390d7e3cd6f1a13%3A0x74366079330647e3!2sTRGC%20Worship%20Center!5e0!3m2!1sen!2sph!4v1764220341549!5m2!1sen!2sph"
+            width="100%"
+            height="100%"
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-700">
+          <div className="bg-gray-50 p-4 rounded-xl shadow-sm">
+            <h3 className="font-semibold text-gray-800 text-lg mb-1">Address</h3>
+            <p>TRGC Worship Center<br/>Science City of Muñoz, Nueva Ecija</p>
+          </div>
+
+          <div className="bg-gray-50 p-4 rounded-xl shadow-sm">
+            <h3 className="font-semibold text-gray-800 text-lg mb-1">Service Hours</h3>
+            <p>Sunday Worship: 9:00 AM<br/>Midweek Service: 6:30 PM</p>
+          </div>
+
+          <div className="bg-gray-50 p-4 rounded-xl shadow-sm">
+            <h3 className="font-semibold text-gray-800 text-lg mb-1">Contact</h3>
+            <p>Email: info@trgc.org<br/>Phone: +63 912 345 6789</p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
