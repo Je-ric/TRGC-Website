@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function VolcanicEmber({ children, className = '' }) {
   return (
     <div className={`relative w-full ${className}`}>      

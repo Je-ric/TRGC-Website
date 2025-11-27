@@ -1,11 +1,515 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate odio quibusdam, placeat exercitationem adipisci eos sint reprehenderit, repudiandae cumque numquam, similique unde obcaecati reiciendis facilis tenetur. Omnis dolor cumque exercitationem.
+<body class="font-sans bg-neutral-950 text-neutral-100 antialiased selection:bg-indigo-500/20 selection:text-indigo-200" style="font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;">
+
+  <!-- Header Banner -->
+  <header class="relative isolate">
+    <div class="absolute inset-0 -z-10">
+      <img src="/assets/img/Church.jpg" alt="Church" class="h-full w-full object-cover opacity-80" />
+      <div class="absolute inset-0 bg-gradient-to-b from-neutral-950/30 via-neutral-950/60 to-neutral-950"></div>
+      <div class="absolute -top-24 left-1/2 -z-10 h-96 w-[48rem] -translate-x-1/2 rounded-full bg-indigo-500/10 blur-3xl"></div>
+    </div>
+
+    <div class="mx-auto max-w-6xl px-6 pt-24 pb-24 md:pt-28 md:pb-32">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <div class="text-sm tracking-tight font-medium text-white/90">AG</div>
+          <div class="h-3 w-px bg-white/15"></div>
+          <span class="text-xs text-white/60">Assembly of God</span>
+        </div>
+        <nav class="hidden md:flex items-center gap-6 text-xs text-white/70">
+          <a href="/" class="hover:text-white/90 transition-colors">Home</a>
+          <a href="#" class="text-white">About</a>
+          <a href="#" class="hover:text-white/90 transition-colors">Ministries</a>
+          <a href="#" class="hover:text-white/90 transition-colors">Events</a>
+          <a href="#" class="hover:text-white/90 transition-colors">Contact</a>
+        </nav>
+      </div>
+
+      <div class="mt-14 md:mt-20">
+        <h1 class="text-4xl md:text-6xl tracking-tight font-semibold text-white">
+          About
+        </h1>
+        <p class="mt-4 md:mt-5 max-w-2xl text-sm md:text-base text-white/70 leading-relaxed">
+          Rooted in Scripture. Shaped by devotion. Moving together in faith and purpose.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Who We Are -->
+  <section class="relative bg-neutral-50 text-neutral-900">
+    <div class="absolute inset-x-0 -top-10 mx-auto h-24 max-w-6xl rounded-t-2xl bg-white/70 backdrop-blur"></div>
+    <div class="mx-auto max-w-6xl px-6 py-16 md:py-24">
+      <div class="mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl tracking-tight font-semibold text-neutral-900">Who We Are</h2>
+        <p class="mt-4 md:mt-5 mx-auto max-w-3xl text-sm md:text-base leading-relaxed text-neutral-700">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate odio quibusdam, placeat exercitationem adipisci eos sint
+          reprehenderit, repudiandae cumque numquam, similique unde obcaecati reiciendis facilis tenetur. Omnis dolor cumque
+          exercitationem.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Believe (Accordion) -->
+  <section class="bg-neutral-950 py-16 md:py-24">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="text-center">
+        <h2 class="text-3xl md:text-4xl tracking-tight font-semibold text-white">What We Believe</h2>
+        <p class="mt-3 text-sm md:text-base text-white/60">Our core convictions grounded in Scripture and lived in community.</p>
+      </div>
+
+      <div class="mt-10 md:mt-12 space-y-3">
+        <!-- Item -->
+        <div class="rounded-xl border border-white/10 bg-white/5 backdrop-blur">
+          <button data-acc-btn class="group w-full px-5 md:px-6 py-4 md:py-5 flex items-center justify-between gap-6 text-left">
+            <div class="flex items-center gap-3">
+              <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-500/10 text-indigo-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M2 12h20"/></svg>
+              </span>
+              <h3 class="text-base md:text-lg font-semibold text-white tracking-tight">The Trinity</h3>
+            </div>
+            <span class="shrink-0 rounded-md bg-white/5 p-2 text-white/80 group-hover:text-white transition">
+              <svg class="h-5 w-5 transition-transform duration-300" data-acc-icon xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m6 9 6 6 6-6"/></svg>
+            </span>
+          </button>
+          <div data-acc-panel class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300">
+            <div class="overflow-hidden">
+              <div class="px-5 md:px-6 pb-5 md:pb-6 -mt-1 text-sm md:text-base leading-relaxed text-white/70">
+                There is one God, eternally coexistent in three persons: Father, Son and Holy Spirit. God the Father is the creator of
+                heaven and earth and the sustainer of all things. There is but one God, infinite, eternal and perfect in holiness, truth
+                and love. He is all-powerful, all-knowing and everywhere.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="rounded-xl border border-white/10 bg-white/5 backdrop-blur">
+          <button data-acc-btn class="group w-full px-5 md:px-6 py-4 md:py-5 flex items-center justify-between gap-6 text-left">
+            <div class="flex items-center gap-3">
+              <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-500/10 text-indigo-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M12 3c2.5 0 4.5 2 4.5 4.5S14.5 12 12 12 7.5 10 7.5 7.5 9.5 3 12 3z"/><path d="M5 21c.5-3.5 3.5-6 7-6s6.5 2.5 7 6"/></svg>
+              </span>
+              <h3 class="text-base md:text-lg font-semibold text-white tracking-tight">Jesus Christ</h3>
+            </div>
+            <span class="shrink-0 rounded-md bg-white/5 p-2 text-white/80 group-hover:text-white transition">
+              <svg class="h-5 w-5 transition-transform duration-300" data-acc-icon xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m6 9 6 6 6-6"/></svg>
+            </span>
+          </button>
+          <div data-acc-panel class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300">
+            <div class="overflow-hidden">
+              <div class="px-5 md:px-6 pb-5 md:pb-6 -mt-1 text-sm md:text-base leading-relaxed text-white/70">
+                The deity of Jesus Christ of Nazareth, His virgin birth, His sinless life, His miracles, His vicarious and atoning death
+                through His shed blood, His burial, His bodily resurrection, and His ascension to the right hand of the Father, and His
+                personal return in power and glory. He is the Head of His body, the Church.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="rounded-xl border border-white/10 bg-white/5 backdrop-blur">
+          <button data-acc-btn class="group w-full px-5 md:px-6 py-4 md:py-5 flex items-center justify-between gap-6 text-left">
+            <div class="flex items-center gap-3">
+              <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-500/10 text-indigo-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M19 12H5"/></svg>
+              </span>
+              <h3 class="text-base md:text-lg font-semibold text-white tracking-tight">The Holy Spirit</h3>
+            </div>
+            <span class="shrink-0 rounded-md bg-white/5 p-2 text-white/80 group-hover:text-white transition">
+              <svg class="h-5 w-5 transition-transform duration-300" data-acc-icon xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m6 9 6 6 6-6"/></svg>
+            </span>
+          </button>
+          <div data-acc-panel class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300">
+            <div class="overflow-hidden">
+              <div class="px-5 md:px-6 pb-5 md:pb-6 -mt-1 text-sm md:text-base leading-relaxed text-white/70">
+                God the Holy Spirit convicts the world of sin, righteousness and judgement, unites man to Jesus Christ in faith, brings
+                about the new birth, and dwells within the believer, enabling him to grow in sanctification and righteousness, and
+                become a gift of God to the church.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="rounded-xl border border-white/10 bg-white/5 backdrop-blur">
+          <button data-acc-btn class="group w-full px-5 md:px-6 py-4 md:py-5 flex items-center justify-between gap-6 text-left">
+            <div class="flex items-center gap-3">
+              <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-500/10 text-indigo-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5V4.5A2.5 2.5 0 0 1 6.5 2h11A2.5 2.5 0 0 1 20 4.5v15M4 19.5h16M8 6h8M8 10h8M8 14h6"/></svg>
+              </span>
+              <h3 class="text-base md:text-lg font-semibold text-white tracking-tight">The Bible</h3>
+            </div>
+            <span class="shrink-0 rounded-md bg-white/5 p-2 text-white/80 group-hover:text-white transition">
+              <svg class="h-5 w-5 transition-transform duration-300" data-acc-icon xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m6 9 6 6 6-6"/></svg>
+            </span>
+          </button>
+          <div data-acc-panel class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300">
+            <div class="overflow-hidden">
+              <div class="px-5 md:px-6 pb-5 md:pb-6 -mt-1 text-sm md:text-base leading-relaxed text-white/70">
+                The Bible is the inspired, only infallible and authoritative Word of God. It is our supreme authority in all matters of
+                faith and conduct.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="rounded-xl border border-white/10 bg-white/5 backdrop-blur">
+          <button data-acc-btn class="group w-full px-5 md:px-6 py-4 md:py-5 flex items-center justify-between gap-6 text-left">
+            <div class="flex items-center gap-3">
+              <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-500/10 text-indigo-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M12 8v8M8 12h8"/><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+              </span>
+              <h3 class="text-base md:text-lg font-semibold text-white tracking-tight">Salvation</h3>
+            </div>
+            <span class="shrink-0 rounded-md bg-white/5 p-2 text-white/80 group-hover:text-white transition">
+              <svg class="h-5 w-5 transition-transform duration-300" data-acc-icon xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m6 9 6 6 6-6"/></svg>
+            </span>
+          </button>
+          <div data-acc-panel class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300">
+            <div class="overflow-hidden">
+              <div class="px-5 md:px-6 pb-5 md:pb-6 -mt-1 text-sm md:text-base leading-relaxed text-white/70">
+                We believe that salvation, with its forgiveness of sins, impartation of new nature and eternal life is a free gift from
+                God upon receiving Jesus Christ as Savior and Lord.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="rounded-xl border border-white/10 bg-white/5 backdrop-blur">
+          <button data-acc-btn class="group w-full px-5 md:px-6 py-4 md:py-5 flex items-center justify-between gap-6 text-left">
+            <div class="flex items-center gap-3">
+              <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-500/10 text-indigo-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M12 3v6m0 12v-6m9-3h-6M3 12h6"/></svg>
+              </span>
+              <h3 class="text-base md:text-lg font-semibold text-white tracking-tight">Holy Spirit's Ministry</h3>
+            </div>
+            <span class="shrink-0 rounded-md bg-white/5 p-2 text-white/80 group-hover:text-white transition">
+              <svg class="h-5 w-5 transition-transform duration-300" data-acc-icon xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m6 9 6 6 6-6"/></svg>
+            </span>
+          </button>
+          <div data-acc-panel class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300">
+            <div class="overflow-hidden">
+              <div class="px-5 md:px-6 pb-5 md:pb-6 -mt-1 text-sm md:text-base leading-relaxed text-white/70">
+                The present ministry of the Holy Spirit, by whose indwelling the Christian is enabled to live a godly life.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="rounded-xl border border-white/10 bg-white/5 backdrop-blur">
+          <button data-acc-btn class="group w-full px-5 md:px-6 py-4 md:py-5 flex items-center justify-between gap-6 text-left">
+            <div class="flex items-center gap-3">
+              <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-500/10 text-indigo-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M12 6v12"/><circle cx="12" cy="12" r="9"/></svg>
+              </span>
+              <h3 class="text-base md:text-lg font-semibold text-white tracking-tight">Baptism of the Spirit</h3>
+            </div>
+            <span class="shrink-0 rounded-md bg-white/5 p-2 text-white/80 group-hover:text-white transition">
+              <svg class="h-5 w-5 transition-transform duration-300" data-acc-icon xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m6 9 6 6 6-6"/></svg>
+            </span>
+          </button>
+          <div data-acc-panel class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300">
+            <div class="overflow-hidden">
+              <div class="px-5 md:px-6 pb-5 md:pb-6 -mt-1 text-sm md:text-base leading-relaxed text-white/70">
+                The baptism of the Holy Spirit, with the evidence of speaking in tongues, is available to all that believe in Jesus
+                Christ, and will totally surrender their lives to the complete, perfect will of God.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="rounded-xl border border-white/10 bg-white/5 backdrop-blur">
+          <button data-acc-btn class="group w-full px-5 md:px-6 py-4 md:py-5 flex items-center justify-between gap-6 text-left">
+            <div class="flex items-center gap-3">
+              <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-500/10 text-indigo-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20"/><path d="M19 7H5m14 5H5m14 5H5"/></svg>
+              </span>
+              <h3 class="text-base md:text-lg font-semibold text-white tracking-tight">Gifts of the Spirit</h3>
+            </div>
+            <span class="shrink-0 rounded-md bg-white/5 p-2 text-white/80 group-hover:text-white transition">
+              <svg class="h-5 w-5 transition-transform duration-300" data-acc-icon xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m6 9 6 6 6-6"/></svg>
+            </span>
+          </button>
+          <div data-acc-panel class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300">
+            <div class="overflow-hidden">
+              <div class="px-5 md:px-6 pb-5 md:pb-6 -mt-1 text-sm md:text-base leading-relaxed text-white/70">
+                The gifts of the Holy Spirit (the word of wisdom, the word of knowledge, faith, gifts of healing, working of miracles,
+                prophecy, discerning of spirits, diverse kinds of tongues and the interpretation of tongues) are available today through
+                the Holy Spirit, and are for the church.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="rounded-xl border border-white/10 bg-white/5 backdrop-blur">
+          <button data-acc-btn class="group w-full px-5 md:px-6 py-4 md:py-5 flex items-center justify-between gap-6 text-left">
+            <div class="flex items-center gap-3">
+              <span class="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-500/10 text-indigo-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M3 12s4-8 9-8 9 8 9 8-4 8-9 8-9-8-9-8Z"/><path d="M12 9v6"/></svg>
+              </span>
+              <h3 class="text-base md:text-lg font-semibold text-white tracking-tight">Fruit of the Spirit</h3>
+            </div>
+            <span class="shrink-0 rounded-md bg-white/5 p-2 text-white/80 group-hover:text-white transition">
+              <svg class="h-5 w-5 transition-transform duration-300" data-acc-icon xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m6 9 6 6 6-6"/></svg>
+            </span>
+          </button>
+          <div data-acc-panel class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300">
+            <div class="overflow-hidden">
+              <div class="px-5 md:px-6 pb-5 md:pb-6 -mt-1 text-sm md:text-base leading-relaxed text-white/70">
+                The fruit of the Holy Spirit (love, joy, peace, long-suffering, gentleness, goodness, faith, meekness and temperance)
+                and the character of God must be evident in the life of every disciple to live and walk by the Spirit.
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission + Vision -->
+  <section class="bg-neutral-50 text-neutral-900">
+    <!-- Mission -->
+    <div class="mx-auto max-w-6xl px-6 py-14 md:py-20 flex flex-col md:flex-row items-center gap-8 md:gap-12">
+      <div class="md:w-1/2">
+        <div class="relative">
+          <img src="/assets/img/Mission.jpg" alt="Mission" class="w-full h-full object-cover rounded-2xl ring-1 ring-neutral-200 shadow-sm" />
+          <div class="pointer-events-none absolute -inset-2 -z-10 rounded-3xl bg-indigo-500/10 blur-2xl"></div>
+        </div>
+      </div>
+      <div class="md:w-1/2">
+        <div class="max-w-xl">
+          <div class="inline-flex items-center gap-2 rounded-full bg-indigo-600/10 text-indigo-700 px-3 py-1 text-xs ring-1 ring-indigo-600/15">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="m22 2-7 20-4-9-9-4 20-7Z"/></svg>
+            Mission
+          </div>
+          <h3 class="mt-4 text-2xl md:text-3xl tracking-tight font-semibold text-neutral-900">Our mandate in motion</h3>
+          <ul class="mt-4 md:mt-6 space-y-3">
+            <li class="flex items-start gap-3">
+              <span class="mt-0.5 inline-flex h-5 w-5 flex-none items-center justify-center rounded-full bg-emerald-500/10 text-emerald-600 ring-1 ring-emerald-500/20">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="m5 12 4 4L19 6"/></svg>
+              </span>
+              <p class="text-sm md:text-base leading-relaxed text-neutral-700">
+                To equip and train every living saint for purposes of righteousness and lifestyle (2 Tim. 3:16-17) through holiness.
+              </p>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-0.5 inline-flex h-5 w-5 flex-none items-center justify-center rounded-full bg-emerald-500/10 text-emerald-600 ring-1 ring-emerald-500/20">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="m5 12 4 4L19 6"/></svg>
+              </span>
+              <p class="text-sm md:text-base leading-relaxed text-neutral-700">
+                To rebuild and restructure according to the original biblical pattern — apostolic foundation, prophetic ministries, and
+                Church (Eph. 2:20, Eph. 4:11).
+              </p>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-0.5 inline-flex h-5 w-5 flex-none items-center justify-center rounded-full bg-emerald-500/10 text-emerald-600 ring-1 ring-emerald-500/20">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="m5 12 4 4L19 6"/></svg>
+              </span>
+              <p class="text-sm md:text-base leading-relaxed text-neutral-700">
+                To revive father and son relationship (Mal. 4:6), guided by Kingdom laws, principles, and divine order, binding with the
+                spirit of love and harmony (Mat. 5-7).
+              </p>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-0.5 inline-flex h-5 w-5 flex-none items-center justify-center rounded-full bg-emerald-500/10 text-emerald-600 ring-1 ring-emerald-500/20">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="m5 12 4 4L19 6"/></svg>
+              </span>
+              <p class="text-sm md:text-base leading-relaxed text-neutral-700">
+                To raise up a new breed of people without greed, worthy of each calling as love-slaves to Christ and the Great
+                Commission (Mat. 28:18-20).
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vision -->
+    <div class="mx-auto max-w-6xl px-6 pb-16 md:pb-24 flex flex-col md:flex-row-reverse items-center gap-8 md:gap-12">
+      <div class="md:w-1/2">
+        <div class="relative">
+          <img src="/assets/img/Vision.jpg" alt="Vision" class="w-full h-full object-cover rounded-2xl ring-1 ring-neutral-200 shadow-sm" />
+          <div class="pointer-events-none absolute -inset-2 -z-10 rounded-3xl bg-fuchsia-500/10 blur-2xl"></div>
+        </div>
+      </div>
+      <div class="md:w-1/2">
+        <div class="max-w-xl">
+          <div class="inline-flex items-center gap-2 rounded-full bg-fuchsia-600/10 text-fuchsia-700 px-3 py-1 text-xs ring-1 ring-fuchsia-600/15">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="m12 19 9-7-9-7-9 7 9 7Z"/><path d="M12 12 21 5"/></svg>
+            Vision
+          </div>
+          <h3 class="mt-4 text-2xl md:text-3xl tracking-tight font-semibold text-neutral-900">Where we are headed</h3>
+          <ul class="mt-4 md:mt-6 space-y-3">
+            <li class="flex items-start gap-3">
+              <span class="mt-0.5 inline-flex h-5 w-5 flex-none items-center justify-center rounded-full bg-indigo-500/10 text-indigo-600 ring-1 ring-indigo-500/20">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="m5 12 4 4L19 6"/></svg>
+              </span>
+              <p class="text-sm md:text-base leading-relaxed text-neutral-700">
+                Church empowerment (Acts 18) and regaining genuine Kingdom identity (Rev. 22:1-5).
+              </p>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-0.5 inline-flex h-5 w-5 flex-none items-center justify-center rounded-full bg-indigo-500/10 text-indigo-600 ring-1 ring-indigo-500/20">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="m5 12 4 4L19 6"/></svg>
+              </span>
+              <p class="text-sm md:text-base leading-relaxed text-neutral-700">
+                Unified faith among believers.
+              </p>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-0.5 inline-flex h-5 w-5 flex-none items-center justify-center rounded-full bg-indigo-500/10 text-indigo-600 ring-1 ring-indigo-500/20">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="m5 12 4 4L19 6"/></svg>
+              </span>
+              <p class="text-sm md:text-base leading-relaxed text-neutral-700">
+                Attaining maturity through the knowledge of the Son of God.
+              </p>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-0.5 inline-flex h-5 w-5 flex-none items-center justify-center rounded-full bg-indigo-500/10 text-indigo-600 ring-1 ring-indigo-500/20">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="m5 12 4 4L19 6"/></svg>
+              </span>
+              <p class="text-sm md:text-base leading-relaxed text-neutral-700">
+                The fullness of Christ in the lives of the saints as heirs of the promised kingdom (Eph. 4:13).
+              </p>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-0.5 inline-flex h-5 w-5 flex-none items-center justify-center rounded-full bg-indigo-500/10 text-indigo-600 ring-1 ring-indigo-500/20">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="m5 12 4 4L19 6"/></svg>
+              </span>
+              <p class="text-sm md:text-base leading-relaxed text-neutral-700">
+                A glorious church as the bride of our Lord Jesus Christ (Rev. 19:7).
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Logo Symbolism -->
+  <section class="bg-neutral-950">
+    <div class="mx-auto max-w-5xl px-6 py-16 md:py-24">
+      <div class="flex flex-col md:flex-row items-center gap-10 md:gap-12">
+        <div class="md:w-1/2">
+          <div class="relative">
+            <img src="/assets/img/Logo.jpg" alt="Church Logo" class="h-56 w-56 md:h-64 md:w-64 object-contain rounded-xl ring-1 ring-white/10 bg-white/5 p-4 mx-auto" />
+            <div class="pointer-events-none absolute -inset-4 -z-10 rounded-2xl bg-indigo-500/10 blur-2xl"></div>
+          </div>
+        </div>
+        <div class="md:w-1/2">
+          <h3 class="text-2xl md:text-3xl tracking-tight font-semibold text-indigo-300">Logo Symbolism</h3>
+          <ul class="mt-5 space-y-3">
+            <li class="flex items-start gap-3">
+              <span class="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-md bg-white/5 text-indigo-300 ring-1 ring-white/10">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/></svg>
+              </span>
+              <p class="text-sm md:text-base leading-relaxed text-white/80"><span class="font-medium text-white">The Inner Circle</span> — Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-md bg-white/5 text-indigo-300 ring-1 ring-white/10">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/></svg>
+              </span>
+              <p class="text-sm md:text-base leading-relaxed text-white/80"><span class="font-medium text-white">The Outer Circle</span> — Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-md bg-white/5 text-indigo-300 ring-1 ring-white/10">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M12 3v18M5 12h14"/></svg>
+              </span>
+              <p class="text-sm md:text-base leading-relaxed text-white/80"><span class="font-medium text-white">The Cross</span> — Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-md bg-white/5 text-indigo-300 ring-1 ring-white/10">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="m5 3 14 18M19 3 5 21"/></svg>
+              </span>
+              <p class="text-sm md:text-base leading-relaxed text-white/80"><span class="font-medium text-white">The Rays</span> — Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-neutral-950">
+    <div class="mx-auto max-w-6xl px-6 py-10 md:py-12 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2 text-white/70">
+        <span class="text-sm tracking-tight font-medium">AG</span>
+        <div class="h-3 w-px bg-white/15"></div>
+        <span class="text-xs">© <span id="year"></span> All rights reserved.</span>
+      </div>
+      <div class="flex items-center gap-5 text-xs text-white/60">
+        <a href="#" class="hover:text-white/90 transition-colors">Privacy</a>
+        <a href="#" class="hover:text-white/90 transition-colors">Beliefs</a>
+        <a href="#" class="hover:text-white/90 transition-colors">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Accordion behavior
+    const buttons = Array.from(document.querySelectorAll('[data-acc-btn]'));
+    const panels = Array.from(document.querySelectorAll('[data-acc-panel]'));
+
+    function closeAll(exceptIndex = -1) {
+      panels.forEach((panel, i) => {
+        if (i === exceptIndex) return;
+        panel.style.gridTemplateRows = '0fr';
+        const icon = buttons[i].querySelector('[data-acc-icon]');
+        icon && icon.classList.remove('rotate-180');
+        buttons[i].setAttribute('aria-expanded', 'false');
+      });
+    }
+
+    buttons.forEach((btn, index) => {
+      btn.setAttribute('aria-expanded', 'false');
+      btn.setAttribute('aria-controls', `panel-${index}`);
+      panels[index].id = `panel-${index}`;
+
+      btn.addEventListener('click', () => {
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
+        closeAll(isOpen ? -1 : index);
+
+        const panel = panels[index];
+        const icon = btn.querySelector('[data-acc-icon]');
+
+        if (isOpen) {
+          panel.style.gridTemplateRows = '0fr';
+          icon && icon.classList.remove('rotate-180');
+          btn.setAttribute('aria-expanded', 'false');
+        } else {
+          panel.style.gridTemplateRows = '1fr';
+          icon && icon.classList.add('rotate-180');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    // Open first item by default
+    if (panels.length) {
+      panels[0].style.gridTemplateRows = '1fr';
+      buttons[0].querySelector('[data-acc-icon]')?.classList.add('rotate-180');
+      buttons[0].setAttribute('aria-expanded', 'true');
+    }
+  </script>
 </body>
 </html>
