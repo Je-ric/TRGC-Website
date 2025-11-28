@@ -109,7 +109,7 @@ export default function Ministry() {
             <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-6 bg-gradient-to-t from-black/60 via-red/40 to-blue/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
               <h2 className="text-3xl md:text-4xl font-bold">{ministry.title}</h2>
               <p className="text-white/90 mt-4 text-lg md:text-xl">{ministry.description}</p>
-              <p className="text-white font-bold text-2xl mt-6">{ministry.leader}</p>
+              <p className="text-white font-bold text-2xl mt-6">Ministry Leader: {ministry.leader}</p>
             </div>
           </div>
         ))}
