@@ -1,3 +1,5 @@
+import HeaderBanner from "../Components/HeaderBanner";
+
 export default function Ministry() {
   const ministries = [
     {
@@ -75,45 +77,54 @@ export default function Ministry() {
   ];
 
   return (
-    <div className="w-full bg-black">
-      <h1 className="text-5xl font-extrabold mb-10 text-center text-white">Ministries</h1>
+    <div>
+      <div>
+        <HeaderBanner
+          title="Ministry"
+          image="img/Ministry.jpg"
+        />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
-        {ministries.map((ministry) => (
-          <div
-            key={ministry.title}
-            className="relative group w-full h-[28rem] overflow-hidden cursor-pointer"
-          >
-            {/* Image */}
-            <img
-              src={ministry.image}
-              alt={ministry.title}
-              className="
-            w-full h-full object-cover object-center 
-            filter opacity-90 grayscale 
-            transition-all duration-500 
-            group-hover:grayscale-0 group-hover:scale-110 group-hover:blur-sm
-          "
-            />
+        <div className="w-full py-1">
 
-            <div className="absolute inset-0 bg-black/50 z-5 pointer-events-none"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
+            {ministries.map((ministry) => (
+              <div
+                key={ministry.title}
+                className="relative group w-full h-[28rem] overflow-hidden cursor-pointer"
+              >
+                {/* Image */}
+                <img
+                  src={ministry.image}
+                  alt={ministry.title}
+                  className="
+              w-full h-full object-cover object-center 
+              filter opacity-90 grayscale 
+              transition-all duration-500 
+              group-hover:grayscale-0 group-hover:scale-110 group-hover:blur-sm
+            "
+                />
 
-            {/* Default visible text (title + description) */}
-            <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-6 z-10 pointer-events-none
-                        transition-opacity duration-500 opacity-100 group-hover:opacity-0">
-              <h2 className="text-3xl md:text-4xl font-bold">{ministry.title}</h2>
-              <p className="text-white/90 mt-4 text-lg md:text-xl">{ministry.description}</p>
-            </div>
+                <div className="absolute inset-0 bg-black/50 z-5 pointer-events-none"></div>
 
-            {/* Hover overlay - shows all info including leader */}
-            <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-6 bg-gradient-to-t from-black/60 via-red/40 to-blue/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
-              <h2 className="text-3xl md:text-4xl font-bold">{ministry.title}</h2>
-              <p className="text-white/90 mt-4 text-lg md:text-xl">{ministry.description}</p>
-              <p className="text-white font-bold text-2xl mt-6">Ministry Leader: {ministry.leader}</p>
-            </div>
+                {/* Default visible text (title + description) */}
+                <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-6 z-10 pointer-events-none
+                          transition-opacity duration-500 opacity-100 group-hover:opacity-0">
+                  <h2 className="text-3xl md:text-4xl font-bold">{ministry.title}</h2>
+                  <p className="text-white/90 mt-4 text-lg md:text-xl">{ministry.description}</p>
+                </div>
+
+                {/* Hover overlay - shows all info including leader */}
+                <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-6 bg-gradient-to-t from-black/60 via-red/40 to-blue/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
+                  <h2 className="text-3xl md:text-4xl font-bold">{ministry.title}</h2>
+                  <p className="text-white/90 mt-4 text-lg md:text-xl">{ministry.description}</p>
+                  <p className="text-white font-bold text-2xl mt-6">Ministry Leader: {ministry.leader}</p>
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
+
     </div>
   );
 }

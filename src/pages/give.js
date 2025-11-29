@@ -10,8 +10,7 @@ export default function Give() {
     <div>
       <HeaderBanner
         title="Give"
-        desc="Be a blessing by giving and supporting God's work through our ministry."
-        image="img/Give-3.jpg"
+        image="img/Give.jpg"
       />
 
       <DiagonalGrid>

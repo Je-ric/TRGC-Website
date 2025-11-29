@@ -86,37 +86,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-
-          {/* The Hub of Christ Programs */}
-          <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center drop-shadow-2xl bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-            The Hub of Christ Programs
-          </h2>
-          <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mb-16">
-            {[
-              { title: "Discipleship Program", img: "/sample/Sample6.jpg" },
-              { title: "Leadership Training", img: "/sample/Sample7.jpg" },
-              { title: "Worship & Arts Ministry", img: "/sample/Sample8.jpg" },
-            ].map(({ title, img }, index) => (
-              <div
-                key={index}
-                className="bg-white/15 backdrop-blur-2xl overflow-hidden shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-500 flex flex-col rounded-2xl border border-white/20 group"
-              >
-                <div className="w-full h-96 relative overflow-hidden rounded-t-2xl">
-                  <img
-                    src={img}
-                    alt={title}
-                    className="w-full h-full object-cover"
-                  />
-                  {/* Overlay on top of image */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                  {/* Text overlay with background for readability */}
-                  <div className="absolute z-10 top-2 left-2 bg-black/60 px-3 py-1 rounded-lg text-white text-sm font-medium backdrop-blur-sm">
-                    {title}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+        
         </div>
 
       </section>
