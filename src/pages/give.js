@@ -2,6 +2,7 @@ import HeaderBanner from "../Components/HeaderBanner";
 import ParallaxSection from "../Components/ParallaxSection";
 import DiagonalGrid from '../Components/ui/DiagonalGrid';
 import VolcanicEmber from '../Components/ui/VolcanicEmber';
+import Mark from "../Components/ui/Mark";
 import { Wallet, Landmark, Smartphone, HandCoins } from "lucide-react";
 
 export default function Give() {
@@ -36,8 +37,8 @@ export default function Give() {
 
 
       {/* Two-column layout */}
-      <VolcanicEmber>
-        <div className="max-w-7xl mx-auto px-4 py-16 flex flex-col md:flex-row items-center gap-8 text-white">
+      <VolcanicEmber className="py-20 pb-32">
+        <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-8 text-white">
           {/* Left: Text */}
           <div className="md:w-1/2">
             <h2 className="text-3xl font-semibold mb-4">Why We Give</h2>
@@ -65,70 +66,81 @@ export default function Give() {
         </div>
       </VolcanicEmber>
 
-      <section className="max-w-7xl mx-auto px-6 py-16">
-        <h2 className="text-3xl font-semibold mb-8 text-center">Ways to Give</h2>
 
-        <div className="flex flex-col md:flex-row justify-center items-start gap-6 md:gap-8 lg:gap-10 flex-wrap">
+      <section
+        className="relative px-6 py-16 z-10 bg-cover bg-center bg-no-repeat -mt-24" // Added -mt-16 for overlap
+        style={{
+          backgroundImage: "url('/img/TornPaper.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "top",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        {/* Optional: Uncomment if you want an overlay for better text readability */}
+        {/* <div className="absolute inset-0 bg-black/30"></div> */}
 
-          {/* GCash */}
-          <div className="flex-1 min-w-[250px] p-6 rounded-2xl bg-white border border-gray-100 text-center">
-            <div className="flex flex-col items-center gap-3 mb-4">
-              <div className="p-3 rounded-full bg-blue-50">
-                <Smartphone className="w-7 h-7 text-blue-600" />
+        {/* Content wrapper so it's above the background */}
+        <div className="relative z-10 flex flex-col gap-8">
+          <h2 className="text-3xl font-semibold mb-8 text-center text-black drop-shadow-lg pt-10">
+            Ways to <Mark>Give</Mark>
+          </h2>
+
+          <div className="flex flex-col md:flex-row justify-center items-start gap-6 md:gap-8 lg:gap-10 flex-wrap">
+            {/* GCash */}
+            <div className="flex-1 min-w-[250px] p-6 rounded-2xl bg-white/80 border border-gray-100 text-center backdrop-blur-sm">
+              <div className="flex flex-col items-center gap-3 mb-4">
+                <div className="p-3 rounded-full bg-blue-50">
+                  <Smartphone className="w-7 h-7 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-bold">GCash</h3>
               </div>
-              <h3 className="text-xl font-bold">GCash</h3>
+              <div className="space-y-1 text-gray-700">
+                <p className="font-medium">Mary Ann Sabio</p>
+                <p className="text-gray-600">0935-647-6800</p>
+              </div>
             </div>
 
-            <div className="space-y-1 text-gray-700">
-              <p className="font-medium">Mary Ann Sabio</p>
-              <p className="text-gray-600">0935-647-6800</p>
+            {/* PNB */}
+            <div className="flex-1 min-w-[250px] p-6 rounded-2xl bg-white/80 border border-gray-100 text-center backdrop-blur-sm">
+              <div className="flex flex-col items-center gap-3 mb-4">
+                <div className="p-3 rounded-full bg-purple-50">
+                  <Landmark className="w-7 h-7 text-purple-600" />
+                </div>
+                <h3 className="text-xl font-bold">PNB</h3>
+              </div>
+              <div className="space-y-1 text-gray-700">
+                <p className="font-medium">The Senior Pastor of TRGC</p>
+                <p className="text-gray-600">2259-1015-3350</p>
+              </div>
+            </div>
+
+            {/* Maya */}
+            <div className="flex-1 min-w-[250px] p-6 rounded-2xl bg-white/80 border border-gray-100 text-center backdrop-blur-sm">
+              <div className="flex flex-col items-center gap-3 mb-4">
+                <div className="p-3 rounded-full bg-green-50">
+                  <Wallet className="w-7 h-7 text-green-600" />
+                </div>
+                <h3 className="text-xl font-bold">Maya</h3>
+              </div>
+              <div className="space-y-1 text-gray-700">
+                <p className="font-medium">Mary Ann Sabio</p>
+                <p className="text-gray-600">0919-233-8055</p>
+              </div>
+            </div>
+
+            {/* In Person */}
+            <div className="flex-1 min-w-[250px] p-6 rounded-2xl bg-white/80 border border-gray-100 text-center backdrop-blur-sm">
+              <div className="flex flex-col items-center gap-3 mb-4">
+                <div className="p-3 rounded-full bg-orange-50">
+                  <HandCoins className="w-7 h-7 text-orange-600" />
+                </div>
+                <h3 className="text-xl font-bold">In Person</h3>
+              </div>
+              <p className="text-gray-700">
+                You may give personally during our worship services at the local church.
+              </p>
             </div>
           </div>
-
-          {/* PNB */}
-          <div className="flex-1 min-w-[250px] p-6 rounded-2xl bg-white border border-gray-100 text-center">
-            <div className="flex flex-col items-center gap-3 mb-4">
-              <div className="p-3 rounded-full bg-purple-50">
-                <Landmark className="w-7 h-7 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-bold">PNB</h3>
-            </div>
-
-            <div className="space-y-1 text-gray-700">
-              <p className="font-medium">The Senior Pastor of TRGC</p>
-              <p className="text-gray-600">2259-1015-3350</p>
-            </div>
-          </div>
-
-          {/* Maya */}
-          <div className="flex-1 min-w-[250px] p-6 rounded-2xl bg-white border border-gray-100 text-center">
-            <div className="flex flex-col items-center gap-3 mb-4">
-              <div className="p-3 rounded-full bg-green-50">
-                <Wallet className="w-7 h-7 text-green-600" />
-              </div>
-              <h3 className="text-xl font-bold">Maya</h3>
-            </div>
-
-            <div className="space-y-1 text-gray-700">
-              <p className="font-medium">Mary Ann Sabio</p>
-              <p className="text-gray-600">0919-233-8055</p>
-            </div>
-          </div>
-
-          {/* In Person */}
-          <div className="flex-1 min-w-[250px] p-6 rounded-2xl bg-white border border-gray-100 text-center">
-            <div className="flex flex-col items-center gap-3 mb-4">
-              <div className="p-3 rounded-full bg-orange-50">
-                <HandCoins className="w-7 h-7 text-orange-600" />
-              </div>
-              <h3 className="text-xl font-bold">In Person</h3>
-            </div>
-
-            <p className="text-gray-700">
-              You may give personally during our worship services at the local church.
-            </p>
-          </div>
-
         </div>
       </section>
 

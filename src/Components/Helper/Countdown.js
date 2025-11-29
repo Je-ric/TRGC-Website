@@ -32,7 +32,7 @@ export default function Countdown() {
     }, []);
 
     return (
-        <div className="text-center mt-6 text-white">
+        <div className="text-center mt-6">
             <h3 className="text-lg font-semibold">Next Sunday Worship</h3>
             <p className="mt-1">{timeLeft}</p>
         </div>
