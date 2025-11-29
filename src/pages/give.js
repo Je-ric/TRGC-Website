@@ -68,18 +68,12 @@ export default function Give() {
 
 
       <section
-        className="relative px-6 py-16 z-10 bg-cover bg-center bg-no-repeat -mt-24" // Added -mt-16 for overlap
+        className="relative px-6 py-16 z-10 bg-cover bg-no-repeat bg-top -mt-24" // for overlap
         style={{
           backgroundImage: "url('/img/TornPaper.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "top",
-          backgroundRepeat: "no-repeat",
         }}
       >
-        {/* Optional: Uncomment if you want an overlay for better text readability */}
-        {/* <div className="absolute inset-0 bg-black/30"></div> */}
 
-        {/* Content wrapper so it's above the background */}
         <div className="relative z-10 flex flex-col gap-8">
           <h2 className="text-3xl font-semibold mb-8 text-center text-black drop-shadow-lg pt-10">
             Ways to <Mark>Give</Mark>
