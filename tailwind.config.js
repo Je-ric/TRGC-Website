@@ -7,6 +7,8 @@ module.exports = {
     extend: {
       fontFamily: {
         oswald: ['Oswald', 'sans-serif'],
+        lato: ['Lato', 'sans-serif'],
+        raleway: ['Raleway', 'sans-serif'],
       },
     },
   },

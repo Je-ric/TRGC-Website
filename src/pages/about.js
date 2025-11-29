@@ -81,7 +81,7 @@ export default function About() {
       <section className="bg-white] py-20 px-6">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-black mb-6">Who We Are</h2>
-          <p className="text-black max-w-3xl mx-auto text-lg leading-relaxed">
+          <p className="text-black max-w-3xl mx-auto">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate odio quibusdam, placeat exercitationem adipisci eos sint reprehenderit, repudiandae cumque numquam, similique unde obcaecati reiciendis facilis tenetur. Omnis dolor cumque exercitationem.
           </p>
         </div>
@@ -265,9 +265,6 @@ export default function About() {
           </div>
         </div>
       </section>
-
-
-
 
 
       <section className="bg-[#1a1a1a] py-20 px-6">

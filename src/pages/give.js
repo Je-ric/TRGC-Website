@@ -23,9 +23,9 @@ export default function Give() {
             {/* Tithes */}
             <div className="flex-1 min-w-[250px] p-6 rounded-2xl text-center">
 
-              <div className="space-y-1 text-gray-700">
-                <p className="font-medium">When you tithe, you’re trusting God with your finances.</p>
-                <p className="text-gray-600">Tithing is a biblical principle. God calls us to give the first 10% of our income back to Him.
+              <div className="space-y-1">
+                <p className="text-black">When you tithe, you’re trusting God with your finances.</p>
+                <p className="text-black">Tithing is a biblical principle. God calls us to give the first 10% of our income back to Him.
                   We’ve seen God provide abundantly in our church, and we know He will provide abundantly for you and your family when you put Him first in your finances.
                   In fact, it’s the one area in the Bible where God tells you to test Him.</p>
               </div>
@@ -81,7 +81,7 @@ export default function Give() {
 
           <div className="flex flex-col md:flex-row justify-center items-start gap-6 md:gap-8 lg:gap-10 flex-wrap">
             {/* GCash */}
-            <div className="flex-1 min-w-[250px] p-6 rounded-2xl bg-white/80 border border-gray-100 text-center backdrop-blur-sm">
+            <div className="flex-1 min-w-[250px] p-6 rounded-2xl text-center backdrop-blur-sm">
               <div className="flex flex-col items-center gap-3 mb-4">
                 <div className="p-3 rounded-full bg-blue-50">
                   <Smartphone className="w-7 h-7 text-blue-600" />
@@ -95,7 +95,7 @@ export default function Give() {
             </div>
 
             {/* PNB */}
-            <div className="flex-1 min-w-[250px] p-6 rounded-2xl bg-white/80 border border-gray-100 text-center backdrop-blur-sm">
+            <div className="flex-1 min-w-[250px] p-6 rounded-2xl text-center backdrop-blur-sm">
               <div className="flex flex-col items-center gap-3 mb-4">
                 <div className="p-3 rounded-full bg-purple-50">
                   <Landmark className="w-7 h-7 text-purple-600" />
@@ -109,7 +109,7 @@ export default function Give() {
             </div>
 
             {/* Maya */}
-            <div className="flex-1 min-w-[250px] p-6 rounded-2xl bg-white/80 border border-gray-100 text-center backdrop-blur-sm">
+            <div className="flex-1 min-w-[250px] p-6 rounded-2x text-center backdrop-blur-sm">
               <div className="flex flex-col items-center gap-3 mb-4">
                 <div className="p-3 rounded-full bg-green-50">
                   <Wallet className="w-7 h-7 text-green-600" />
@@ -123,7 +123,7 @@ export default function Give() {
             </div>
 
             {/* In Person */}
-            <div className="flex-1 min-w-[250px] p-6 rounded-2xl bg-white/80 border border-gray-100 text-center backdrop-blur-sm">
+            <div className="flex-1 min-w-[250px] p-6 rounded-2xl text-center backdrop-blur-sm">
               <div className="flex flex-col items-center gap-3 mb-4">
                 <div className="p-3 rounded-full bg-orange-50">
                   <HandCoins className="w-7 h-7 text-orange-600" />
