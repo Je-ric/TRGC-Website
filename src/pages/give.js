@@ -75,7 +75,7 @@ export default function Give() {
       >
 
         <div className="relative z-10 flex flex-col gap-8">
-          <h2 className="text-3xl font-semibold mb-8 text-center text-black drop-shadow-lg pt-10">
+          <h2 className="text-5xl font-semibold mb-8 text-center text-black drop-shadow-lg pt-24">
             Ways to <Mark>Give</Mark>
           </h2>
 

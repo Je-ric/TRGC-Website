@@ -4,7 +4,7 @@ import Mark from "../Components/ui/Mark";
 
 export default function Home() {
   return (
-    <div className="space-y-10">
+    <div>
 
 
       <section
@@ -121,21 +121,15 @@ export default function Home() {
 
       </section>
 
-      <section className="h-96 bg-black">
-        <h2 className="text-3xl font-semibold mb-8 text-center text-white drop-shadow-lg pt-10">
-          Our <Mark>Location</Mark>
-        </h2>
-      </section>
 
-  <section
-        className="relative px-6 py-16 z-10 bg-cover bg-no-repeat bg-top -mt-24" // for overlap
+      <section
+        className="relative py-16 z-10 bg-cover bg-no-repeat bg-top -mt-24" // for overlap
         style={{
           backgroundImage: "url('/img/TornPaper.jpg')",
         }}
       >
-
-        <div className="relative z-10 flex flex-col gap-8">
-          <h2 className="text-3xl font-semibold mb-8 text-center text-black drop-shadow-lg pt-10">
+        <div className="relative z-10">
+          <h2 className="text-5xl font-semibold mb-8 text-center text-black drop-shadow-lg pt-24">
             Our <Mark>Location</Mark>
           </h2>
 
