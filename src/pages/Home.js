@@ -1,8 +1,24 @@
 import React from "react";
+import Countdown from "../Components/Helper/Countdown";
 
 export default function Home() {
   return (
     <div className="space-y-10">
+
+      <section className="bg-indigo-900 text-white py-16 md:py-24">
+      <div className="mx-auto max-w-3xl px-6 text-center">
+        <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+          Countdown to Sunday Worship
+        </h2>
+        <p className="mt-3 text-white/70">
+          Join us every Sunday at 9:30 AM Philippine Time.
+        </p>
+
+        <div className="mt-8 text-2xl md:text-3xl font-mono">
+          <Countdown />
+        </div>
+      </div>
+    </section>
 
       {/* Map Section */}
       <section className="bg-white space-y-6 border border-gray-100">
