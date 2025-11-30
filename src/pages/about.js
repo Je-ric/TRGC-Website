@@ -58,7 +58,7 @@ export default function About() {
     },
     {
       title: "Fruit of the Spirit",
-      content: "The fruit of the Holy Spirit (love, joy, peace, long-suffering, gentleness, goodness, faith, meekness and temperance) and the character of God must be evident in the life of every disciple to live and walk by the Spirit.",
+      content: "The fruit of the Holy Spirit (love, joy, peace, gentleness, long-suffering, goodness, faith, meekness and temperance) and the character of God must be evident in the life of every disciple to live and walk by the Spirit.",
       icon: <FaAppleAlt className="w-4 h-4" />
     }
   ];
@@ -179,12 +179,13 @@ export default function About() {
                     {belief.icon}
                   </div>
 
-                  <h3 className="text-2xl md:text-3xl font-bold text-black drop-shadow-lg">
+                  <h3 className="text-xl md:text-2xl font-bold text-black drop-shadow-lg">
                     {belief.title}
                   </h3>
                 </div>
 
-                <p className="text-black md:text-lg drop-shadow-md">{belief.content}</p>
+                <p className="text-black md:text-lg drop-shadow-md text-justify leading-relaxed"
+                  style={{ textIndent: "1.5rem" }}>{belief.content}</p>
               </div>
             ))}
           </div>
@@ -201,11 +202,10 @@ export default function About() {
 
 
       <section className="bg-[#1a1a1a] py-20 px-6">
-        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10">
-
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-start md:items-center gap-10">
 
           {/* Logo */}
-          <div className="md:w-1/2 flex justify-center">
+          <div className="md:w-1/2 flex justify-center mb-10 md:mb-0">
             <img
               src="img/Logo.jpg"
               alt="Church Logo"
@@ -213,19 +213,42 @@ export default function About() {
             />
           </div>
 
-
           {/* Symbolism Description */}
           <div className="md:w-1/2 space-y-6">
-            <h2 className="text-3xl font-bold text-indigo-400">Logo Symbolism</h2>
-            <ul className="text-gray-300 list-disc list-inside space-y-3 text-lg">
-              <li><strong>The Inner Circle</strong> — Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-              <li><strong>The Outer Circle</strong> — Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-              <li><strong>The Cross</strong> — Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-              <li><strong>The Rays</strong> — Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            <h2 className="text-3xl font-bold text-indigo-400 mb-6">Logo Symbolism</h2>
+
+            {/* Items with placeholders */}
+            <ul className="space-y-4">
+              <li className="flex items-center gap-4">
+                <img src="/img/placeholders/inner-circle.png" alt="Inner Circle" className="w-12 h-12 object-contain rounded-full border border-indigo-400" />
+                <span className="text-gray-300 text-lg">
+                  <strong>The Inner Circle</strong> — Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </span>
+              </li>
+              <li className="flex items-center gap-4">
+                <img src="/img/placeholders/outer-circle.png" alt="Outer Circle" className="w-12 h-12 object-contain rounded-full border border-indigo-400" />
+                <span className="text-gray-300 text-lg">
+                  <strong>The Outer Circle</strong> — Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </span>
+              </li>
+              <li className="flex items-center gap-4">
+                <img src="/img/placeholders/cross.png" alt="Cross" className="w-12 h-12 object-contain rounded-full border border-indigo-400" />
+                <span className="text-gray-300 text-lg">
+                  <strong>The Cross</strong> — Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </span>
+              </li>
+              <li className="flex items-center gap-4">
+                <img src="/img/placeholders/rays.png" alt="Rays" className="w-12 h-12 object-contain rounded-full border border-indigo-400" />
+                <span className="text-gray-300 text-lg">
+                  <strong>The Rays</strong> — Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </span>
+              </li>
             </ul>
+
           </div>
         </div>
       </section>
+
 
 
 
