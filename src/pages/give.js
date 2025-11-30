@@ -36,7 +36,7 @@ export default function Give() {
 
 
       {/* Two-column layout */}
-      <VolcanicEmber className="py-20 pb-32">
+      <VolcanicEmber className="py-20 pb-56">
         <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-8 text-white">
           {/* Left: Text */}
           <div className="md:w-1/2">
@@ -46,7 +46,7 @@ export default function Give() {
               given us so much we <strong>LOVE</strong> to give back to Him. We also believe that giving
               accomplishes many things like:
             </p>
-            <ul className="list-disc list-inside space-y-2">
+            <ul className="list-disc list-inside space-y-2 text-base">
               <li>Helps you grow in your faith.</li>
               <li>Supports the ministries of TRGC.</li>
               <li>Allows you to be part of God's impact in making our community better.</li>
@@ -57,7 +57,7 @@ export default function Give() {
           {/* Right: Image */}
           <div className="md:w-1/2">
             <img
-              src="img/Give-3.jpg"
+              src="img/Give-2.jpg"
               alt="Giving"
               className="w-full h-auto rounded-lg shadow-lg"
             />

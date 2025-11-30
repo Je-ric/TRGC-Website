@@ -1,11 +1,10 @@
-import React from "react";
 import Countdown from "../Components/Helper/Countdown";
 import Mark from "../Components/ui/Mark";
+import PrismaticAurora from "../Components/ui/PrismaticAurora";
 
 export default function Home() {
   return (
     <div>
-
 
       <section
         className="relative text-white py-16 md:py-24 bg-cover bg-center bg-no-repeat"
@@ -14,7 +13,6 @@ export default function Home() {
             "url('https://cdn.monkplatform.com/image/czoyMzQ6Imh0dHBzJTNBJTJGJTJGMGUxYjdlYzQyZWJlOTg2NzMxZGMtMjI1ZjIwNDhhZDRkYjE3NDY0MDc3MjQxY2RmY2M4NTQuc3NsLmNmMi5yYWNrY2RuLmNvbSUyRnVwbG9hZGVkJTJGMiUyRjBlMTUxNzE5NzhfMTY3MDQ1MTcxNF8yMjEwMjMtd2Vla2VuZHNlcnZpY2UtNjIuanBnJTNGcSUzRDkwJTI2dyUzRDMyMDAlMjZoJTNEMCUyNmZpdCUzRG1heCUyNnMlM0Q3NWYxYWRlMmY3YTRhYmZjNzE5YmM5YmVjYzI1OWI1NSI7/221023-weekendservice-62.jpg?fm=webp')",
         }}
       >
-        {/* Enhanced dark overlay with gradient for modern look */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70"></div>
 
         <div className="relative max-w-7xl mx-auto px-6">
@@ -22,8 +20,7 @@ export default function Home() {
             Local Church <Mark>Programs</Mark> & <Mark>Events</Mark>
           </h2>
 
-          {/* Countdown with modern glassmorphism */}
-          <div className="mx-auto max-w-4xl text-center mb-20 bg-white/10 backdrop-blur-2xl p-10 shadow-2xl rounded-2xl border border-white/20">
+          <div className="mx-auto max-w-7xl text-center mb-20 bg-white/10 backdrop-blur-2xl p-10 shadow-2xl rounded-2xl border border-white/20">
             <p className="text-xl md:text-2xl text-white font-medium">
               Join us every Sunday at 9:30 AM Philippine Time
             </p>
@@ -32,7 +29,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* First Set of Programs - Responsive grid with modern cards */}
           <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mb-12">
             {[
               { title: "Online Intercessory Prayer Meeting", img: "/sample/Sample1.jpg" },
@@ -86,10 +82,11 @@ export default function Home() {
               </div>
             ))}
           </div>
-        
+
         </div>
 
       </section>
+
 
 
       <section
@@ -115,6 +112,50 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+
+
+
+      <PrismaticAurora className="relative w-full min-h-screen bg-black py-24 select-none overflow-hidden">
+
+        <div className="flex flex-col items-center gap-10 pointer-events-none">
+
+          {/* Top */}
+          <h1
+            className="text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] xl:text-[11rem] font-black text-transparent"
+            style={{
+              WebkitTextStroke: "4px rgba(255, 255, 255, 0.9)",
+              opacity: 0.9,
+            }}
+          >
+            Risen Generation
+          </h1>
+
+          {/* Middle */}
+          <h1
+            className="text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] xl:text-[11rem] font-black text-transparent"
+            style={{
+              WebkitTextStroke: "4px rgba(255, 255, 255, 0.7)",
+              opacity: 0.7,
+            }}
+          >
+            Risen Generation
+          </h1>
+
+          {/* Bottom */}
+          <h1
+            className="text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] xl:text-[11rem] font-black text-transparent"
+            style={{
+              WebkitTextStroke: "4px rgba(255, 255, 255, 0.5)",
+              opacity: 0.5,
+            }}
+          >
+            Risen Generation
+          </h1>
+
+        </div>
+
+      </PrismaticAurora>
 
     </div>
   );
