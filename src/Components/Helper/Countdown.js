@@ -8,24 +8,41 @@ export default function Countdown() {
             const now = new Date();
 
             // Philippine time
-            const phtNow = new Date(now.toLocaleString("en-US", { timeZone: "Asia/Manila" }));
+            const phtNow = new Date(
+                now.toLocaleString("en-US", { timeZone: "Asia/Manila" })
+            );
 
-            // Find next Sunday 9:30 AM
             const day = phtNow.getDay();
-            const nextSunday = new Date(phtNow);
-            nextSunday.setDate(phtNow.getDate() + ((7 - day) % 7));
-            nextSunday.setHours(9, 30, 0, 0);
+
+            // Compute this week's Sunday 9:30 AM
+            const thisSunday = new Date(phtNow);
+            thisSunday.setDate(phtNow.getDate() + ((7 - day) % 7));
+            thisSunday.setHours(9, 30, 0, 0);
+
+            // Compute this Sunday's end time (11:40 AM)
+            const thisSundayEnd = new Date(thisSunday);
+            thisSundayEnd.setHours(11, 40, 0, 0);
+
+            // If today is Sunday and between 9:30am–11:40am → Live now
+            if (phtNow >= thisSunday && phtNow <= thisSundayEnd) {
+                setTimeLeft("Worship is live now!");
+                return;
+            }
+
+            // If past 11:40am today → countdown to next Sunday
+            let nextSunday = new Date(thisSunday);
+            if (phtNow > thisSundayEnd) {
+                nextSunday.setDate(nextSunday.getDate() + 7);
+            }
 
             const diff = nextSunday - phtNow;
-            if (diff <= 0) {
-                setTimeLeft("Worship is live now!");
-            } else {
-                const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-                const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
-                const m = Math.floor((diff / (1000 * 60)) % 60);
-                const s = Math.floor((diff / 1000) % 60);
-                setTimeLeft(`${d}d ${h}h ${m}m ${s}s`);
-            }
+
+            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            const m = Math.floor((diff / (1000 * 60)) % 60);
+            const s = Math.floor((diff / 1000) % 60);
+
+            setTimeLeft(`${d}d ${h}h ${m}m ${s}s`);
         }, 1000);
 
         return () => clearInterval(interval);

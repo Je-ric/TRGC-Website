@@ -3,78 +3,79 @@ import HeaderBanner from "../Components/HeaderBanner";
 export default function Ministry() {
   const ministries = [
     {
-      title: "Children",
-      description: "Nurturing children in faith through fun and engaging programs.",
+      title: "Children's Ministry",
+      description: "Guiding children to know and love God through creative, Christ-centered programs.",
       image: "img/test-image.webp",
       leader: "John Doe",
     },
     {
-      title: "Youth",
-      description: "Equipping the next generation to grow in faith and leadership.",
+      title: "Youth Ministry",
+      description: "Empowering students to grow spiritually, build godly character, and develop leadership.",
       image: "img/test-image.webp",
       leader: "John Doe",
     },
     {
-      title: "Parents",
-      description: "Supporting parents in raising spiritually grounded families.",
+      title: "Parents Ministry",
+      description: "Equipping parents with biblical principles to nurture strong, faith-filled families.",
       image: "img/test-image.webp",
       leader: "John Doe",
     },
     {
-      title: "Senior",
-      description: "Caring for the senior members of our church community.",
+      title: "Seniors Ministry",
+      description: "Providing care, fellowship, and spiritual encouragement to our senior adults.",
       image: "img/test-image.webp",
       leader: "John Doe",
     },
     {
-      title: "Music",
-      description: "Leading the congregation in heartfelt worship and praise.",
+      title: "Worship Ministry",
+      description: "Leading the church in authentic worship through music, vocals, and creative expressions.",
       image: "img/test-image.webp",
       leader: "John Doe",
     },
     {
-      title: "Technical",
-      description: "Handling audio, video, lighting, and technical setups.",
+      title: "Technical Ministry",
+      description: "Supporting worship and events through sound, media, lighting, and production excellence.",
       image: "img/test-image.webp",
       leader: "John Doe",
     },
     {
-      title: "Finance",
-      description: "Managing church resources responsibly and transparently.",
+      title: "Finance Ministry",
+      description: "Stewarding church finances with integrity, transparency, and biblical principles.",
       image: "img/test-image.webp",
       leader: "John Doe",
     },
     {
-      title: "MIS",
-      description: "Managing church data and information systems efficiently.",
+      title: "MIS Ministry",
+      description: "Managing church information systems, technology, and data to support ministry operations.",
       image: "img/test-image.webp",
       leader: "John Doe",
     },
     {
-      title: "Ushering",
-      description: "Welcoming and guiding members and guests during services.",
+      title: "Ushering Ministry",
+      description: "Creating a warm, welcoming environment and assisting members during services.",
       image: "img/test-image.webp",
       leader: "John Doe",
     },
     {
-      title: "Intercessory",
-      description: "Praying for the needs of the congregation and the world.",
+      title: "Intercessory Ministry",
+      description: "Standing in prayer for the church, community, and global needs with dedication and faith.",
       image: "img/test-image.webp",
       leader: "John Doe",
     },
     {
-      title: "Evangelism",
-      description: "Spreading the gospel and reaching out to the community.",
+      title: "Evangelism Ministry",
+      description: "Sharing the gospel and reaching people through outreach, discipleship, and missions.",
       image: "img/test-image.webp",
       leader: "John Doe",
     },
     {
-      title: "Facilities",
-      description: "Maintaining and managing church buildings and grounds.",
+      title: "Facilities Ministry",
+      description: "Overseeing the maintenance, cleanliness, and safety of all church facilities and grounds.",
       image: "img/test-image.webp",
       leader: "John Doe",
     },
   ];
+
 
   return (
     <div>
@@ -104,7 +105,18 @@ export default function Ministry() {
             "
                 />
 
+
                 <div className="absolute inset-0 bg-black/50 z-5 pointer-events-none"></div>
+
+                <div className="absolute inset-0 
+  bg-gradient-to-br 
+  from-red-500/20 
+  via-transparent 
+  to-red-800/20 
+  z-5 pointer-events-none">
+                </div>
+
+
 
                 {/* Default visible text (title + description) */}
                 <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-6 z-10 pointer-events-none
@@ -117,7 +129,7 @@ export default function Ministry() {
                 <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-6 bg-gradient-to-t from-black/60 via-red/40 to-blue/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
                   <h2 className="text-3xl md:text-4xl font-bold">{ministry.title}</h2>
                   <p className="text-white/90 mt-4 text-lg md:text-xl">{ministry.description}</p>
-                  <p className="text-white font-bold text-2xl mt-6">Ministry Leader: {ministry.leader}</p>
+                  <strong className="text-white font-bold text-2xl mt-6">Ministry Leader: {ministry.leader}</strong>
                 </div>
               </div>
             ))}
