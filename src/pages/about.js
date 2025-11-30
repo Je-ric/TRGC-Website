@@ -12,15 +12,11 @@ import {
   FaUsers,
   FaStar
 } from 'react-icons/fa';
-
+import { ChevronDown } from "lucide-react"
 
 
 export default function About() {
   const [openIndex, setOpenIndex] = useState(null);
-
-  const toggleAccordion = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
 
   const beliefs = [
     {
@@ -89,101 +85,8 @@ export default function About() {
 
       {/* ============================================================================================================================== */}
 
-
-      <PrismaticAurora className="py-16 md:py-24">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="text-center">
-            <h2 className="text-3xl md:text-4xl tracking-tight font-semibold text-white">
-              What We Believe
-            </h2>
-          </div>
-
-          <div className="mt-10 md:mt-12 space-y-3">
-            {beliefs.map((belief, index) => (
-              <div key={index} className="rounded-xl border border-white/10 bg-white/5 backdrop-blur">
-                <button
-                  onClick={() => toggleAccordion(index)}
-                  className="group w-full px-5 md:px-6 py-4 md:py-5 flex items-center justify-between gap-6 text-left"
-                >
-                  <div className="flex items-center gap-3">
-                    <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-500/10 text-indigo-300">
-                      {belief.icon}
-                    </span>
-                    <h3 className="text-base md:text-lg font-semibold text-white tracking-tight">
-                      {belief.title}
-                    </h3>
-                  </div>
-                  <span className="shrink-0 rounded-md bg-white/5 p-2 text-white/80 group-hover:text-white transition">
-                    <svg
-                      className={`h-5 w-5 transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""
-                        }`}
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth={1.5}
-                    >
-                      <path d="m6 9 6 6 6-6" />
-                    </svg>
-                  </span>
-                </button>
-
-                <div
-                  className={`grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ${openIndex === index ? "grid-rows-[1fr]" : ""
-                    }`}
-                >
-                  <div className="overflow-hidden">
-                    <div className="px-5 md:px-6 pb-5 md:pb-6 -mt-1 text-2xl md:text-lg leading-relaxed text-white/70">
-                      {belief.content}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </PrismaticAurora>
-      {/* <section className="bg-[#232323] py-16 mx-auto">
-
-        <div className="max-w-6xl mx-auto text-center mb-12">
-          <h2 className="text-4xl font-bold text-white mb-4">What We Believe</h2>
-        </div>
-
-        <div className="max-w-6xl mx-auto divide-y divide-gray-700 space-y-4">
-          {beliefs.map((belief, index) => (
-            <div key={index}>
-              <button
-                onClick={() => toggleAccordion(index)}
-                className="w-full px-6 py-5 flex justify-between items-center rounded-md bg-white text-black hover:bg-gray-200 transition-colors duration-300 focus:outline-none"
-              >
-                <h3 className="text-xl font-semibold">{belief.title}</h3>
-                <svg
-                  className={`w-6 h-6 transform transition-transform duration-300 ${openIndex === index ? "rotate-180" : ""
-                    }`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-
-              <div
-                className={`overflow-hidden transition-all duration-500 ${openIndex === index ? "max-h-96 py-6 px-6" : "max-h-0 px-6"
-                  }`}
-                style={{ backgroundColor: "#232323" }}
-              >
-                <p className="text-gray-300 leading-relaxed">{belief.content}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section> */}
-
-      {/* ============================================================================================================================== */}
-      <section className="bg-black text-white w-full">
-        <div className="max-w-[1600px] mx-auto">
+      <PrismaticAurora>
+        <div className="pb-48">
 
           {/* GRID WRAPPER — 2x2 on large screens, 1x4 on mobile */}
           <div className="grid grid-cols-1 lg:grid-cols-2">
@@ -264,6 +167,56 @@ export default function About() {
 
           </div>
         </div>
+      </PrismaticAurora>
+
+
+
+
+      {/* <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-background"> */}
+      <section
+        className="relative py-16 z-10 bg-cover bg-no-repeat bg-top -mt-32" // for overlap
+        style={{
+          backgroundImage: "url('/img/TornPaper.jpg')",
+        }}
+      >
+        <div className="relative z-10">
+
+          <div className="max-w-4xl mx-auto mt-14">
+            <div className="text-center mb-12 md:mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">What We Believe</h2>
+              <p className="text-muted-foreground">Our faith is grounded in biblical truth</p>
+            </div>
+
+            <div className="space-y-3">
+              {beliefs.map((belief, idx) => (
+                <div
+                  key={idx}
+                  className="bg-card/50 border border-border rounded-lg overflow-hidden transition-all duration-300"
+                >
+                  <button
+                    onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
+                    className="w-full px-6 py-5 flex items-center justify-between hover:bg-card/70 transition-colors text-left"
+                  >
+                    <h3 className="text-lg font-semibold text-foreground">{belief.title}</h3>
+                    <ChevronDown
+                      className={`w-5 h-5 text-primary transition-transform duration-300 ${openIndex === idx ? "rotate-180" : ""
+                        }`}
+                    />
+                  </button>
+                  {openIndex === idx && (
+                    <div className="px-6 pb-5 pt-2  border-t border-border text-muted-foreground">{belief.content}</div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* ============================================================================================================================== */}
+      <section className="bg-black text-white w-full">
+
       </section>
 
 

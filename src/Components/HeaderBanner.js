@@ -10,7 +10,7 @@ export default function HeaderBanner({ title, desc, image }) {
 
     return (
         <div
-            className="relative w-full h-[300px] md:h-[400px] flex items-center justify-center text-center overflow-hidden"
+            className="relative w-full h-96 md:h-[400px] flex items-center justify-center text-center overflow-hidden"
             style={{
                 backgroundImage: `url(${image})`,
                 backgroundSize: "cover",
