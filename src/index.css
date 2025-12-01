@@ -17,11 +17,11 @@ body {
 }
 
 @layer base {
-  p {
-    @apply font-raleway text-lg leading-relaxed; 
+  p, li {
+    @apply font-raleway text-base leading-relaxed; 
   }
   span { 
-    @apply font-bold
+    @apply font-bold;
   }
 }
 
