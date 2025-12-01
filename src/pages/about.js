@@ -196,61 +196,103 @@ export default function About() {
       </section>
 
       {/* ============================================================================================================================== */}
-      <section className="bg-black text-white w-full">
-
-      </section>
 
 
-      <section className="bg-[#1a1a1a] py-20 px-6">
-        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-start md:items-center gap-10">
+      <PrismaticAurora>
+        <div className="py-20 px-6 relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(99,102,241,0.1)_0%,_transparent_70%)] opacity-50"></div>
 
-          {/* Logo */}
-          <div className="md:w-1/2 flex justify-center mb-10 md:mb-0">
-            <img
-              src="img/Logo.jpg"
-              alt="Church Logo"
-              className="w-72 h-72 object-contain drop-shadow-xl"
-            />
-          </div>
+          <div className="relative max-w-7xl mx-auto space-y-16">
+            {/* Title */}
+            <div className="text-center">
+              <h2 className="text-5xl md:text-6xl font-bold text-white drop-shadow-2xl bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">
+                Our <Mark>Logo</Mark>
+              </h2>
+              <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto">
+                Discover the deep symbolism behind each element of our logo, representing our faith and mission.
+              </p>
+            </div>
 
-          {/* Symbolism Description */}
-          <div className="md:w-1/2 space-y-6">
-            <h2 className="text-3xl font-bold text-indigo-400 mb-6">Logo Symbolism</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
 
-            {/* Items with placeholders */}
-            <ul className="space-y-4">
-              <li className="flex items-center gap-4">
-                <img src="/img/placeholders/inner-circle.png" alt="Inner Circle" className="w-12 h-12 object-contain rounded-full border border-indigo-400" />
-                <span className="text-gray-300 text-lg">
-                  <strong>The Inner Circle</strong> — Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </span>
-              </li>
-              <li className="flex items-center gap-4">
-                <img src="/img/placeholders/outer-circle.png" alt="Outer Circle" className="w-12 h-12 object-contain rounded-full border border-indigo-400" />
-                <span className="text-gray-300 text-lg">
-                  <strong>The Outer Circle</strong> — Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </span>
-              </li>
-              <li className="flex items-center gap-4">
-                <img src="/img/placeholders/cross.png" alt="Cross" className="w-12 h-12 object-contain rounded-full border border-indigo-400" />
-                <span className="text-gray-300 text-lg">
-                  <strong>The Cross</strong> — Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </span>
-              </li>
-              <li className="flex items-center gap-4">
-                <img src="/img/placeholders/rays.png" alt="Rays" className="w-12 h-12 object-contain rounded-full border border-indigo-400" />
-                <span className="text-gray-300 text-lg">
-                  <strong>The Rays</strong> — Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </span>
-              </li>
-            </ul>
+              <div className="group bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 shadow-2xl p-8 transition-all duration-500 hover:bg-white/10 hover:shadow-indigo-500/20 hover:scale-105 hover:-translate-y-2">
+                <div className="flex flex-col items-center text-center space-y-6">
+                  <div className="relative">
+                    <img
+                      src="/img/Logo-Circle2.png"
+                      alt="Circle Symbol"
+                      className="w-48 h-48 object-contain drop-shadow-2xl transition-transform duration-500 group-hover:rotate-12"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  </div>
+                  <div className="space-y-4">
+                    <h3 className="text-2xl font-bold text-indigo-400 group-hover:text-indigo-300 transition-colors duration-300">
+                      The Circle
+                    </h3>
+                    <div className="space-y-3">
+                      <div>
+                        <h4 className="text-lg font-semibold text-white">Inner Circle</h4>
+                        <p className="text-gray-300 text-sm leading-relaxed">
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Represents unity and eternity.
+                        </p>
+                      </div>
+                      <div>
+                        <h4 className="text-lg font-semibold text-white">Outer Circle</h4>
+                        <p className="text-gray-300 text-sm leading-relaxed">
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Symbolizes protection and completeness.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
+              <div className="group bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 shadow-2xl p-8 transition-all duration-500 hover:bg-white/10 hover:shadow-red-500/20 hover:scale-105 hover:-translate-y-2">
+                <div className="flex flex-col items-center text-center space-y-6">
+                  <div className="relative">
+                    <img
+                      src="/img/Logo-Cross.png"
+                      alt="Cross Symbol"
+                      className="w-48 h-48 object-contain drop-shadow-2xl transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  </div>
+                  <div className="space-y-4">
+                    <h3 className="text-2xl font-bold text-red-400 group-hover:text-red-300 transition-colors duration-300">
+                      The Cross
+                    </h3>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. A powerful emblem of sacrifice, redemption, and Christ's love.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="group bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 shadow-2xl p-8 transition-all duration-500 hover:bg-white/10 hover:shadow-yellow-500/20 hover:scale-105 hover:-translate-y-2 md:col-span-2 lg:col-span-1">
+                <div className="flex flex-col items-center text-center space-y-6">
+                  <div className="relative">
+                    <img
+                      src="/img/Logo-Rays.png"
+                      alt="Rays Symbol"
+                      className="w-48 h-48 object-contain drop-shadow-2xl transition-transform duration-500 group-hover:rotate-6"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  </div>
+                  <div className="space-y-4">
+                    <h3 className="text-2xl font-bold text-yellow-400 group-hover:text-yellow-300 transition-colors duration-300">
+                      The Rays
+                    </h3>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Radiating light and hope, spreading the gospel to the world.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
         </div>
-      </section>
-
-
-
+      </PrismaticAurora>
 
 
       {/* <div className="grid grid-cols-1 lg:grid-cols-2">
