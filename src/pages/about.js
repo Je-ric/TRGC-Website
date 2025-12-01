@@ -203,51 +203,66 @@ export default function About() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(99,102,241,0.1)_0%,_transparent_70%)] opacity-50"></div>
 
           <div className="relative max-w-7xl mx-auto space-y-16">
-            {/* Title */}
+
             <div className="text-center">
               <h2 className="text-5xl md:text-6xl font-bold text-white drop-shadow-2xl bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">
                 Our <Mark>Logo</Mark>
               </h2>
-              <p className="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto">
-                Discover the deep symbolism behind each element of our logo, representing our faith and mission.
-              </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12">
 
-              <div className="group bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 shadow-2xl p-8 transition-all duration-500 hover:bg-white/10 hover:shadow-indigo-500/20 hover:scale-105 hover:-translate-y-2">
-                <div className="flex flex-col items-center text-center space-y-6">
-                  <div className="relative">
-                    <img
-                      src="/img/Logo-Circle2.png"
-                      alt="Circle Symbol"
-                      className="w-48 h-48 object-contain drop-shadow-2xl transition-transform duration-500 group-hover:rotate-12"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  </div>
-                  <div className="space-y-4">
-                    <h3 className="text-2xl font-bold text-indigo-400 group-hover:text-indigo-300 transition-colors duration-300">
-                      The Circle
-                    </h3>
-                    <div className="space-y-3">
-                      <div>
-                        <h4 className="text-lg font-semibold text-white">Inner Circle</h4>
-                        <p className="text-gray-300 text-sm leading-relaxed">
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Represents unity and eternity.
-                        </p>
-                      </div>
-                      <div>
-                        <h4 className="text-lg font-semibold text-white">Outer Circle</h4>
-                        <p className="text-gray-300 text-sm leading-relaxed">
-                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Symbolizes protection and completeness.
-                        </p>
+              {/* Circle */}
+              <div className="lg:col-span-2">
+
+                <div className="group bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 shadow-2xl p-10 transition-all duration-500 hover:bg-white/10 hover:shadow-indigo-500/20 hover:scale-105 hover:-translate-y-2">
+
+                  <div className="flex flex-col lg:flex-row items-center lg:items-start text-center lg:text-left gap-12">
+
+                    {/* Left */}
+                    <div className="flex-1 space-y-3">
+                      <h4 className="text-2xl font-semibold text-white">Inner Circle</h4>
+                      <p className="text-white text-justify">
+                        The inner circle represents the wholeness of a person created by God according
+                        to His image and likeness to whom He has given dominion and rulership over all
+                        the earth <span className="text-red-500">(Genesis 1:26-28)</span>.
+                      </p>
+                    </div>
+
+                    {/* Image - center (pero since grid, there are timmes na masyadong mahaba yung card na to*/}
+                    <div className="flex justify-center">
+                      <div className="relative">
+                        <img
+                          src="/img/Logo-Circle2.png"
+                          alt="Circle Symbol"
+                          className="w-48 h-48 object-contain drop-shadow-2xl transition-transform duration-500 group-hover:rotate-12"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                       </div>
                     </div>
+
+                    {/* Right */}
+                    <div className="flex-1 space-y-3">
+                      <h4 className="text-2xl font-semibold text-white">Outer Circle</h4>
+                      <p className="text-white text-justify">
+                        The outside circle signifies the family of believers, whose lives are committed
+                        to Jesus Christ as Lord, fitted together, growing together and building one
+                        another to participate in building the Kingdom of God
+                        <span className="text-red-500"> (Ephesians 4:12-16)</span>.
+                      </p>
+                    </div>
+
                   </div>
+
+                  <h3 className="text-2xl font-bold text-indigo-400 text-center pt-6 group-hover:text-indigo-300 transition-colors duration-300">
+                    The Circle
+                  </h3>
+
                 </div>
               </div>
 
-              <div className="group bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 shadow-2xl p-8 transition-all duration-500 hover:bg-white/10 hover:shadow-red-500/20 hover:scale-105 hover:-translate-y-2">
+              {/* CROSS */}
+              <div className="group bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 shadow-2xl p-10 transition-all duration-500 hover:bg-white/10 hover:shadow-red-500/20 hover:scale-105 hover:-translate-y-2">
                 <div className="flex flex-col items-center text-center space-y-6">
                   <div className="relative">
                     <img
@@ -257,18 +272,18 @@ export default function About() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   </div>
-                  <div className="space-y-4">
-                    <h3 className="text-2xl font-bold text-red-400 group-hover:text-red-300 transition-colors duration-300">
-                      The Cross
-                    </h3>
-                    <p className="text-gray-300 text-sm leading-relaxed">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. A powerful emblem of sacrifice, redemption, and Christ's love.
-                    </p>
-                  </div>
+                  <h3 className="text-2xl font-bold text-red-400 group-hover:text-red-300 transition-colors duration-300">
+                    The Cross
+                  </h3>
+                  <p className="text-white text-justify">
+                    Represents Jesus, our redeemer who died on the cross for us to live and have an abundant life
+                    <span className="text-red-500"> (John 10:10b)</span>.
+                  </p>
                 </div>
               </div>
 
-              <div className="group bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 shadow-2xl p-8 transition-all duration-500 hover:bg-white/10 hover:shadow-yellow-500/20 hover:scale-105 hover:-translate-y-2 md:col-span-2 lg:col-span-1">
+              {/* RAYS */}
+              <div className="group bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 shadow-2xl p-10 transition-all duration-500 hover:bg-white/10 hover:shadow-yellow-500/20 hover:scale-105 hover:-translate-y-2">
                 <div className="flex flex-col items-center text-center space-y-6">
                   <div className="relative">
                     <img
@@ -278,14 +293,13 @@ export default function About() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   </div>
-                  <div className="space-y-4">
-                    <h3 className="text-2xl font-bold text-yellow-400 group-hover:text-yellow-300 transition-colors duration-300">
-                      The Rays
-                    </h3>
-                    <p className="text-gray-300 text-sm leading-relaxed">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Radiating light and hope, spreading the gospel to the world.
-                    </p>
-                  </div>
+                  <h3 className="text-2xl font-bold text-yellow-400 group-hover:text-yellow-300 transition-colors duration-300">
+                    The Rays
+                  </h3>
+                  <p className="text-white text-justify">
+                    Represents the nine Fruits of the Holy Spirit to be manifested in one's life to be able to walk and live in the Spirit
+                    <span className="text-red-500"> (Galatians 5:22-23)</span>.
+                  </p>
                 </div>
               </div>
 
@@ -293,6 +307,7 @@ export default function About() {
           </div>
         </div>
       </PrismaticAurora>
+
 
 
       {/* <div className="grid grid-cols-1 lg:grid-cols-2">
