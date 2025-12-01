@@ -175,12 +175,13 @@ export default function About() {
               >
 
                 <div className="flex items-center mb-4 gap-3">
-                  <div className="text-[#ffc358] text-3xl md:text-4xl flex-shrink-0 drop-shadow-lg">
+                  <div className="text-[#ffb700] text-3xl md:text-4xl flex-shrink-0 drop-shadow-lg">
                     {belief.icon}
                   </div>
 
-                  <h3 className="text-xl md:text-2xl font-bold text-black drop-shadow-lg">
+                  <h3 className="relative text-xl md:text-2xl font-bold text-black drop-shadow-lg">
                     {belief.title}
+                    <span className="absolute left-0 -bottom-1 h-1 w-10 bg-[#ffb700] rounded-full transition-all duration-300 group-hover:w-full"></span>
                   </h3>
                 </div>
 
@@ -225,7 +226,7 @@ export default function About() {
                       <p className="text-white text-justify">
                         The inner circle represents the wholeness of a person created by God according
                         to His image and likeness to whom He has given dominion and rulership over all
-                        the earth <span className="text-red-500">(Genesis 1:26-28)</span>.
+                        the earth <span className="text-red-500 font-bold">(Genesis 1:26-28)</span>.
                       </p>
                     </div>
 

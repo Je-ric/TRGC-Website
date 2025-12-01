@@ -20,6 +20,9 @@ body {
   p {
     @apply font-raleway text-lg leading-relaxed; 
   }
+  span { 
+    @apply font-bold
+  }
 }
 
 code {

@@ -5,7 +5,7 @@ const Mark = ({ children }) => {
         display: 'inline-block',
         lineHeight: '0.3em', 
         padding: '5px 15px 25px 0',
-        backgroundColor: '#ffc358',
+        backgroundColor: '#ffb700',
         transform: 'translate(0, -18px) rotate(-5deg)',
         color: '#000', // or white?
         fontSize: '110%',
