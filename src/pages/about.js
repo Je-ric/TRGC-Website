@@ -83,7 +83,11 @@ export default function About() {
       {/* ============================================================================================================================== */}
 
       <PrismaticAurora>
-        <div className="px-6 md:px-12 lg:px-16 py-10 pb-40">
+        <div className="py-20 px-6 md:px-12 lg:px-16 pb-40">
+
+          <h2 className="text-center text-5xl md:text-6xl font-bold text-white drop-shadow-2xl bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">
+            Our <Mark color="white" backgroundColor="#EF4444">Purpose</Mark>
+          </h2>
 
           <div className="flex flex-col lg:flex-row justify-center items-start gap-16 mb-20 mt-14 max-w-6xl mx-auto">
 
@@ -100,25 +104,25 @@ export default function About() {
               <li>
                 <p>
                   To equip and train every living saint for purposes of righteousness and lifestyle{" "}
-                  <span className="text-red-400">(2 Tim. 3:16-17)</span> through holiness.
+                  <span className="text-red-500">(2 Tim. 3:16-17)</span> through holiness.
                 </p>
               </li>
               <li>
                 <p>
                   To rebuild and restructure according to the original biblical pattern — apostolic foundation, prophetic ministries, and Church{" "}
-                  <span className="text-red-400">(Eph. 2:20, Eph. 4:11)</span>.
+                  <span className="text-red-500">(Eph. 2:20, Eph. 4:11)</span>.
                 </p>
               </li>
               <li>
                 <p>
                   To revive father and son relationship{" "}
-                  <span className="text-red-400">(Mal. 4:6)</span>, guided by Kingdom laws and divine order.
+                  <span className="text-red-500">(Mal. 4:6)</span>, guided by Kingdom laws and divine order.
                 </p>
               </li>
               <li>
                 <p>
                   To raise up a new breed of people without greed, worthy of each calling as love-slaves to Christ{" "}
-                  <span className="text-red-400">(Mat. 28:18-20)</span>.
+                  <span className="text-red-500">(Mat. 28:18-20)</span>.
                 </p>
               </li>
             </div>
@@ -135,17 +139,29 @@ export default function About() {
               </h1>
             </div>
 
-            {/* RIGHT COLUMN: Vision points */}
             <div className="text-white space-y-4 lg:w-1/2">
               <li>
                 <p>
-                  Church empowerment <span className="text-red-400">(Acts 18)</span> / Regaining genuine Kingdom identity <span className="text-red-400">(Rev. 22:1-5)</span>.
+                  Church empowerment <span className="text-red-500">(Acts 18)</span> / Regaining genuine Kingdom identity <span className="text-red-500">(Rev. 22:1-5)</span>.
                 </p>
               </li>
-              <li><p>Unified faith among believers.</p></li>
-              <li><p>Attaining maturity through the knowledge of the Son of God.</p></li>
-              <li><p>The fullness of Christ in the lives of the saints.</p></li>
-              <li><p>A glorious church as the bride of our Lord Jesus Christ <span className="text-red-400">(Rev. 19:7)</span>.</p></li>
+              <li>
+                <p>Unified faith among believers.
+                </p>
+              </li>
+              <li>
+                <p>Attaining maturity through the knowledge of the Son of God.
+
+                </p>
+              </li>
+              <li>
+                <p>The fullness of Christ in the lives of the saints.
+                </p>
+              </li>
+              <li>
+                <p>A glorious church as the bride of our Lord Jesus Christ <span className="text-red-500">(Rev. 19:7)</span>.
+                </p>
+              </li>
             </div>
           </div>
 
@@ -205,11 +221,9 @@ export default function About() {
 
           <div className="relative max-w-7xl mx-auto space-y-16">
 
-            <div className="text-center">
-              <h2 className="text-5xl md:text-6xl font-bold text-white drop-shadow-2xl bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">
-                Our <Mark>Logo</Mark>
+              <h2 className="text-center text-5xl md:text-6xl font-bold text-white drop-shadow-2xl bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">
+                Our <Mark color="white" backgroundColor="#EF4444">Logo</Mark>
               </h2>
-            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12">
 
@@ -226,7 +240,7 @@ export default function About() {
                       <p className="text-white text-justify">
                         The inner circle represents the wholeness of a person created by God according
                         to His image and likeness to whom He has given dominion and rulership over all
-                        the earth <span className="text-red-500 font-bold">(Genesis 1:26-28)</span>.
+                        the earth <span className="text-red-500">(Genesis 1:26-28)</span>.
                       </p>
                     </div>
 
