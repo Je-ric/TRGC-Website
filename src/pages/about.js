@@ -269,9 +269,9 @@ export default function About() {
 
                   </div>
 
-                  <h3 className="text-2xl font-bold text-indigo-400 text-center pt-6 group-hover:text-indigo-300 transition-colors duration-300">
+                  {/* <h3 className="text-2xl font-bold text-indigo-400 text-center pt-6 group-hover:text-indigo-300 transition-colors duration-300">
                     The Circle
-                  </h3>
+                  </h3> */}
 
                 </div>
               </div>

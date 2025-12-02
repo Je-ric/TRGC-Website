@@ -1,8 +1,19 @@
+import { useState } from "react";
 import Countdown from "../Components/Helper/Countdown";
 import Mark from "../Components/ui/Mark";
-import PrismaticAurora from "../Components/ui/PrismaticAurora";
+// import PrismaticAurora from "../Components/ui/PrismaticAurora";
+import { FaChevronLeft, FaChevronRight, FaTimes } from 'react-icons/fa';
 
 export default function Home() {
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const merch = [
+    "/img/Merch-2.jpg",
+    "/img/Merch-3.jpg",
+    "/img/Merch-4.jpg",
+    "/img/Merch-5.jpg",
+  ];
+
   return (
     <div>
 
@@ -17,7 +28,7 @@ export default function Home() {
 
         <div className="relative max-w-7xl mx-auto px-6">
           <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center drop-shadow-2xl bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-            Local Church <Mark>Programs</Mark> & <Mark>Events</Mark>
+            Local Church <Mark color="white" backgroundColor="#EF4444">Programs</Mark> & <Mark color="white">Events</Mark>
           </h2>
 
           <div className="mx-auto max-w-7xl text-center mb-20 bg-white/10 backdrop-blur-2xl p-10 shadow-2xl rounded-2xl border border-white/20">
@@ -89,6 +100,7 @@ export default function Home() {
 
 
 
+
       <section
         className="relative py-16 z-10 bg-cover bg-no-repeat bg-top -mt-24" // for overlap
         style={{
@@ -116,47 +128,84 @@ export default function Home() {
 
 
 
-      <PrismaticAurora className="relative w-full min-h-screen bg-black py-24 select-none overflow-hidden">
+      <section
+        className="relative py-20 px-6 text-white bg-fixed bg-cover bg-center"
+        style={{
+          backgroundImage: "url('/img/Merch-1.jpg')",
+        }}
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/80 backdrop-blur-sm"></div>
 
-        <div className="flex flex-col items-center gap-10 pointer-events-none">
+        <div className="relative z-10 max-w-7xl mx-auto">
+          <h2 className="text-center text-5xl md:text-6xl font-bold mb-14 drop-shadow-2xl bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+            Merch <span className="text-red-500">Collection</span>
+          </h2>
 
-          {/* Top */}
-          <h1
-            className="text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] xl:text-[11rem] font-black text-transparent"
-            style={{
-              WebkitTextStroke: "4px rgba(255, 255, 255, 0.9)",
-              opacity: 0.9,
-            }}
-          >
-            Risen Generation
-          </h1>
-
-          {/* Middle */}
-          <h1
-            className="text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] xl:text-[11rem] font-black text-transparent"
-            style={{
-              WebkitTextStroke: "4px rgba(255, 255, 255, 0.7)",
-              opacity: 0.7,
-            }}
-          >
-            Risen Generation
-          </h1>
-
-          {/* Bottom */}
-          <h1
-            className="text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] xl:text-[11rem] font-black text-transparent"
-            style={{
-              WebkitTextStroke: "4px rgba(255, 255, 255, 0.5)",
-              opacity: 0.5,
-            }}
-          >
-            Risen Generation
-          </h1>
-
+          {/* Modern Grid for Square Images */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {merch.map((src, i) => (
+              <div key={i} className="group relative aspect-square p-4 overflow-hidden border-4 border-white shadow-2xl transition-all duration-500 hover:scale-105 hover:shadow-red-500/30 cursor-pointer" onClick={() => setActiveIndex(i)}>
+                <img
+                  src={src}
+                  alt={`Merch Item ${i + 1}`}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                {/* Hover Overlay */}
+                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <span className="text-white font-semibold text-lg">View</span>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
+      </section>
 
-      </PrismaticAurora>
+      {/* Modern Lightbox with Controls */}
+      {activeIndex !== null && (
+        <div className="fixed inset-0 bg-black/90 backdrop-blur-md flex items-center justify-center z-50 p-4">
+          {/* Close Button */}
+          <button
+            onClick={() => setActiveIndex(null)}
+            className="absolute top-4 right-4 text-white hover:text-red-500 transition duration-300 z-60"
+          >
+            <FaTimes size={30} />
+          </button>
 
-    </div>
+          {/* Prev Button */}
+          <button
+            onClick={() => setActiveIndex((prev) => (prev > 0 ? prev - 1 : merch.length - 1))}
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white hover:text-red-500 transition duration-300 z-60 p-2 bg-black/50 rounded-full hover:bg-black/70"
+          >
+            <FaChevronLeft size={24} />
+          </button>
+
+          {/* Image */}
+          <div className="relative max-w-4xl w-full flex items-center justify-center">
+            <img
+              src={merch[activeIndex]}
+              alt={`Merch Item ${activeIndex + 1}`}
+              className="max-w-full h-96 rounded-2xl shadow-2xl transition-transform duration-500"
+            />
+          </div>
+
+          {/* Next Button */}
+          <button
+            onClick={() => setActiveIndex((prev) => (prev < merch.length - 1 ? prev + 1 : 0))}
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-red-500 transition duration-300 z-60 p-2 bg-black/50 rounded-full hover:bg-black/70"
+          >
+            <FaChevronRight size={24} />
+          </button>
+
+          {/* Image Counter */}
+          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-sm bg-black/50 px-3 py-1 rounded-full">
+            {activeIndex + 1} / {merch.length}
+          </div>
+        </div>
+      )}
+
+
+
+    </div >
   );
 }

@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, NavLink, Link } from 'react-router-dom'; // Added Link for logo
+import { useState, useEffect } from 'react'; // Added useEffect
+import { BrowserRouter as Router, Routes, Route, NavLink, Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -10,14 +10,24 @@ import Events from './pages/Events';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false); // Track scroll state
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // Detect scroll to apply glass effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <Router>
-      <nav className="fixed top-0 w-full z-50 h-28 bg-white/10 backdrop-blur-md border-b border-white/20 shadow-lg">
+      <nav className={`fixed top-0 w-full z-50 h-28 transition-all duration-300 ${isScrolled ? 'bg-white/10 backdrop-blur-md border-b border-white/20 shadow-lg' : 'bg-transparent'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
           <div className="flex justify-between items-center w-full">
             
