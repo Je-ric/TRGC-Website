@@ -1,5 +1,7 @@
 import React from "react";
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
+import { FiMapPin, FiMail, FiPhone, FiClock } from 'react-icons/fi';
+
 
 export default function Footer() {
     return (
@@ -40,11 +42,19 @@ export default function Footer() {
                     {/* Contact */}
                     <div className="lg:col-span-1 space-y-4">
                         <h3 className="text-lg font-semibold text-white">Contact Us</h3>
-                        <div className="space-y-2 text-gray-300 text-sm">
-                            <p>📍 TRGC Worship Center, Philippines</p>
-                            <p>📧 info@risengenerationchurch.com</p>
-                            <p>📞 +63 123 456 7890</p>
-                            <p>⏰ Sundays: 9:30 AM</p>
+                        <div className="space-y-3 text-gray-300 text-sm">
+                            <p className="flex items-center gap-2">
+                                <FiMapPin className="w-5 h-5 text-red-500" /> TRGC Worship Center, Philippines
+                            </p>
+                            <p className="flex items-center gap-2">
+                                <FiMail className="w-5 h-5 text-red-500" /> info@risengenerationchurch.com
+                            </p>
+                            <p className="flex items-center gap-2">
+                                <FiPhone className="w-5 h-5 text-red-500" /> +63 123 456 7890
+                            </p>
+                            <p className="flex items-center gap-2">
+                                <FiClock className="w-5 h-5 text-red-500" /> Sundays: 9:30 AM
+                            </p>
                         </div>
                     </div>
 
