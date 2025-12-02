@@ -7,6 +7,7 @@ import Leadership from './pages/Leadership';
 import Ministry from './pages/Ministry';
 import Give from './pages/Give';
 import Events from './pages/Events';
+import Footer from './Components/Footer';
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,7 +31,7 @@ function App() {
       <nav className={`fixed top-0 w-full z-50 h-28 transition-all duration-300 ${isScrolled ? 'bg-white/10 backdrop-blur-md border-b border-white/20 shadow-lg' : 'bg-transparent'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
           <div className="flex justify-between items-center w-full">
-            
+
             <div className="text-white font-bold text-xl">
               <Link to="/">
                 <img src="/img/logo.png" alt="Risen Generation" className="h-10 w-auto hover:opacity-80 transition duration-300" />
@@ -109,7 +110,11 @@ function App() {
           <Route path="/events" element={<Events />} />
         </Routes>
       </div>
+
+      <Footer />
+
     </Router>
+
   );
 }
 
