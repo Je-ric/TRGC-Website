@@ -56,9 +56,9 @@ export default function Home() {
                     alt={title}
                     className="w-full h-full object-cover"
                   />
-                  {/* Overlay on top of image */}
+
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                  {/* Text overlay with background for readability */}
+                  
                   <div className="absolute z-10 top-2 left-2 bg-black/60 px-3 py-1 rounded-lg text-white text-sm font-medium backdrop-blur-sm">
                     {title}
                   </div>
@@ -67,7 +67,6 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Second Set of Programs - Responsive grid */}
           <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 mb-20">
             {[
               { title: "Face-to-Face Intercessory Prayer Meeting (Last Saturday Quarterly)", img: "/sample/Sample4.jpg" },
@@ -83,9 +82,9 @@ export default function Home() {
                     alt={title}
                     className="w-full h-full object-cover"
                   />
-                  {/* Overlay on top of image */}
+
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                  {/* Text overlay with background for readability */}
+                
                   <div className="absolute z-10 top-2 left-2 bg-black/60 px-3 py-1 rounded-lg text-white text-sm font-medium backdrop-blur-sm">
                     {title}
                   </div>
