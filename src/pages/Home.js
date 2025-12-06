@@ -3,6 +3,7 @@ import Countdown from "../Components/Helper/Countdown";
 import Mark from "../Components/ui/Mark";
 // import PrismaticAurora from "../Components/ui/PrismaticAurora";
 import { FaChevronLeft, FaChevronRight, FaTimes } from 'react-icons/fa';
+// import { FaFacebookF, FaMapMarkerAlt } from "react-icons/fa";
 
 export default function Home() {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -16,6 +17,43 @@ export default function Home() {
 
   return (
     <div>
+      <section className="min-h-screen flex items-center justify-center p-4 relative bg-cover bg-center bg-no-repeat bg-black" style={{ backgroundImage: "url('')" }}>
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+
+        <div className="text-white text-center relative z-10 max-w-5xl mx-auto px-4 space-y-8">
+          <h1 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black tracking-tight drop-shadow-2xl">
+            SUNDAY SERVICE
+          </h1>
+
+          <p className="text-base md:text-lg lg:text-xl xl:text-2xl font-light uppercase tracking-wider drop-shadow-lg max-w-3xl mx-auto leading-relaxed">
+            YOU’RE INVITED — WORSHIP WITH US THIS SUNDAY AND HEAR THE LIFE-CHANGING GOSPEL
+          </p>
+
+          <div className="bg-white text-black p-4 mx-auto shadow-2xl max-w-4xl">
+            <p className="text-lg md:text-xl lg:text-2xl xl:text-3xl tracking-tight flex items-center justify-center gap-6 md:gap-12 leading-relaxed">
+            
+              <span className="flex items-center gap-2 font-lato">
+                <span className="italic font-normal">Sundays at</span>
+                <span className="font-extrabold">9:30 <span className="text-sm md:text-base">AM</span></span>
+              </span>
+
+              <span className="opacity-60 font-bold text-xl hidden md:inline">/</span>
+
+              <span className="flex flex-col md:flex-row items-center gap-1 md:gap-2 font-normal font-lato italic">
+                Next service...
+                <span className="font-extrabold">
+                  <Countdown inline />
+                </span>
+              </span>
+            </p>
+
+          </div>
+
+          <div className="w-24 h-1 bg-white mx-auto opacity-70"></div>
+        </div>
+      </section>
+
 
       <section
         className="relative text-white py-16 md:py-24 bg-cover bg-center bg-no-repeat"
@@ -30,15 +68,6 @@ export default function Home() {
           <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center drop-shadow-2xl bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
             Local Church <Mark color="white" backgroundColor="#EF4444">Programs</Mark> & <Mark color="white">Events</Mark>
           </h2>
-
-          <div className="mx-auto max-w-7xl text-center mb-20 bg-white/10 backdrop-blur-2xl p-10 shadow-2xl rounded-2xl border border-white/20">
-            <p className="text-xl md:text-2xl text-white font-medium">
-              Join us every Sunday at 9:30 AM Philippine Time
-            </p>
-            <div className="mt-8 text-4xl md:text-5xl text-white font-bold">
-              <Countdown />
-            </div>
-          </div>
 
           <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mb-12">
             {[
@@ -58,7 +87,7 @@ export default function Home() {
                   />
 
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                  
+
                   <div className="absolute z-10 top-2 left-2 bg-black/60 px-3 py-1 rounded-lg text-white text-sm font-medium backdrop-blur-sm">
                     {title}
                   </div>
@@ -84,7 +113,7 @@ export default function Home() {
                   />
 
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-                
+
                   <div className="absolute z-10 top-2 left-2 bg-black/60 px-3 py-1 rounded-lg text-white text-sm font-medium backdrop-blur-sm">
                     {title}
                   </div>

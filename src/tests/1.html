@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worship Service Times</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for background and text contrast */
+        .worship-bg {
+            /* Using a high-contrast, black-and-white image placeholder */
+            background-image: url('https://images.unsplash.com/photo-1543884841-b84589d89163?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
+            /* Applying a dark overlay for better text contrast, similar to the original image */
+            position: relative;
+            z-index: 1;
+        }
+        .worship-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5); /* 50% opacity black overlay */
+            z-index: 2;
+        }
+        .content-container {
+            position: relative;
+            z-index: 3; /* Keep content above the overlay */
+        }
+    </style>
+</head>
+<body class="bg-black">
+
+    <section class="worship-bg min-h-screen flex items-center justify-center p-4">
+        <div class="content-container text-white text-center">
+            
+            <h1 class="text-[10vw] md:text-9xl font-extrabold tracking-tight mb-6">
+                WORSHIP
+            </h1>
+            
+            <p class="text-xl md:text-3xl font-light mb-12 uppercase tracking-wider">
+                JOIN US FOR TWO SERVICES IF YOU'D LIKE
+            </p>
+            
+            <div class="bg-white text-black p-4 inline-block mx-auto max-w-full">
+                <p class="text-lg md:text-3xl font-bold tracking-tight whitespace-nowrap">
+                    SUNDAYS // <span class="mx-2">9:00</span> / <span class="mx-2">10:30 AM</span> / <span class="mx-2">12:00 PM</span>
+                </p>
+            </div>
+            
+        </div>
+    </section>
+
+</body>
+</html>
