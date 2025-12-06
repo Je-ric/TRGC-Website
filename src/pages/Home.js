@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Countdown from "../Components/Helper/Countdown";
-// import Mark from "../Components/ui/Mark";
+import Mark from "../Components/ui/Mark";
 // import PrismaticAurora from "../Components/ui/PrismaticAurora";
 import { FaChevronLeft, FaChevronRight, FaTimes } from 'react-icons/fa';
 
@@ -79,7 +79,7 @@ export default function Home() {
                 Church Programs & Events
               </h2>
               <p className="text-sm md:text-base font-bold uppercase tracking-wide text-gray-200">
-                
+
               </p>
             </div>
 
@@ -186,27 +186,26 @@ export default function Home() {
 
 
       <section
-        className="relative pt-16 z-10 bg-cover bg-no-repeat bg-top -mt-24" // for overlap
+        className="relative py-16 z-10 bg-cover bg-no-repeat bg-top -mt-24" // for overlap
         style={{
           backgroundImage: "url('/img/TornPaper.jpg')",
         }}
       >
-        <div className="relative z-10">
+        <div className="relative z-10 pt-28 py-6 mx-auto max-w-7xl">
 
-            <h2 className="text-center text-5xl md:text-6xl font-bold mb-14 drop-shadow-2xl bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-            Merch <span className="text-red-500">Collection</span>
+          <h2 className="text-5xl font-semibold mb-8 text-center text-black drop-shadow-lg pt-24">
+            Merch <Mark>Collection</Mark>
           </h2>
 
-          {/* Modern Grid for Square Images */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {merch.map((src, i) => (
-              <div key={i} className="group relative aspect-square p-4 overflow-hidden border-4 border-white shadow-2xl transition-all duration-500 hover:scale-105 hover:shadow-red-500/30 cursor-pointer" onClick={() => setActiveIndex(i)}>
+              <div key={i} className="group relative aspect-square p-4 overflow-hidden border-4 border-black shadow-2xl transition-all duration-500 hover:scale-105 hover:shadow-red-500/30 cursor-pointer" onClick={() => setActiveIndex(i)}>
                 <img
                   src={src}
                   alt={`Merch Item ${i + 1}`}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                {/* Hover Overlay */}
+
                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <span className="text-white font-semibold text-lg">View</span>
                 </div>
@@ -214,20 +213,19 @@ export default function Home() {
             ))}
           </div>
 
-          
+
         </div>
       </section>
 
 
 
 
-      <section
+      {/* <section
         className="relative py-20 px-6 text-white bg-fixed bg-cover bg-center"
         style={{
           backgroundImage: "url('/img/Merch-1.jpg')",
         }}
       >
-        {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/80 backdrop-blur-sm"></div>
 
         <div className="relative z-10 max-w-7xl mx-auto">
@@ -235,7 +233,6 @@ export default function Home() {
             Merch <span className="text-red-500">Collection</span>
           </h2>
 
-          {/* Modern Grid for Square Images */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {merch.map((src, i) => (
               <div key={i} className="group relative aspect-square p-4 overflow-hidden border-4 border-white shadow-2xl transition-all duration-500 hover:scale-105 hover:shadow-red-500/30 cursor-pointer" onClick={() => setActiveIndex(i)}>
@@ -244,7 +241,6 @@ export default function Home() {
                   alt={`Merch Item ${i + 1}`}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                {/* Hover Overlay */}
                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <span className="text-white font-semibold text-lg">View</span>
                 </div>
@@ -252,7 +248,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Modern Lightbox with Controls */}
       {activeIndex !== null && (
@@ -297,7 +293,20 @@ export default function Home() {
         </div>
       )}
 
+      <h2 className="text-5xl font-semibold mb-8 text-center text-black drop-shadow-lg pt-24">
+        Our <Mark>Location</Mark>
+      </h2>
 
+      <div className="w-full h-96 overflow-hidden">
+        <iframe
+          title="TRGC Worship Center Location Map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3840.535368329474!2d120.89232037459338!3d15.72279284862027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3390d7e3cd6f1a13%3A0x74366079330647e3!2sTRGC%20Worship%20Center!5e0!3m2!1sen!2sph!4v1764220341549!5m2!1sen!2sph"
+          className="w-full h-full"
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
 
     </div >
   );
