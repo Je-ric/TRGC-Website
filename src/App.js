@@ -6,7 +6,6 @@ import About from './pages/About';
 import Leadership from './pages/Leadership';
 import Ministry from './pages/Ministry';
 import Give from './pages/Give';
-import Events from './pages/Events';
 import Footer from './Components/Footer';
 
 function App() {
@@ -55,9 +54,6 @@ function App() {
               <NavLink to="/give" className={({ isActive }) => isActive ? "text-orange-500 font-semibold" : "text-white hover:text-gray-300 transition duration-300"}>
                 Give
               </NavLink>
-              <NavLink to="/events" className={({ isActive }) => isActive ? "text-orange-500 font-semibold" : "text-white hover:text-gray-300 transition duration-300"}>
-                Events
-              </NavLink>
             </div>
 
             {/* Mobile Menu Button */}
@@ -90,9 +86,6 @@ function App() {
                 <NavLink to="/give" className={({ isActive }) => `block px-3 py-2 transition duration-300 ${isActive ? "text-orange-500 font-semibold" : "text-white hover:text-gray-300"}`} onClick={toggleMenu}>
                   Give
                 </NavLink>
-                <NavLink to="/events" className={({ isActive }) => `block px-3 py-2 transition duration-300 ${isActive ? "text-orange-500 font-semibold" : "text-white hover:text-gray-300"}`} onClick={toggleMenu}>
-                  Events
-                </NavLink>
               </div>
             </div>
           )}
@@ -107,7 +100,6 @@ function App() {
           <Route path="/leadership" element={<Leadership />} />
           <Route path="/ministry" element={<Ministry />} />
           <Route path="/give" element={<Give />} />
-          <Route path="/events" element={<Events />} />
         </Routes>
       </div>
 
