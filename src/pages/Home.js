@@ -32,7 +32,7 @@ export default function Home() {
 
           <div className="bg-white text-black p-4 mx-auto shadow-2xl max-w-4xl">
             <p className="text-lg md:text-xl lg:text-2xl xl:text-3xl tracking-tight flex items-center justify-center gap-6 md:gap-12 leading-relaxed">
-            
+
               <span className="flex items-center gap-2 font-lato">
                 <span className="italic font-normal">Sundays at</span>
                 <span className="font-extrabold">9:30 <span className="text-sm md:text-base">AM</span></span>
@@ -54,6 +54,116 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="py-20 px-4 md:px-8 bg-black">
+        <div className="max-w-7xl mx-auto">
+
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-oswald font-bold uppercase tracking-tight text-white mb-4">
+              Why We Give
+            </h2>
+            <p className="text-sm md:text-base font-bold uppercase tracking-wide text-gray-200">
+              Understanding the motivation behind our contributions.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <div className="relative h-[500px] w-full group overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?q=80&w=2670&auto=format&fit=crop"
+                alt="Man clapping"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+
+              <div className="absolute bottom-0 left-0 p-8 w-full">
+                <h3 className="text-2xl font-oswald font-bold uppercase mb-2 text-white">
+                  Online Intercessory Prayer Meeting
+                </h3>
+                <p className="text-sm font-bold uppercase leading-tight text-gray-200">
+                  Our contributions create real change in the lives of those in need.
+                </p>
+              </div>
+            </div>
+
+            <div className="relative h-[500px] w-full group overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=2664&auto=format&fit=crop"
+                alt="People smiling in community"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+
+              <div className="absolute bottom-0 left-0 p-8 w-full">
+                <h3 className="text-2xl font-oswald font-bold uppercase mb-2 text-white">
+                  BRIDGE - Youth Fellowship
+                </h3>
+                <p className="text-sm font-bold uppercase leading-tight text-gray-200">
+                  Which supports the majority of our ministry activities.
+                </p>
+              </div>
+            </div>
+
+            <div className="relative h-[500px] w-full group overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?q=80&w=2670&auto=format&fit=crop"
+                alt="Hands raised"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+
+              <div className="absolute bottom-0 left-0 p-8 w-full">
+                <h3 className="text-2xl font-oswald font-bold uppercase mb-2 text-white">
+                  Home Visitation Saturday / Sunday Afternoon
+                </h3>
+                <p className="text-sm font-bold uppercase leading-tight text-gray-200">
+                  Which supports our building expansion projects.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 mb-20">
+            {[
+              {
+                title: "Face-to-Face Intercessory Prayer Meeting (Last Saturday Quarterly)",
+                img: "https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?q=80&w=2670&auto=format&fit=crop",
+                desc: "Join us for a powerful prayer session where we come together to intercede for our community and beyond."
+              },
+              {
+                title: "Holy Communion every first Sunday of the month",
+                img: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=2664&auto=format&fit=crop",
+                desc: "Participate in the sacred tradition of Holy Communion, a time to reflect and renew our faith."
+              }
+            ].map(({ title, img, desc }, index) => (
+              <div
+                key={index}
+                className="relative h-[500px] w-full group overflow-hidden">
+                <img
+                  src={img}
+                  alt={title}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+
+                <div className="absolute bottom-0 left-0 p-8 w-full">
+                  <h3 className="text-2xl font-oswald font-bold uppercase mb-2 text-white">
+                    {title}
+                  </h3>
+                  <p className="text-sm font-bold uppercase leading-tight text-gray-200">
+                    {desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section
         className="relative text-white py-16 md:py-24 bg-cover bg-center bg-no-repeat"
@@ -68,59 +178,6 @@ export default function Home() {
           <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center drop-shadow-2xl bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
             Local Church <Mark color="white" backgroundColor="#EF4444">Programs</Mark> & <Mark color="white">Events</Mark>
           </h2>
-
-          <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mb-12">
-            {[
-              { title: "Online Intercessory Prayer Meeting", img: "/sample/Sample1.jpg" },
-              { title: "Home Visitation Saturday / Sunday Afternoon", img: "/sample/Sample2.jpg" },
-              { title: "BRIDGE - Youth Fellowship", img: "/sample/Sample3.jpg" },
-            ].map(({ title, img }, index) => (
-              <div
-                key={index}
-                className="bg-white/15 backdrop-blur-2xl overflow-hidden shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-500 flex flex-col rounded-2xl border border-white/20 group"
-              >
-                <div className="w-full h-96 relative overflow-hidden rounded-t-2xl">
-                  <img
-                    src={img}
-                    alt={title}
-                    className="w-full h-full object-cover"
-                  />
-
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-
-                  <div className="absolute z-10 top-2 left-2 bg-black/60 px-3 py-1 rounded-lg text-white text-sm font-medium backdrop-blur-sm">
-                    {title}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 mb-20">
-            {[
-              { title: "Face-to-Face Intercessory Prayer Meeting (Last Saturday Quarterly)", img: "/sample/Sample4.jpg" },
-              { title: "Holy Communion every first Sunday of the month", img: "/sample/Sample5.jpg" },
-            ].map(({ title, img }, index) => (
-              <div
-                key={index}
-                className="bg-white/15 backdrop-blur-2xl overflow-hidden shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-500 flex flex-col rounded-2xl border border-white/20 group"
-              >
-                <div className="w-full h-96 relative overflow-hidden rounded-t-2xl">
-                  <img
-                    src={img}
-                    alt={title}
-                    className="w-full h-full object-cover"
-                  />
-
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-
-                  <div className="absolute z-10 top-2 left-2 bg-black/60 px-3 py-1 rounded-lg text-white text-sm font-medium backdrop-blur-sm">
-                    {title}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
 
         </div>
 
