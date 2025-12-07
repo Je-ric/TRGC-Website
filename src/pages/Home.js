@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <div>
       <section className="min-h-screen flex items-center justify-center p-4 relative bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/backgrounds/BG1.png')" }}
+        style={{ backgroundImage: "url('/img/BG1.png')" }}
       >
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
