@@ -17,22 +17,37 @@ export default function Home() {
   return (
     <div>
       <section className="min-h-screen flex items-center justify-center p-4 relative bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/img/BG1.png')" }}
+        style={{ backgroundImage: "url('/backgrounds/BG1.png')" }}
       >
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-        <div className="text-white text-center relative z-10 max-w-5xl mx-auto px-4 space-y-8">
-          <h1 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black tracking-tight drop-shadow-2xl">
+
+      </section>
+
+
+      <section
+        className="min-h-screen flex items-center justify-center p-4 relative bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/backgrounds/BG2.png')" }}
+      >
+        <div className="absolute inset-0 bg-white bg-opacity-50"></div>
+
+        <div className="text-black text-center relative z-10 max-w-5xl mx-auto px-4 space-y-8">
+
+          <div className="w-24 h-1 bg-black mx-auto opacity-70"></div>
+
+          <h1 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black tracking-tight text-shadow-heading">
             SUNDAY SERVICE
           </h1>
 
-          <p className="text-base md:text-lg lg:text-xl xl:text-2xl font-light uppercase tracking-wider drop-shadow-lg max-w-3xl mx-auto leading-relaxed">
-            YOU’RE INVITED — WORSHIP WITH US THIS SUNDAY AND HEAR THE LIFE-CHANGING GOSPEL
+          <p className="text-base md:text-lg lg:text-xl xl:text-2xl font-light uppercase tracking-wider max-w-3xl mx-auto p-4 border-t-2 border-b-2 border-black leading-relaxed text-shadow-paragraph">
+            YOU’RE INVITED — WORSHIP WITH US THIS SUNDAY
           </p>
 
-          <div className="bg-white text-black p-4 mx-auto shadow-2xl max-w-4xl">
-            <p className="text-lg md:text-xl lg:text-2xl xl:text-3xl tracking-tight flex items-center justify-center gap-6 md:gap-12 leading-relaxed">
+          <div className="bg-black text-white p-4 mx-auto max-w-4xl 
+                shadow-2xl hover:shadow-md transition-all duration-300 
+                hover:bg-white hover:text-black">
+            <p className="text-lg md:text-xl lg:text-2xl xl:text-3xl tracking-tight 
+                flex items-center justify-center gap-6 md:gap-12 leading-relaxed
+                text-shadow-time hover:text-shadow-time-hover transition-all duration-300">
 
               <span className="flex items-center gap-2 font-lato">
                 <span className="italic font-normal">Sundays at</span>
@@ -48,16 +63,12 @@ export default function Home() {
                 </span>
               </span>
             </p>
-
           </div>
 
-          <div className="w-24 h-1 bg-white mx-auto opacity-70"></div>
+          <div className="w-24 h-1 bg-black mx-auto opacity-70"></div>
         </div>
       </section>
 
-      <section className="py-20 px-4 md:px-8 bg-black">
-
-      </section>
 
       <section
         className="relative text-white py-16 md:py-24 bg-cover bg-center bg-no-repeat"

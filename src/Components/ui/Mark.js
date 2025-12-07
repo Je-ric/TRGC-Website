@@ -1,12 +1,15 @@
 const Mark = ({ children, 
                 color = 'black', 
-                backgroundColor = '#ffb700' }) => {
+                backgroundColor = '#ffb700',
+                transform = 'translate(0, -18px) rotate(-5deg)',
+                straight = false
+            }) => {
     const markStyle = {
         display: 'inline-block',
         lineHeight: '0.3em', 
         padding: '5px 15px 25px 0',
         backgroundColor: backgroundColor,
-        transform: 'translate(0, -18px) rotate(-5deg)',
+        transform: straight ? 'none' : transform,
         color: color, 
         fontSize: '110%',
         textShadow: `

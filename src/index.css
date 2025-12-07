@@ -31,3 +31,21 @@ code {
 }
 
 
+
+
+
+
+.text-shadow-heading {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.text-shadow-paragraph {
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+}
+
+.text-shadow-time {
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+.text-shadow-time-hover {
+  text-shadow: 1px 1px 4px rgba(255,255,255,0.5);
+}
