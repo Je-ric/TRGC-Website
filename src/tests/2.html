@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borcelle Church Sermon Slide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font families for closer resemblance */
+        .font-serif-display {
+            font-family: 'Times New Roman', serif; /* Use a common elegant serif */
+        }
+        .font-sans-header {
+            font-family: Arial, sans-serif; /* Use a common clean sans-serif */
+            letter-spacing: 0.25em; /* Add wide letter-spacing */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+
+    <div class="w-[800px] h-[600px] bg-white shadow-xl relative overflow-hidden p-10 flex flex-col justify-between">
+
+        <div class="absolute inset-0 opacity-70" 
+             style="background-image: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.5) 0%, rgba(0, 0, 0, 0.05) 50%, rgba(255, 255, 255, 0) 100%), 
+                    url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'><circle cx=\'20\' cy=\'20\' r=\'10\' fill=\'#ccc\' opacity=\'0.2\'/><circle cx=\'80\' cy=\'50\' r=\'15\' fill=\'#ccc\' opacity=\'0.15\'/><circle cx=\'50\' cy=\'80\' r=\'8\' fill=\'#ccc\' opacity=\'0.25\'/></svg>'); 
+                    background-size: cover, 100% 100%;"
+        ></div>
+        
+        <div class="relative z-10 flex flex-col h-full">
+            
+            <header class="flex justify-between items-start text-black">
+                <div class="flex items-center space-x-2">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2l-5 5h3v7h4v-7h3l-5-5zm0 18c-3.31 0-6-2.69-6-6h2c0 2.21 1.79 4 4 4s4-1.79 4-4h2c0 3.31-2.69 6-6 6z"/>
+                    </svg>
+                    <span class="text-sm uppercase tracking-wider font-sans-header">Borcelle Church</span>
+                </div>
+                <span class="text-sm uppercase tracking-wider font-sans-header">Sunday Sermon</span>
+            </header>
+
+            <main class="flex-grow flex flex-col items-center justify-center -mt-16">
+                <p class="text-xl text-black font-sans-header uppercase tracking-[.3em] mb-4">
+                    ANCHORED IN
+                </p>
+
+                <h1 class="text-[12rem] leading-none text-black font-serif-display font-bold">
+                    HOPE
+                </h1>
+            </main>
+
+            <footer class="flex justify-between items-end text-black">
+                <span class="text-sm tracking-wide font-sans-header">Aaron Loeb</span>
+                
+                <div class="absolute bottom-14 left-1/2 transform -translate-x-1/2 w-64 h-32 overflow-hidden">
+                    <div class="bg-gray-800 w-full h-full flex items-center justify-center">
+                        <img src="image_bb3ab4.png" alt="Silhouette of a church roof with a cross" class="object-cover w-full h-full filter grayscale contrast-125" />
+                    </div>
+                </div>
+
+                <span class="text-sm tracking-wide font-sans-header">12 March 2030</span>
+            </footer>
+
+        </div>
+    </div>
+
+</body>
+</html>
