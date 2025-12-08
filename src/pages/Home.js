@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Countdown from "../Components/Helper/Countdown";
 import Mark from "../Components/ui/Mark";
+import Brushstroke from "../Components/ui/Brushstroke";
 // import PrismaticAurora from "../Components/ui/PrismaticAurora";
 import { FaChevronLeft, FaChevronRight, FaTimes } from 'react-icons/fa';
 
@@ -39,7 +40,7 @@ export default function Home() {
           </h1>
 
           <p className="text-base md:text-lg lg:text-xl xl:text-2xl font-light uppercase tracking-wider max-w-3xl mx-auto p-4 border-t-2 border-b-2 border-black leading-relaxed text-shadow-paragraph">
-            YOU’RE INVITED — WORSHIP WITH US THIS SUNDAY
+            <Brushstroke>YOU’RE INVITED</Brushstroke> — WORSHIP WITH US THIS SUNDAY
           </p>
 
           <div className="bg-black text-white p-4 mx-auto max-w-4xl 
