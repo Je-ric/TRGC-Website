@@ -1,53 +1,36 @@
-const BrushBG = ({
-    children,
-    color = "#ffb700",
-    opacity = 0.9,
-    padding = "0.4em 0.8em",
-    radius = "6px",
-}) => {
-    const strokeSVG = `
-    <svg viewBox="0 0 400 140" xmlns="http://www.w3.org/2000/svg">
-      <path d="
-        M5 70
-        Q60 10 130 40
-        T250 60
-        Q330 90 390 40
-        L395 130
-        Q300 120 200 130
-        T5 120 Z
-      "
-      fill="${color}" fill-opacity="${opacity}" />
-    </svg>
-  `;
+import { useId } from "react";
 
-    return (
-        <span
-            style={{
-                display: "inline-block",
-                padding,
-                position: "relative",
-                zIndex: 1,
-            }}
-        >
-            {/* BG stroke */}
-            <span
-                style={{
-                    position: "absolute",
-                    inset: 0,
-                    backgroundImage: `url("data:image/svg+xml;utf8,${encodeURIComponent(
-                        strokeSVG
-                    )}")`,
-                    backgroundRepeat: "no-repeat",
-                    backgroundSize: "100% 100%",
-                    zIndex: -1,
-                    borderRadius: radius,
-                }}
-            ></span>
+export default function Brushstroke({ children, colors = ["#ffb700", "#ff6f61"] }) {
+  const gradientId = useId(); // unique per component
 
-            {/* Text */}
-            <span style={{ position: "relative", zIndex: 2 }}>{children}</span>
-        </span>
-    );
-};
+  return (
+    <div className="relative inline-block px-4 py-2 font-bold">
+      <svg className="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id={`bgGradient-${gradientId}`} x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor={colors[0]} />
+            <stop offset="100%" stopColor={colors[1]} />
+          </linearGradient>
 
-export default BrushBG;
+          <filter id={`canvasTexture-${gradientId}`}>
+            <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="5" result="noise" />
+            <feDiffuseLighting in="noise" lightingColor="#ffffff" surfaceScale="2" result="light">
+              <feDistantLight azimuth="45" elevation="60" />
+            </feDiffuseLighting>
+          </filter>
+        </defs>
+
+        <rect
+          width="100%"
+          height="100%"
+          rx="14"
+          fill={`url(#bgGradient-${gradientId})`}
+          filter={`url(#canvasTexture-${gradientId})`}
+          opacity="0.85"
+        />
+      </svg>
+
+      <div className="relative z-10">{children}</div>
+    </div>
+  );
+}
