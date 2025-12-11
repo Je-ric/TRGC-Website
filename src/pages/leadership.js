@@ -1,51 +1,67 @@
 import HeaderBanner from '../Components/HeaderBanner';
-import { FaQuoteLeft, FaQuoteRight, FaChurch, FaUsers, FaCrown, FaHandsHelping } from 'react-icons/fa';
+import { 
+  FaQuoteLeft, 
+  FaQuoteRight, 
+  FaChurch, 
+  FaUsers, 
+  FaCrown, 
+  FaHandsHelping 
+} from 'react-icons/fa';
 
 export default function Leadership() {
   const leaders = {
-    foundation: {
-      name: "Pastor [Founder's Name]",
-      title: "Founder & Senior Pastor",
-      bio: "Started the church with a vision to spread the Gospel and build a community rooted in faith.",
-      mission: "To equip believers for righteousness through holiness.",
-      vision: "A glorious church as the bride of Christ.",
-      image: "/img/founder.jpg",
-      verse: "Ephesians 2:20",
-      icon: <FaChurch className="w-8 h-8" />
-    },
-    legacy: [
+  foundation: {
+    name: "Pastor [Founder's Name]",
+    title: "Founder & Senior Pastor",
+    bio: "Started the church with a vision to spread the Gospel and build a community rooted in faith.",
+    mission: "To equip believers for righteousness through holiness.",
+    vision: "A glorious church as the bride of Christ.",
+    image: "/img/founder.jpg",
+    verse: "Ephesians 2:20",
+    icon: <FaChurch className="w-8 h-8" />
+  },
+
+  legacy: {
+    image: "/img/legacy-group.jpg", // ← Add your combined image here
+    members: [
       {
-        name: 'Pastor [Son\'s Name]',
-        title: 'Lead Pastor',
-        bio: 'Continuing the legacy with passion for outreach and discipleship.',
-        image: '/img/son.jpg',
+        name: "Pastor [Son's Name]",
+        title: "Lead Pastor",
+        bio: "Continuing the legacy with passion for outreach and discipleship.",
+        image: "/img/son.jpg",
         icon: <FaCrown className="w-8 h-8" />
       },
       {
-        name: 'Pastor [Wife\'s Name]',
-        title: 'Co-Lead Pastor',
-        bio: 'Dedicated to family ministry and spiritual growth.',
-        image: '/img/wife.jpg',
+        name: "Pastor [Wife's Name]",
+        title: "Co-Lead Pastor",
+        bio: "Dedicated to family ministry and spiritual growth.",
+        image: "/img/wife.jpg",
         icon: <FaHandsHelping className="w-8 h-8" />
       }
-    ],
-    associates: [
+    ]
+  },
+
+  associates: {
+    image: "/img/associates-group.jpg", // ← Add your combined image here
+    members: [
       {
-        name: 'Pastor [Associate 1 Name]',
-        title: 'Associate Pastor',
-        bio: 'Focuses on youth and community outreach.',
-        image: '/img/associate1.jpg',
+        name: "Pastor [Associate 1 Name]",
+        title: "Associate Pastor",
+        bio: "Focuses on youth and community outreach.",
+        image: "/img/associate1.jpg",
         icon: <FaUsers className="w-8 h-8" />
       },
       {
-        name: 'Pastor [Associate 2 Name]',
-        title: 'Associate Pastor',
-        bio: 'Leads worship and creative ministries.',
-        image: '/img/associate2.jpg',
+        name: "Pastor [Associate 2 Name]",
+        title: "Associate Pastor",
+        bio: "Leads worship and creative ministries.",
+        image: "/img/associate2.jpg",
         icon: <FaUsers className="w-8 h-8" />
       }
     ]
-  };
+  }
+};
+
 
   const timeline = [
     {
@@ -115,80 +131,87 @@ export default function Leadership() {
         </div>
       </section>
 
-      {/* Leadership Sections - No Tabs, Flowing Layout */}
-      <section className="py-20 px-6 space-y-20">
-        <div className="max-w-7xl mx-auto">
+<section className="py-20 px-6 space-y-24">
+  <div className="max-w-6xl mx-auto space-y-24">
 
-          {/* Foundation Section */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-800 mb-8 bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
-              Foundation
-            </h2>
-            <div className="bg-white/80 backdrop-blur-lg p-8 rounded-2xl shadow-2xl max-w-4xl mx-auto hover:shadow-orange-500/20 transition duration-500">
-              <div className="flex flex-col md:flex-row items-center gap-8">
-                <img src={leaders.foundation.image} alt={leaders.foundation.name} className="w-48 h-48 object-cover rounded-full shadow-lg hover:scale-105 transition duration-300" />
-                <div className="text-center md:text-left">
-                  <div className="flex items-center justify-center md:justify-start gap-4 mb-4">
-                    <span className="text-orange-500">{leaders.foundation.icon}</span>
-                    <h3 className="text-3xl font-bold text-slate-800">{leaders.foundation.name}</h3>
-                  </div>
-                  <p className="text-slate-600 mb-4">{leaders.foundation.bio}</p>
-                  <blockquote className="text-slate-700 italic border-l-4 border-orange-500 pl-4">
-                    <FaQuoteLeft className="inline mr-2" /> Mission: {leaders.foundation.mission} <br />
-                    Vision: {leaders.foundation.vision} <FaQuoteRight className="inline ml-2" />
-                  </blockquote>
-                  <p className="text-sm text-slate-500 mt-2">{leaders.foundation.verse}</p>
-                </div>
-              </div>
-            </div>
-          </div>
+    {/* FOUNDATION */}
+    <div className="flex flex-col md:flex-row items-center gap-10">
+      
+      {/* IMAGE */}
+      <img
+        src="/img/foundation-group.jpg"
+        alt="Foundation Leadership"
+        className="w-full md:w-1/2 h-80 object-cover rounded-3xl shadow-xl"
+      />
 
-          {/* Legacy Section */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-slate-800 mb-8 bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
-              Legacy
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {leaders.legacy.map((leader, index) => (
-                <div key={index} className="bg-white/80 backdrop-blur-lg p-8 rounded-2xl shadow-2xl hover:shadow-orange-500/20 hover:scale-105 transition duration-500">
-                  <div className="text-center">
-                    <img src={leader.image} alt={leader.name} className="w-32 h-32 object-cover rounded-full mx-auto mb-4 shadow-lg hover:scale-110 transition duration-300" />
-                    <div className="flex items-center justify-center gap-4 mb-4">
-                      <span className="text-orange-500">{leader.icon}</span>
-                      <h3 className="text-2xl font-bold text-slate-800">{leader.name}</h3>
-                    </div>
-                    <p className="text-slate-600 mb-2">{leader.title}</p>
-                    <p className="text-slate-500">{leader.bio}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+      {/* TEXT */}
+      <div className="md:w-1/2 space-y-4">
+        <h2 className="text-4xl font-extrabold bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+          Foundation
+        </h2>
+        <p className="text-slate-700 text-lg leading-relaxed">
+          The foundation of our church was established through the vision and faithfulness 
+          of Pastor [Founder's Name], who began the ministry with a heart for discipleship, prayer, and community building.
+        </p>
+        <p className="text-slate-600 text-md italic">
+          “Built on the cornerstone of Christ, with a passion to equip believers for righteousness.”
+        </p>
+      </div>
+    </div>
 
-          {/* Associates Section */}
-          <div className="text-center">
-            <h2 className="text-4xl font-bold text-slate-800 mb-8 bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
-              Associates
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {leaders.associates.map((leader, index) => (
-                <div key={index} className="bg-white/80 backdrop-blur-lg p-8 rounded-2xl shadow-2xl hover:shadow-orange-500/20 hover:scale-105 transition duration-500">
-                  <div className="text-center">
-                    <img src={leader.image} alt={leader.name} className="w-32 h-32 object-cover rounded-full mx-auto mb-4 shadow-lg hover:scale-110 transition duration-300" />
-                    <div className="flex items-center justify-center gap-4 mb-4">
-                      <span className="text-orange-500">{leader.icon}</span>
-                      <h3 className="text-2xl font-bold text-slate-800">{leader.name}</h3>
-                    </div>
-                    <p className="text-slate-600 mb-2">{leader.title}</p>
-                    <p className="text-slate-500">{leader.bio}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+    {/* LEGACY */}
+    <div className="flex flex-col md:flex-row-reverse items-center gap-10">
+      
+      {/* IMAGE */}
+      <img
+        src="/img/legacy-group.jpg"
+        alt="Legacy Leadership"
+        className="w-full md:w-1/2 h-80 object-cover rounded-3xl shadow-xl"
+      />
 
-        </div>
-      </section>
+      {/* TEXT */}
+      <div className="md:w-1/2 space-y-4">
+        <h2 className="text-4xl font-extrabold bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+          Legacy
+        </h2>
+        <p className="text-slate-700 text-lg leading-relaxed">
+          The legacy continues through Pastor [Son’s Name] and Pastor [Wife’s Name], 
+          leading the church toward growth, excellence, and stronger discipleship—embracing both tradition and innovation.
+        </p>
+        <p className="text-slate-600 italic">
+          “Advancing the vision with passion, unity, and purpose.”
+        </p>
+      </div>
+    </div>
+
+    {/* ASSOCIATES */}
+    <div className="flex flex-col md:flex-row items-center gap-10">
+      
+      {/* IMAGE */}
+      <img
+        src="/img/associates-group.jpg"
+        alt="Associate Pastors"
+        className="w-full md:w-1/2 h-80 object-cover rounded-3xl shadow-xl"
+      />
+
+      {/* TEXT */}
+      <div className="md:w-1/2 space-y-4">
+        <h2 className="text-4xl font-extrabold bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+          Associates
+        </h2>
+        <p className="text-slate-700 text-lg leading-relaxed">
+          Our associate pastors faithfully support the church through youth ministries, worship, 
+          outreach, and discipleship—strengthening our foundation and expanding our impact.
+        </p>
+        <p className="text-slate-600 italic">
+          “Serving together to build up the body of Christ.”
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
     </div>
   );
 }
