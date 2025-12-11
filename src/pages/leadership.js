@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import HeaderBanner from '../Components/HeaderBanner';
 import { FaQuoteLeft, FaQuoteRight, FaChurch, FaUsers, FaCrown, FaHandsHelping } from 'react-icons/fa';
 
