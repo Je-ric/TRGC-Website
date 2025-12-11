@@ -3,8 +3,6 @@ import HeaderBanner from '../Components/HeaderBanner';
 import { FaQuoteLeft, FaQuoteRight, FaChurch, FaUsers, FaCrown, FaHandsHelping } from 'react-icons/fa';
 
 export default function Leadership() {
-  const [activeTab, setActiveTab] = useState('foundation');
-
   const leaders = {
     foundation: {
       name: "Pastor [Founder's Name]",
@@ -21,14 +19,14 @@ export default function Leadership() {
         name: 'Pastor [Son\'s Name]',
         title: 'Lead Pastor',
         bio: 'Continuing the legacy with passion for outreach and discipleship.',
-        image: '/img/son.jpg', // Placeholder
+        image: '/img/son.jpg',
         icon: <FaCrown className="w-8 h-8" />
       },
       {
         name: 'Pastor [Wife\'s Name]',
         title: 'Co-Lead Pastor',
         bio: 'Dedicated to family ministry and spiritual growth.',
-        image: '/img/wife.jpg', // Placeholder
+        image: '/img/wife.jpg',
         icon: <FaHandsHelping className="w-8 h-8" />
       }
     ],
@@ -37,14 +35,14 @@ export default function Leadership() {
         name: 'Pastor [Associate 1 Name]',
         title: 'Associate Pastor',
         bio: 'Focuses on youth and community outreach.',
-        image: '/img/associate1.jpg', // Placeholder
+        image: '/img/associate1.jpg',
         icon: <FaUsers className="w-8 h-8" />
       },
       {
         name: 'Pastor [Associate 2 Name]',
         title: 'Associate Pastor',
         bio: 'Leads worship and creative ministries.',
-        image: '/img/associate2.jpg', // Placeholder
+        image: '/img/associate2.jpg',
         icon: <FaUsers className="w-8 h-8" />
       }
     ]
@@ -118,28 +116,18 @@ export default function Leadership() {
         </div>
       </section>
 
-      {/* Leadership Tabs and Cards */}
-      <section className="py-20 px-6">
+      {/* Leadership Sections - No Tabs, Flowing Layout */}
+      <section className="py-20 px-6 space-y-20">
         <div className="max-w-7xl mx-auto">
-          {/* Tabs */}
-          <div className="flex justify-center mb-12">
-            {['foundation', 'legacy', 'associates'].map((tab) => (
-              <button
-                key={tab}
-                onClick={() => setActiveTab(tab)}
-                className={`px-6 py-3 mx-2 rounded-full font-semibold transition duration-300 ${activeTab === tab ? 'bg-orange-500 text-white shadow-lg' : 'bg-slate-200 text-slate-700 hover:bg-slate-300'
-                  }`}
-              >
-                {tab.charAt(0).toUpperCase() + tab.slice(1)}
-              </button>
-            ))}
-          </div>
 
-          {/* Content */}
-          {activeTab === 'foundation' && (
-            <div className="bg-white/80 backdrop-blur-lg p-8 rounded-2xl shadow-2xl max-w-4xl mx-auto">
+          {/* Foundation Section */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-slate-800 mb-8 bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+              Foundation
+            </h2>
+            <div className="bg-white/80 backdrop-blur-lg p-8 rounded-2xl shadow-2xl max-w-4xl mx-auto hover:shadow-orange-500/20 transition duration-500">
               <div className="flex flex-col md:flex-row items-center gap-8">
-                <img src={leaders.foundation.image} alt={leaders.foundation.name} className="w-48 h-48 object-cover rounded-full shadow-lg" />
+                <img src={leaders.foundation.image} alt={leaders.foundation.name} className="w-48 h-48 object-cover rounded-full shadow-lg hover:scale-105 transition duration-300" />
                 <div className="text-center md:text-left">
                   <div className="flex items-center justify-center md:justify-start gap-4 mb-4">
                     <span className="text-orange-500">{leaders.foundation.icon}</span>
@@ -154,14 +142,18 @@ export default function Leadership() {
                 </div>
               </div>
             </div>
-          )}
+          </div>
 
-          {activeTab === 'legacy' && (
+          {/* Legacy Section */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-slate-800 mb-8 bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+              Legacy
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {leaders.legacy.map((leader, index) => (
                 <div key={index} className="bg-white/80 backdrop-blur-lg p-8 rounded-2xl shadow-2xl hover:shadow-orange-500/20 hover:scale-105 transition duration-500">
                   <div className="text-center">
-                    <img src={leader.image} alt={leader.name} className="w-32 h-32 object-cover rounded-full mx-auto mb-4 shadow-lg" />
+                    <img src={leader.image} alt={leader.name} className="w-32 h-32 object-cover rounded-full mx-auto mb-4 shadow-lg hover:scale-110 transition duration-300" />
                     <div className="flex items-center justify-center gap-4 mb-4">
                       <span className="text-orange-500">{leader.icon}</span>
                       <h3 className="text-2xl font-bold text-slate-800">{leader.name}</h3>
@@ -172,14 +164,18 @@ export default function Leadership() {
                 </div>
               ))}
             </div>
-          )}
+          </div>
 
-          {activeTab === 'associates' && (
+          {/* Associates Section */}
+          <div className="text-center">
+            <h2 className="text-4xl font-bold text-slate-800 mb-8 bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+              Associates
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {leaders.associates.map((leader, index) => (
                 <div key={index} className="bg-white/80 backdrop-blur-lg p-8 rounded-2xl shadow-2xl hover:shadow-orange-500/20 hover:scale-105 transition duration-500">
                   <div className="text-center">
-                    <img src={leader.image} alt={leader.name} className="w-32 h-32 object-cover rounded-full mx-auto mb-4 shadow-lg" />
+                    <img src={leader.image} alt={leader.name} className="w-32 h-32 object-cover rounded-full mx-auto mb-4 shadow-lg hover:scale-110 transition duration-300" />
                     <div className="flex items-center justify-center gap-4 mb-4">
                       <span className="text-orange-500">{leader.icon}</span>
                       <h3 className="text-2xl font-bold text-slate-800">{leader.name}</h3>
@@ -190,7 +186,8 @@ export default function Leadership() {
                 </div>
               ))}
             </div>
-          )}
+          </div>
+
         </div>
       </section>
     </div>
