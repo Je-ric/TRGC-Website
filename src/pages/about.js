@@ -130,6 +130,43 @@ export default function About() {
         </div>
       </section>
 
+      <section className="bg-gradient-to-b from-slate-100 to-white py-20 px-6 relative overflow-hidden">
+        {/* Subtle Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-10 left-10 w-32 h-32 bg-orange-200 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 right-10 w-40 h-40 bg-slate-300 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="relative max-w-6xl mx-auto text-center space-y-8">
+          {/* Decorative Line */}
+          <div className="w-24 h-1 bg-gradient-to-r from-orange-500 to-red-500 mx-auto"></div>
+
+          {/* Main Heading */}
+          <h2 className="text-4xl md:text-5xl font-black text-slate-800 uppercase tracking-wider bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
+            Who We Are
+          </h2>
+
+          {/* Subtitle */}
+          <p className="text-lg md:text-xl font-light text-slate-600 italic max-w-4xl mx-auto leading-relaxed">
+            A community rooted in faith, united in purpose, and committed to spreading God's love.
+          </p>
+
+          {/* Main Description */}
+          <div className="max-w-4xl mx-auto">
+            <p className="text-slate-700 text-lg md:text-xl leading-relaxed font-medium">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate odio quibusdam, placeat exercitationem adipisci eos sint reprehenderit, repudiandae cumque numquam, similique unde obcaecati reiciendis facilis tenetur. Omnis dolor cumque exercitationem.
+            </p>
+          </div>
+
+          {/* Quote Block */}
+          <blockquote className="text-slate-800 text-xl md:text-2xl font-semibold italic border-l-4 border-orange-500 pl-8 max-w-3xl mx-auto">
+            "We are called to be the hands and feet of Jesus, building a kingdom that lasts."
+          </blockquote>
+
+          {/* Decorative Line */}
+          <div className="w-16 h-1 bg-gradient-to-r from-red-500 to-orange-500 mx-auto"></div>
+        </div>
+      </section>
 
 
       {/* ============================================================================================================================== */}
