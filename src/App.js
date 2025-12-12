@@ -31,11 +31,19 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
           <div className="flex justify-between items-center w-full">
 
-            <div className="text-white font-bold text-xl">
-              <Link to="/">
-                <img src="/img/logo.png" alt="Risen Generation" className="h-10 w-auto hover:opacity-80 transition duration-300" />
+            <div className="flex items-center space-x-3">
+              <Link to="/" className="flex items-center space-x-2">
+                <img
+                  src={`${process.env.PUBLIC_URL}/img/logo.png`}
+                  alt="Risen Generation"
+                  className="h-12 w-auto hover:opacity-80 transition duration-300"
+                />
+                <span className="text-white font-bold text-xl">
+                  Risen Generation Church
+                </span>
               </Link>
             </div>
+
 
             {/* Desktop Menu */}
             <div className="hidden md:flex space-x-8">
