@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/TRGC-Website/static/css/main.9afe3e56.css",
-    "main.js": "/TRGC-Website/static/js/main.3a43f001.js",
-    "static/js/453.389e1cfc.chunk.js": "/TRGC-Website/static/js/453.389e1cfc.chunk.js",
-    "index.html": "/TRGC-Website/index.html",
-    "main.9afe3e56.css.map": "/TRGC-Website/static/css/main.9afe3e56.css.map",
-    "main.3a43f001.js.map": "/TRGC-Website/static/js/main.3a43f001.js.map",
-    "453.389e1cfc.chunk.js.map": "/TRGC-Website/static/js/453.389e1cfc.chunk.js.map"
+    "main.css": "/trgc/static/css/main.79e15856.css",
+    "main.js": "/trgc/static/js/main.f6dd282e.js",
+    "static/js/453.389e1cfc.chunk.js": "/trgc/static/js/453.389e1cfc.chunk.js",
+    "index.html": "/trgc/index.html",
+    "main.79e15856.css.map": "/trgc/static/css/main.79e15856.css.map",
+    "main.f6dd282e.js.map": "/trgc/static/js/main.f6dd282e.js.map",
+    "453.389e1cfc.chunk.js.map": "/trgc/static/js/453.389e1cfc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9afe3e56.css",
-    "static/js/main.3a43f001.js"
+    "static/css/main.79e15856.css",
+    "static/js/main.f6dd282e.js"
   ]
 }
