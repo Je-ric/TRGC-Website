@@ -2,7 +2,7 @@
   "name": "trgc",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Je-ric.github.io/trgc",
+  "homepage": "https://Je-ric.github.io/TRGC-Website",
   "dependencies": {
     "@tailwindcss/typography": "^0.5.19",
     "@testing-library/dom": "^10.4.1",

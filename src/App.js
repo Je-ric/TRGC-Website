@@ -26,7 +26,7 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    <Router basename="/TRGC-Website">
       <nav className={`fixed top-0 w-full z-50 h-28 transition-all duration-300 ${isScrolled ? 'bg-white/10 backdrop-blur-md border-b border-white/20 shadow-lg' : 'bg-transparent'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
           <div className="flex justify-between items-center w-full">
