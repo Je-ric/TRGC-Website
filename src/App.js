@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'; // Added useEffect
-import { BrowserRouter as Router, Routes, Route, NavLink, Link } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, NavLink, Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -26,7 +26,7 @@ function App() {
   }, []);
 
   return (
-    <Router basename="/TRGC-Website">
+    <Router basename="/">
       <nav className={`fixed top-0 w-full z-50 h-28 transition-all duration-300 ${isScrolled ? 'bg-white/10 backdrop-blur-md border-b border-white/20 shadow-lg' : 'bg-transparent'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
           <div className="flex justify-between items-center w-full">

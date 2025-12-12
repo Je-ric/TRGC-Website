@@ -9,16 +9,16 @@ export default function Home() {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const merch = [
-    "/img/Merch-2.jpg",
-    "/img/Merch-3.jpg",
-    "/img/Merch-4.jpg",
-    "/img/Merch-5.jpg",
+    process.env.PUBLIC_URL + "/img/Merch-2.jpg",
+    process.env.PUBLIC_URL + "/img/Merch-3.jpg",
+    process.env.PUBLIC_URL + "/img/Merch-4.jpg",
+    process.env.PUBLIC_URL + "/img/Merch-5.jpg",
   ];
 
   return (
     <div>
       <section className="min-h-screen flex items-center justify-center p-4 relative bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/backgrounds/BG1.png')" }}
+        style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/backgrounds/BG1.png)` }}
       >
 
 
@@ -27,7 +27,7 @@ export default function Home() {
 
       <section
         className="min-h-screen flex items-center justify-center p-4 relative bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/backgrounds/BG2.png')" }}
+        style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/backgrounds/BG2.png)` }}
       >
         <div className="absolute inset-0 bg-white bg-opacity-50"></div>
 
@@ -201,9 +201,7 @@ export default function Home() {
 
       <section
         className="relative py-16 z-10 bg-cover bg-no-repeat bg-top -mt-24" // for overlap
-        style={{
-          backgroundImage: "url('/img/TornPaper.jpg')",
-        }}
+        style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/backgrounds/TornPaper.jpg)` }}
       >
         <div className="relative z-10 pt-28 py-6 mx-auto max-w-7xl">
 
@@ -220,6 +218,7 @@ export default function Home() {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
 
+
                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <span className="text-white font-semibold text-lg">View</span>
                 </div>
@@ -230,39 +229,6 @@ export default function Home() {
 
         </div>
       </section>
-
-
-
-
-      {/* <section
-        className="relative py-20 px-6 text-white bg-fixed bg-cover bg-center"
-        style={{
-          backgroundImage: "url('/img/Merch-1.jpg')",
-        }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/80 backdrop-blur-sm"></div>
-
-        <div className="relative z-10 max-w-7xl mx-auto">
-          <h2 className="text-center text-5xl md:text-6xl font-bold mb-14 drop-shadow-2xl bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-            Merch <span className="text-red-500">Collection</span>
-          </h2>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {merch.map((src, i) => (
-              <div key={i} className="group relative aspect-square p-4 overflow-hidden border-4 border-white shadow-2xl transition-all duration-500 hover:scale-105 hover:shadow-red-500/30 cursor-pointer" onClick={() => setActiveIndex(i)}>
-                <img
-                  src={src}
-                  alt={`Merch Item ${i + 1}`}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <span className="text-white font-semibold text-lg">View</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section> */}
 
       {/* Modern Lightbox with Controls */}
       {activeIndex !== null && (
