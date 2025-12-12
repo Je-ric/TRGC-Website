@@ -70,66 +70,6 @@ export default function About() {
         image="img/Church.jpg"
       />
 
-
-      <section className="bg-gradient-to-b from-white to-gray-50 py-24 px-6">
-        <div className="max-w-5xl mx-auto text-center space-y-6">
-
-          <div className="inline-block">
-            <span className="block w-20 h-1 bg-black mx-auto mb-4 opacity-80"></span>
-            <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight text-black">
-              Who We Are
-            </h2>
-          </div>
-
-          <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto font-light">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate odio
-            quibusdam, placeat exercitationem adipisci eos sint reprehenderit,
-            repudiandae cumque numquam, similique unde obcaecati reiciendis facilis
-            tenetur. Omnis dolor cumque exercitationem.
-          </p>
-
-        </div>
-      </section>
-
-      <section className="py-24 px-6 bg-white relative">
-        <div className="max-w-5xl mx-auto text-center space-y-6">
-
-          <h2 className="text-4xl md:text-5xl font-bold tracking-wide text-black">
-            <span className="bg-gradient-to-r from-yellow-300 to-yellow-400 px-4 py-1 rounded-md">
-              Who We Are
-            </span>
-          </h2>
-
-          <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate odio
-            quibusdam, placeat exercitationem adipisci eos sint reprehenderit,
-            repudiandae cumque numquam, similique unde obcaecati reiciendis facilis
-            tenetur. Omnis dolor cumque exercitationem.
-          </p>
-        </div>
-      </section>
-
-      <section className="py-24 px-6 bg-white">
-        <div className="max-w-4xl mx-auto text-center">
-
-          <div className="flex items-center gap-4 justify-center mb-6">
-            <span className="w-12 h-[2px] bg-black"></span>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-black">
-              Who We Are
-            </h2>
-            <span className="w-12 h-[2px] bg-black"></span>
-          </div>
-
-          <p className="text-lg md:text-xl text-gray-700 leading-relaxed font-light max-w-3xl mx-auto">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate odio
-            quibusdam, placeat exercitationem adipisci eos sint reprehenderit,
-            repudiandae cumque numquam, similique unde obcaecati reiciendis facilis
-            tenetur. Omnis dolor cumque exercitationem.
-          </p>
-
-        </div>
-      </section>
-
       <section className="bg-gradient-to-b from-slate-100 to-white py-20 px-6 relative overflow-hidden">
         {/* Subtle Background Pattern */}
         <div className="absolute inset-0 opacity-5">
