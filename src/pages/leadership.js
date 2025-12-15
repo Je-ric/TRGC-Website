@@ -62,17 +62,17 @@ export default function Leadership() {
 
   const timeline = [
     {
-      year: "2000",
+      year: "1997",
       event: "Church founded by Pastor [Founder's Name] with a small group of believers.",
       icon: <FaChurch />
     },
     {
-      year: "2005",
+      year: "2023",
       event: "First building acquired and community outreach programs launched.",
       icon: <FaUsers />
     },
     {
-      year: "2010",
+      year: "2020",
       event: "Legacy passed to [Son's Name] and [Wife's Name], expanding ministries.",
       icon: <FaCrown />
     },
