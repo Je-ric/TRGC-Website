@@ -261,58 +261,57 @@ export default function Home() {
 
         </div>
       </section>
-      {activeIndex !== null && (
-        <div className="fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex items-center justify-center px-4">
 
-          {/* Close */}
+      {/* Enhanced Lightbox */}
+      {activeIndex !== null && (
+        <div className="fixed inset-0 bg-black/95 backdrop-blur-lg z-50 flex items-center justify-center px-4 py-8">
+          {/* Close Button */}
           <button
             onClick={() => setActiveIndex(null)}
-            className="absolute top-6 right-6 text-white/80 hover:text-white transition"
+            className="absolute top-6 right-6 text-white/80 hover:text-white transition duration-300 bg-black/50 rounded-full p-2 hover:bg-black/70"
           >
-            <FaTimes size={28} />
+            <FaTimes size={24} />
           </button>
 
-          {/* Prev */}
+          {/* Prev Button */}
           <button
-            onClick={() =>
-              setActiveIndex(prev => (prev > 0 ? prev - 1 : merch.length - 1))
-            }
-            className="absolute left-4 md:left-8 text-white/70 hover:text-white transition"
+            onClick={() => setActiveIndex((prev) => (prev > 0 ? prev - 1 : merch.length - 1))}
+            className="absolute left-4 md:left-8 top-1/2 transform -translate-y-1/2 text-white/70 hover:text-white transition duration-300 bg-black/50 rounded-full p-3 hover:bg-black/70"
           >
-            <FaChevronLeft size={26} />
+            <FaChevronLeft size={28} />
           </button>
 
-          {/* Image */}
-          <div className="max-w-5xl w-full flex justify-center">
+          {/* Image Container */}
+          <div className="max-w-6xl w-full flex flex-col items-center space-y-6">
             <img
               src={merch[activeIndex]}
               alt={`Merch ${activeIndex + 1}`}
-              className="
-          max-h-[70vh] w-auto
-          rounded-2xl
-          transition-transform duration-500
-        "
+              className="max-h-[60vh] w-auto rounded-2xl shadow-2xl transition-transform duration-500"
             />
+
+            {/* Item Details */}
+            <div className="text-center text-white">
+              <h3 className="text-2xl font-bold mb-2">Merch Item {activeIndex + 1}</h3>
+              <p className="text-gray-300 text-sm max-w-md">
+                Faith-inspired design to express your beliefs. Available in various sizes and colors.
+              </p>
+            </div>
           </div>
 
-          {/* Next */}
+          {/* Next Button */}
           <button
-            onClick={() =>
-              setActiveIndex(prev => (prev < merch.length - 1 ? prev + 1 : 0))
-            }
-            className="absolute right-4 md:right-8 text-white/70 hover:text-white transition"
+            onClick={() => setActiveIndex((prev) => (prev < merch.length - 1 ? prev + 1 : 0))}
+            className="absolute right-4 md:right-8 top-1/2 transform -translate-y-1/2 text-white/70 hover:text-white transition duration-300 bg-black/50 rounded-full p-3 hover:bg-black/70"
           >
-            <FaChevronRight size={26} />
+            <FaChevronRight size={28} />
           </button>
 
           {/* Counter */}
-          <div className="absolute bottom-6 text-white/70 text-xs tracking-widest">
+          <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-white/70 text-sm bg-black/50 px-4 py-2 rounded-full">
             {activeIndex + 1} / {merch.length}
           </div>
         </div>
       )}
-
-
       <h2 className="text-5xl font-semibold mb-8 text-center text-black drop-shadow-lg pt-24">
         Our <Mark>Location</Mark>
       </h2>
