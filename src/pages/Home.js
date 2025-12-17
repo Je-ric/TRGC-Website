@@ -9,6 +9,7 @@ export default function Home() {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const merch = [
+    process.env.PUBLIC_URL + "/img/Merch-1.jpg",
     process.env.PUBLIC_URL + "/img/Merch-2.jpg",
     process.env.PUBLIC_URL + "/img/Merch-3.jpg",
     process.env.PUBLIC_URL + "/img/Merch-4.jpg",
@@ -200,78 +201,117 @@ export default function Home() {
 
 
       <section
-        className="relative py-16 z-10 bg-cover bg-no-repeat bg-top -mt-24" // for overlap
-        style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/backgrounds/TornPaper.jpg)` }}
+        className="relative py-20 z-10 bg-cover bg-no-repeat bg-top -mt-24"
+        style={{
+          backgroundImage: `url(${process.env.PUBLIC_URL}/backgrounds/TornPaper.jpg)`,
+        }}
       >
-        <div className="relative z-10 pt-28 py-6 mx-auto max-w-7xl">
+        <div className="relative z-10 pt-32 px-4 mx-auto max-w-7xl">
 
-          <h2 className="text-5xl font-semibold mb-8 text-center text-black drop-shadow-lg pt-24">
+          {/* Title */}
+          <h2 className="text-4xl md:text-5xl font-semibold mb-12 text-center text-black drop-shadow-lg">
             Merch <Mark>Collection</Mark>
           </h2>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {/* Editorial Grid */}
+          <div className="
+  grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6
+">
             {merch.map((src, i) => (
-              <div key={i} className="group relative aspect-square p-4 overflow-hidden border-4 border-black shadow-2xl transition-all duration-500 hover:scale-105 hover:shadow-red-500/30 cursor-pointer" onClick={() => setActiveIndex(i)}>
-                <img
-                  src={src}
-                  alt={`Merch Item ${i + 1}`}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-
-
-                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                  <span className="text-white font-semibold text-lg">View</span>
+              <button
+                key={i}
+                onClick={() => setActiveIndex(i)}
+                className={`
+        group relative
+        w-full aspect-square  /* ensures square */
+        overflow-hidden rounded-3xl
+        focus:outline-none
+        bg-neutral-100
+        ${i === 0 ? 'col-span-2 row-span-2' : ''}
+      `}
+              >
+                {/* Image Wrapper */}
+                <div className="w-full h-full flex items-center justify-center p-2">
+                  <img
+                    src={src}
+                    alt={`Merch Item ${i + 1}`}
+                    className="
+            max-w-full max-h-full
+            object-contain rounded-3xl
+            transition-transform duration-[900ms] ease-out
+            group-hover:scale-105
+          "
+                  />
                 </div>
-              </div>
+
+                {/* Bottom Label Strip */}
+                <div className="
+        absolute bottom-0 left-0 right-0
+        bg-black/60 backdrop-blur-sm
+        translate-y-full group-hover:translate-y-0
+        transition-transform duration-300
+      ">
+                  <span className="text-white text-xs tracking-widest uppercase">
+                    View Item →
+                  </span>
+                </div>
+              </button>
             ))}
           </div>
 
-
         </div>
       </section>
-
-      {/* Modern Lightbox with Controls */}
       {activeIndex !== null && (
-        <div className="fixed inset-0 bg-black/90 backdrop-blur-md flex items-center justify-center z-50 p-4">
-          {/* Close Button */}
+        <div className="fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex items-center justify-center px-4">
+
+          {/* Close */}
           <button
             onClick={() => setActiveIndex(null)}
-            className="absolute top-4 right-4 text-white hover:text-red-500 transition duration-300 z-60"
+            className="absolute top-6 right-6 text-white/80 hover:text-white transition"
           >
-            <FaTimes size={30} />
+            <FaTimes size={28} />
           </button>
 
-          {/* Prev Button */}
+          {/* Prev */}
           <button
-            onClick={() => setActiveIndex((prev) => (prev > 0 ? prev - 1 : merch.length - 1))}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white hover:text-red-500 transition duration-300 z-60 p-2 bg-black/50 rounded-full hover:bg-black/70"
+            onClick={() =>
+              setActiveIndex(prev => (prev > 0 ? prev - 1 : merch.length - 1))
+            }
+            className="absolute left-4 md:left-8 text-white/70 hover:text-white transition"
           >
-            <FaChevronLeft size={24} />
+            <FaChevronLeft size={26} />
           </button>
 
           {/* Image */}
-          <div className="relative max-w-4xl w-full flex items-center justify-center">
+          <div className="max-w-5xl w-full flex justify-center">
             <img
               src={merch[activeIndex]}
-              alt={`Merch Item ${activeIndex + 1}`}
-              className="max-w-full h-96 rounded-2xl shadow-2xl transition-transform duration-500"
+              alt={`Merch ${activeIndex + 1}`}
+              className="
+          max-h-[70vh] w-auto
+          rounded-2xl
+          transition-transform duration-500
+        "
             />
           </div>
 
-          {/* Next Button */}
+          {/* Next */}
           <button
-            onClick={() => setActiveIndex((prev) => (prev < merch.length - 1 ? prev + 1 : 0))}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-red-500 transition duration-300 z-60 p-2 bg-black/50 rounded-full hover:bg-black/70"
+            onClick={() =>
+              setActiveIndex(prev => (prev < merch.length - 1 ? prev + 1 : 0))
+            }
+            className="absolute right-4 md:right-8 text-white/70 hover:text-white transition"
           >
-            <FaChevronRight size={24} />
+            <FaChevronRight size={26} />
           </button>
 
-          {/* Image Counter */}
-          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-sm bg-black/50 px-3 py-1 rounded-full">
+          {/* Counter */}
+          <div className="absolute bottom-6 text-white/70 text-xs tracking-widest">
             {activeIndex + 1} / {merch.length}
           </div>
         </div>
       )}
+
 
       <h2 className="text-5xl font-semibold mb-8 text-center text-black drop-shadow-lg pt-24">
         Our <Mark>Location</Mark>
