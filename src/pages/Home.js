@@ -315,18 +315,16 @@ export default function Home() {
 
 
 
-
+{/* 
       <section className="relative py-20 bg-gradient-to-br from-orange-50 via-white to-yellow-50 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 relative z-10">
-          {/* Title with accent underline */}
           <h2 className="text-4xl md:text-5xl font-extrabold mb-12 text-center text-black relative">
             Our <Mark>Location</Mark>
             <span className="absolute left-1/2 -bottom-3 w-24 h-1 bg-gradient-to-r from-orange-400 to-pink-500 rounded-full -translate-x-1/2"></span>
           </h2>
 
-          {/* Map container with card-like effect */}
           <div className="relative w-full overflow-hidden rounded-3xl shadow-2xl border-2 border-black/10">
-            {/* Map */}
+            
             <iframe
               title="TRGC Worship Center Location Map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3840.535368329474!2d120.89232037459338!3d15.72279284862027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3390d7e3cd6f1a13%3A0x74366079330647e3!2sTRGC%20Worship%20Center!5e0!3m2!1sen!2sph!4v1764220341549!5m2!1sen!2sph"
@@ -336,7 +334,6 @@ export default function Home() {
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
 
-            {/* Floating Pin/Button */}
             <a
               href="https://goo.gl/maps/your-link" // Optional: Google Maps directions
               target="_blank"
@@ -357,13 +354,12 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Optional subtle geometric background */}
         <div className="absolute inset-0 -z-10">
           <div className="absolute top-0 left-1/2 w-[600px] h-[600px] bg-pink-200/30 rounded-full -translate-x-1/2 -translate-y-1/3 filter blur-3xl"></div>
           <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-orange-200/30 rounded-full filter blur-2xl"></div>
         </div>
       </section>
-
+ */}
 
 
       <h2 className="text-5xl font-semibold mb-8 text-center text-black drop-shadow-lg pt-24">
