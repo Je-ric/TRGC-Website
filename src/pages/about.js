@@ -277,7 +277,7 @@ export default function About() {
                     <div className="flex justify-center">
                       <div className="relative">
                         <img
-                          src="/img/Logo-Circle2.png"
+                          src={`${process.env.PUBLIC_URL}/img/Logo-Circle2.png`}
                           alt="Circle Symbol"
                           className="w-48 h-48 object-contain drop-shadow-2xl transition-transform duration-500 group-hover:rotate-12"
                         />
@@ -310,8 +310,8 @@ export default function About() {
                 <div className="flex flex-col items-center text-center space-y-6">
                   <div className="relative">
                     <img
-                      src="/img/Logo-Cross.png"
-                      alt="Cross Symbol"
+                        src={`${process.env.PUBLIC_URL}/img/Logo-Cross.png`}
+                        alt="Cross Symbol"
                       className="w-48 h-48 object-contain drop-shadow-2xl transition-transform duration-500 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -331,7 +331,7 @@ export default function About() {
                 <div className="flex flex-col items-center text-center space-y-6">
                   <div className="relative">
                     <img
-                      src="/img/Logo-Rays.png"
+                      src={`${process.env.PUBLIC_URL}/img/Logo-Rays.png`}
                       alt="Rays Symbol"
                       className="w-48 h-48 object-contain drop-shadow-2xl transition-transform duration-500 group-hover:rotate-6"
                     />
@@ -352,81 +352,6 @@ export default function About() {
         </div>
       </PrismaticAurora>
 
-
-
-      {/* <div className="grid grid-cols-1 lg:grid-cols-2">
-
-            <div className="flex justify-center w-full h-full">
-              <img
-                src="img/Mission.jpg"
-                alt="Mission"
-                className="w-full h-full object-cover"
-              />
-            </div>
-
-            <div className="text-left space-y-6 px-6 py-10 md:px-10">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight bg-gradient-to-r from-red-400 to-orange-300 bg-clip-text text-transparent">
-                Mission
-              </h2>
-
-              <ul className="text-base md:text-lg lg:text-xl space-y-4 leading-relaxed text-white/80">
-                <li className="flex gap-3">
-                  <span className="text-red-400">•</span>
-                  To equip and train every living saint for purposes of righteousness and lifestyle (2 Tim. 3:16-17) through holiness.
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-red-400">•</span>
-                  To rebuild and restructure according to the original biblical pattern — apostolic foundation, prophetic ministries, and Church (Eph. 2:20, Eph. 4:11).
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-red-400">•</span>
-                  To revive father and son relationship (Mal. 4:6), guided by Kingdom laws and divine order.
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-red-400">•</span>
-                  To raise up a new breed of people without greed, worthy of each calling as love-slaves to Christ (Mat. 28:18-20).
-                </li>
-              </ul>
-            </div>
-
-            <div className="text-left space-y-6 px-6 py-10 md:px-10 order-1 lg:order-none">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight bg-gradient-to-r from-indigo-400 to-blue-300 bg-clip-text text-transparent">
-                Vision
-              </h2>
-
-              <ul className="text-base md:text-lg lg:text-xl space-y-4 leading-relaxed text-white/80">
-                <li className="flex gap-3">
-                  <span className="text-indigo-400">•</span>
-                  Church empowerment (Acts 18) and regaining genuine Kingdom identity (Rev. 22:1-5).
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-indigo-400">•</span>
-                  Unified faith among believers.
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-indigo-400">•</span>
-                  Attaining maturity through the knowledge of the Son of God.
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-indigo-400">•</span>
-                  The fullness of Christ in the lives of the saints (Eph. 4:13).
-                </li>
-                <li className="flex gap-3">
-                  <span className="text-indigo-400">•</span>
-                 p A glorious church as the bride of our Lord Jesus Christ (Rev. 19:7).
-                </li>
-              </ul>
-            </div>
-
-            <div className="flex justify-center w-full h-full order-2 lg:order-none">
-              <img
-                src="img/Vision.jpg"
-                alt="Vision"
-                className="w-full h-full object-cover"
-              />
-            </div>
-
-          </div> */}
     </div>
   );
 }
