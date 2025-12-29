@@ -34,7 +34,7 @@ function App() {
             <div className="flex items-center space-x-3">
               <Link to="/" className="flex items-center space-x-2">
                 <img
-                  src={`${process.env.PUBLIC_URL}/img/logo.png`}
+                  src={`${process.env.PUBLIC_URL}/img/Logo.png`}
                   alt="Risen Generation"
                   className="h-12 w-auto hover:opacity-80 transition duration-300"
                 />
