@@ -67,8 +67,9 @@ export default function About() {
     <div>
       <HeaderBanner
         title="About"
-        image="img/Church.jpg"
+        image={`${process.env.PUBLIC_URL}/backgrounds/BG1.png`}
       />
+
 
       <section className="bg-gradient-to-b from-slate-100 to-white py-20 px-6 relative overflow-hidden">
         {/* Subtle Background Pattern */}

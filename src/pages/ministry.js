@@ -88,8 +88,7 @@ export default function Ministry() {
       <div>
         <HeaderBanner
           title="Ministry"
-          image="img/Ministry.jpg"
-        />
+          image={`${process.env.PUBLIC_URL}/backgrounds/BG1.png`} />
 
         <div className="w-full py-1">
 

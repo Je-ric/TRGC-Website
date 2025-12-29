@@ -1,11 +1,11 @@
 import HeaderBanner from '../Components/HeaderBanner';
-import { 
-  FaQuoteLeft, 
-  FaQuoteRight, 
-  FaChurch, 
-  FaUsers, 
-  FaCrown, 
-  FaHandsHelping 
+import {
+  FaQuoteLeft,
+  FaQuoteRight,
+  FaChurch,
+  FaUsers,
+  FaCrown,
+  FaHandsHelping
 } from 'react-icons/fa';
 
 export default function Leadership() {
@@ -90,7 +90,9 @@ export default function Leadership() {
 
   return (
     <div className="bg-gradient-to-b from-slate-50 to-slate-100 min-h-screen">
-      <HeaderBanner title="Leadership" image="/img/leadership-banner.jpg" />
+      <HeaderBanner
+        title="Leadership"
+        image={`${process.env.PUBLIC_URL}/backgrounds/BG1.png`} />
 
       {/* Hero Section */}
       <section className="py-20 px-6 text-center">
@@ -128,7 +130,7 @@ export default function Leadership() {
 
       {/* Leadership Sections - Poster-Style, No Shadows/Radius */}
       <section className="space-y-0">
-        
+
         {/* Foundation - Poster Style */}
         <div className="relative h-screen flex items-center bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${leaders.foundation.image})` }}>
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>

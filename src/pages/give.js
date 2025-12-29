@@ -23,8 +23,8 @@ export default function Give() {
     <div>
       <HeaderBanner
         title="Give"
-        image="img/Give.jpg"
-      />
+        image={`${process.env.PUBLIC_URL}/backgrounds/BG1.png`} />
+
 
       <DiagonalGrid>
         <section className="max-w-7xl mx-auto px-6 py-24">
