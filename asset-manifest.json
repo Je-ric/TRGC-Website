@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/TRGC-Website/static/css/main.1f5195b0.css",
-    "main.js": "/TRGC-Website/static/js/main.ca812376.js",
+    "main.js": "/TRGC-Website/static/js/main.fae6b3a7.js",
     "static/js/453.389e1cfc.chunk.js": "/TRGC-Website/static/js/453.389e1cfc.chunk.js",
     "index.html": "/TRGC-Website/index.html",
     "main.1f5195b0.css.map": "/TRGC-Website/static/css/main.1f5195b0.css.map",
-    "main.ca812376.js.map": "/TRGC-Website/static/js/main.ca812376.js.map",
+    "main.fae6b3a7.js.map": "/TRGC-Website/static/js/main.fae6b3a7.js.map",
     "453.389e1cfc.chunk.js.map": "/TRGC-Website/static/js/453.389e1cfc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1f5195b0.css",
-    "static/js/main.ca812376.js"
+    "static/js/main.fae6b3a7.js"
   ]
 }
