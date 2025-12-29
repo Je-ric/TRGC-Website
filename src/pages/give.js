@@ -1,5 +1,5 @@
 import HeaderBanner from "../Components/HeaderBanner";
-import ParallaxSection from "../Components/ParallaxSection";
+// import ParallaxSection from "../Components/ParallaxSection";
 import DiagonalGrid from '../Components/ui/DiagonalGrid';
 import PrismaticAurora from '../Components/ui/PrismaticAurora';
 import Mark from "../Components/ui/Mark";
@@ -191,13 +191,13 @@ export default function Give() {
         </div>
       </section>
 
-      <ParallaxSection
+      {/* <ParallaxSection
         title="Your generosity makes a difference."
         desc={`“Bring the whole tithe into the storehouse, that there may be food in my house. Test me in this,” says the Lord Almighty, 
               “and see if I will not throw open the floodgates of heaven and pour out so much blessing that there will not be room enough to store it.”
               — Malachi 3:10 NIV`}
         image="img/Give-2.jpg"
-      />
+      /> */}
     </div>
 
   );

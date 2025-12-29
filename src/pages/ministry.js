@@ -3,7 +3,7 @@ import HeaderBanner from "../Components/HeaderBanner";
 export default function Ministry() {
   const ministries = [
     {
-      title: "Children's Ministry",
+      title: "Kid's Ministry",
       description: "Guiding children to know and love God through creative, Christ-centered programs.",
       image: `${process.env.PUBLIC_URL}/img/test-image.webp`,
       leader: "John Doe",
@@ -45,7 +45,7 @@ export default function Ministry() {
       leader: "John Doe",
     },
     {
-      title: "MIS Ministry",
+      title: "Multimedia Ministry",
       description: "Managing church information systems, technology, and data to support ministry operations.",
       image: `${process.env.PUBLIC_URL}/img/test-image.webp`,
       leader: "John Doe",
@@ -57,7 +57,7 @@ export default function Ministry() {
       leader: "John Doe",
     },
     {
-      title: "Intercessory Ministry",
+      title: "Prayer Ministry",
       description: "Standing in prayer for the church, community, and global needs with dedication and faith.",
       image: `${process.env.PUBLIC_URL}/img/test-image.webp`,
       leader: "John Doe",
@@ -70,6 +70,12 @@ export default function Ministry() {
     },
     {
       title: "Facilities Ministry",
+      description: "Overseeing the maintenance, cleanliness, and safety of all church facilities and grounds.",
+      image: `${process.env.PUBLIC_URL}/img/test-image.webp`,
+      leader: "John Doe",
+    },
+    {
+      title: "Food Ministry",
       description: "Overseeing the maintenance, cleanliness, and safety of all church facilities and grounds.",
       image: `${process.env.PUBLIC_URL}/img/test-image.webp`,
       leader: "John Doe",
