@@ -72,25 +72,23 @@ export default function Give() {
       <PrismaticAurora className="py-20 pb-56 relative overflow-hidden bg-black">
         <div className="relative max-w-7xl mx-auto px-6 flex flex-col items-center gap-16">
 
-          {/* Section Title */}
           <div className="text-center space-y-4">
-            {/* Section Title */}
-            <h2 className="text-5xl font-semibold text-center text-white drop-shadow-lg animate-fade-in">
-              Ways to <Mark color="white" backgroundColor="#EF4444">Give</Mark>
+            
+            <h2 className="text-5xl md:text-6xl font-black drop-shadow-2xl uppercase tracking-wider bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent animate-fade-in">
+              Ways to{" "}
+              <Mark color="white" backgroundColor="#EF4444" transform="straight">
+                Give
+              </Mark>
             </h2>
 
-            <h2 className="text-5xl md:text-6xl font-black text-white drop-shadow-2xl uppercase tracking-wider bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent animate-fade-in">
-              Ways to <span className="text-red-500">Give</span>
-            </h2>
-            <p className="text-gray-300 text-lg md:text-xl italic max-w-2xl">
+            <p className="text-gray-300 text-lg md:text-xl italic max-w-2xl mx-auto">
               Choose your preferred method to support our mission and community.
             </p>
           </div>
 
-          {/* Giving Options - Enhanced Grid with Unique Layout */}
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 w-full">
 
-            {/* GCash - Highlighted First */}
             <div className="flex flex-col items-center text-center space-y-6 group cursor-pointer transition-all duration-500 hover:scale-110 animate-slide-up bg-white/5 backdrop-blur-lg p-6 rounded-3xl border border-white/10 hover:bg-white/10">
               <div className="p-5 rounded-full bg-gradient-to-r from-yellow-500 to-red-500 shadow-lg group-hover:shadow-yellow-500/50 transition-shadow duration-500">
                 <Smartphone className="w-12 h-12 text-white group-hover:animate-pulse" />
@@ -102,7 +100,6 @@ export default function Give() {
               </div>
             </div>
 
-            {/* PNB */}
             <div className="flex flex-col items-center text-center space-y-6 group cursor-pointer transition-all duration-500 hover:scale-110 animate-slide-up animation-delay-200 bg-white/5 backdrop-blur-lg p-6 rounded-3xl border border-white/10 hover:bg-white/10">
               <div className="p-5 rounded-full bg-gradient-to-r from-yellow-500 to-red-500 shadow-lg group-hover:shadow-yellow-500/50 transition-shadow duration-500">
                 <Landmark className="w-12 h-12 text-white group-hover:animate-pulse" />
@@ -114,7 +111,6 @@ export default function Give() {
               </div>
             </div>
 
-            {/* Maya */}
             <div className="flex flex-col items-center text-center space-y-6 group cursor-pointer transition-all duration-500 hover:scale-110 animate-slide-up animation-delay-400 bg-white/5 backdrop-blur-lg p-6 rounded-3xl border border-white/10 hover:bg-white/10">
               <div className="p-5 rounded-full bg-gradient-to-r from-yellow-500 to-red-500 shadow-lg group-hover:shadow-yellow-500/50 transition-shadow duration-500">
                 <Wallet className="w-12 h-12 text-white group-hover:animate-pulse" />
@@ -126,7 +122,6 @@ export default function Give() {
               </div>
             </div>
 
-            {/* In Person - Larger for Emphasis */}
             <div className="flex flex-col items-center text-center space-y-6 group cursor-pointer transition-all duration-500 hover:scale-110 animate-slide-up animation-delay-600 bg-white/5 backdrop-blur-lg p-6 rounded-3xl border border-white/10 hover:bg-white/10 lg:col-span-1 md:col-span-2">
               <div className="p-5 rounded-full bg-gradient-to-r from-yellow-500 to-red-500 shadow-lg group-hover:shadow-yellow-500/50 transition-shadow duration-500">
                 <HandCoins className="w-12 h-12 text-white group-hover:animate-pulse" />
