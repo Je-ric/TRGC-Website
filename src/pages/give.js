@@ -69,73 +69,83 @@ export default function Give() {
         </section>
       </DiagonalGrid>
 
-
-
       <PrismaticAurora className="py-20 pb-56 relative overflow-hidden bg-black">
         <div className="relative max-w-7xl mx-auto px-6 flex flex-col items-center gap-16">
 
           {/* Section Title */}
-          <h2 className="text-5xl font-semibold text-center text-white drop-shadow-lg animate-fade-in">
-            Ways to <Mark color="white" backgroundColor="#EF4444">Give</Mark>
-          </h2>
+          <div className="text-center space-y-4">
+            {/* Section Title */}
+            <h2 className="text-5xl font-semibold text-center text-white drop-shadow-lg animate-fade-in">
+              Ways to <Mark color="white" backgroundColor="#EF4444">Give</Mark>
+            </h2>
 
-          {/* Giving Options - Modern Grid without Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 w-full">
+            <h2 className="text-5xl md:text-6xl font-black text-white drop-shadow-2xl uppercase tracking-wider bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent animate-fade-in">
+              Ways to <span className="text-red-500">Give</span>
+            </h2>
+            <p className="text-gray-300 text-lg md:text-xl italic max-w-2xl">
+              Choose your preferred method to support our mission and community.
+            </p>
+          </div>
 
-            {/* GCash */}
-            <div className="flex flex-col items-center text-center space-y-4 group cursor-pointer transition-all duration-500 hover:scale-110 animate-slide-up">
-              <div className="p-4 rounded-full bg-gradient-to-r from-yellow-500 to-red-500 shadow-lg group-hover:shadow-orange-500/50 transition-shadow duration-500">
-                <Smartphone className="w-10 h-10 text-white group-hover:animate-pulse" />
+          {/* Giving Options - Enhanced Grid with Unique Layout */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 w-full">
+
+            {/* GCash - Highlighted First */}
+            <div className="flex flex-col items-center text-center space-y-6 group cursor-pointer transition-all duration-500 hover:scale-110 animate-slide-up bg-white/5 backdrop-blur-lg p-6 rounded-3xl border border-white/10 hover:bg-white/10">
+              <div className="p-5 rounded-full bg-gradient-to-r from-yellow-500 to-red-500 shadow-lg group-hover:shadow-yellow-500/50 transition-shadow duration-500">
+                <Smartphone className="w-12 h-12 text-white group-hover:animate-pulse" />
               </div>
-              <h3 className="text-2xl font-bold text-white group-hover:text-orange-300 transition-colors duration-300">GCash</h3>
-              <div className="space-y-1 text-gray-200">
+              <h3 className="text-2xl font-bold text-white group-hover:text-yellow-300 transition-colors duration-300">GCash</h3>
+              <div className="space-y-2 text-gray-200">
                 <p className="font-medium">Mary Ann Sabio</p>
-                <p>0935-647-6800</p>
+                <p className="text-sm">0935-647-6800</p>
               </div>
             </div>
 
             {/* PNB */}
-            <div className="flex flex-col items-center text-center space-y-4 group cursor-pointer transition-all duration-500 hover:scale-110 animate-slide-up animation-delay-200">
-              <div className="p-4 rounded-full bg-gradient-to-r from-yellow-500 to-red-500 shadow-lg group-hover:shadow-orange-500/50 transition-shadow duration-500">
-                <Landmark className="w-10 h-10 text-white group-hover:animate-pulse" />
+            <div className="flex flex-col items-center text-center space-y-6 group cursor-pointer transition-all duration-500 hover:scale-110 animate-slide-up animation-delay-200 bg-white/5 backdrop-blur-lg p-6 rounded-3xl border border-white/10 hover:bg-white/10">
+              <div className="p-5 rounded-full bg-gradient-to-r from-yellow-500 to-red-500 shadow-lg group-hover:shadow-yellow-500/50 transition-shadow duration-500">
+                <Landmark className="w-12 h-12 text-white group-hover:animate-pulse" />
               </div>
-              <h3 className="text-2xl font-bold text-white group-hover:text-orange-300 transition-colors duration-300">PNB</h3>
-              <div className="space-y-1 text-gray-200">
-                <p className="font-medium">The Senior Pastor of TRGC</p>
-                <p>2259-1015-3350</p>
+              <h3 className="text-2xl font-bold text-white group-hover:text-yellow-300 transition-colors duration-300">PNB</h3>
+              <div className="space-y-2 text-gray-200">
+                <p className="font-medium text-sm">The Senior Pastor of TRGC</p>
+                <p className="text-sm">2259-1015-3350</p>
               </div>
             </div>
 
             {/* Maya */}
-            <div className="flex flex-col items-center text-center space-y-4 group cursor-pointer transition-all duration-500 hover:scale-110 animate-slide-up animation-delay-400">
-              <div className="p-4 rounded-full bg-gradient-to-r from-yellow-500 to-red-500 shadow-lg group-hover:shadow-orange-500/50 transition-shadow duration-500">
-                <Wallet className="w-10 h-10 text-white group-hover:animate-pulse" />
+            <div className="flex flex-col items-center text-center space-y-6 group cursor-pointer transition-all duration-500 hover:scale-110 animate-slide-up animation-delay-400 bg-white/5 backdrop-blur-lg p-6 rounded-3xl border border-white/10 hover:bg-white/10">
+              <div className="p-5 rounded-full bg-gradient-to-r from-yellow-500 to-red-500 shadow-lg group-hover:shadow-yellow-500/50 transition-shadow duration-500">
+                <Wallet className="w-12 h-12 text-white group-hover:animate-pulse" />
               </div>
-              <h3 className="text-2xl font-bold text-white group-hover:text-orange-300 transition-colors duration-300">Maya</h3>
-              <div className="space-y-1 text-gray-200">
+              <h3 className="text-2xl font-bold text-white group-hover:text-yellow-300 transition-colors duration-300">Maya</h3>
+              <div className="space-y-2 text-gray-200">
                 <p className="font-medium">Mary Ann Sabio</p>
-                <p>0919-233-8055</p>
+                <p className="text-sm">0919-233-8055</p>
               </div>
             </div>
 
-            {/* In Person */}
-            <div className="flex flex-col items-center text-center space-y-4 group cursor-pointer transition-all duration-500 hover:scale-110 animate-slide-up animation-delay-600">
-              <div className="p-4 rounded-full bg-gradient-to-r from-yellow-500 to-red-500 shadow-lg group-hover:shadow-orange-500/50 transition-shadow duration-500">
-                <HandCoins className="w-10 h-10 text-white group-hover:animate-pulse" />
+            {/* In Person - Larger for Emphasis */}
+            <div className="flex flex-col items-center text-center space-y-6 group cursor-pointer transition-all duration-500 hover:scale-110 animate-slide-up animation-delay-600 bg-white/5 backdrop-blur-lg p-6 rounded-3xl border border-white/10 hover:bg-white/10 lg:col-span-1 md:col-span-2">
+              <div className="p-5 rounded-full bg-gradient-to-r from-yellow-500 to-red-500 shadow-lg group-hover:shadow-yellow-500/50 transition-shadow duration-500">
+                <HandCoins className="w-12 h-12 text-white group-hover:animate-pulse" />
               </div>
-              <h3 className="text-2xl font-bold text-white group-hover:text-orange-300 transition-colors duration-300">In Person</h3>
-              <p className="text-gray-200 max-w-xs">
-                You may give personally during our worship services at the local church.
+              <h3 className="text-2xl font-bold text-white group-hover:text-yellow-300 transition-colors duration-300">In Person</h3>
+              <p className="text-gray-200 text-sm max-w-xs leading-relaxed">
+                You may give personally during our worship services at the local church. Join us in fellowship and generosity.
               </p>
             </div>
 
           </div>
 
+          {/* Inspirational Quote */}
+          <blockquote className="text-center text-gray-300 text-lg italic max-w-3xl border-l-4 border-yellow-500 pl-6">
+            "Give, and it will be given to you. A good measure, pressed down, shaken together and running over, will be poured into your lap." — Luke 6:38
+          </blockquote>
+
         </div>
       </PrismaticAurora>
-
-
-
 
       <section
         className="relative px-6 py-16 z-10 bg-no-repeat bg-top -mt-24" // for overlap

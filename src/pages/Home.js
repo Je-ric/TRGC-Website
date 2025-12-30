@@ -201,7 +201,7 @@ export default function Home() {
 
 
       <section
-        className="relative py-20 z-10 bg-cover bg-no-repeat bg-top -mt-24"
+        className="relative py-18 z-10 bg-cover bg-no-repeat bg-top -mt-24"
         style={{
           backgroundImage: `url(${process.env.PUBLIC_URL}/backgrounds/TornPaper.jpg)`,
         }}
@@ -312,54 +312,6 @@ export default function Home() {
           </div>
         </div>
       )}
-
-
-
-{/* 
-      <section className="relative py-20 bg-gradient-to-br from-orange-50 via-white to-yellow-50 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-12 text-center text-black relative">
-            Our <Mark>Location</Mark>
-            <span className="absolute left-1/2 -bottom-3 w-24 h-1 bg-gradient-to-r from-orange-400 to-pink-500 rounded-full -translate-x-1/2"></span>
-          </h2>
-
-          <div className="relative w-full overflow-hidden rounded-3xl shadow-2xl border-2 border-black/10">
-            
-            <iframe
-              title="TRGC Worship Center Location Map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3840.535368329474!2d120.89232037459338!3d15.72279284862027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3390d7e3cd6f1a13%3A0x74366079330647e3!2sTRGC%20Worship%20Center!5e0!3m2!1sen!2sph!4v1764220341549!5m2!1sen!2sph"
-              className="w-full h-96 md:h-[28rem] border-0 transform hover:scale-105 transition-transform duration-700"
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-
-            <a
-              href="https://goo.gl/maps/your-link" // Optional: Google Maps directions
-              target="_blank"
-              rel="noopener noreferrer"
-              className="absolute bottom-6 right-6 bg-orange-500 hover:bg-pink-500 text-white font-semibold px-5 py-3 rounded-full shadow-xl hover:scale-105 transition-all duration-300 flex items-center gap-2"
-            >
-              <span>Get Directions</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute top-0 left-1/2 w-[600px] h-[600px] bg-pink-200/30 rounded-full -translate-x-1/2 -translate-y-1/3 filter blur-3xl"></div>
-          <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-orange-200/30 rounded-full filter blur-2xl"></div>
-        </div>
-      </section>
- */}
 
 
       <h2 className="text-5xl font-semibold mb-8 text-center text-black drop-shadow-lg pt-24">

@@ -12,19 +12,27 @@ export default function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
                     {/* Logo */}
                     <div className="lg:col-span-1 space-y-4">
-                        <img
-                            src="/img/logo.png"
-                            alt="Risen Generation Church"
-                            className="h-12 w-auto filter brightness-0 invert hover:opacity-80 transition duration-300"
-                        />
+                        <div className="flex items-center gap-3">
+                            <img
+                                src={`${process.env.PUBLIC_URL}/img/Logo.png`}
+                                alt="Risen Generation"
+                                className="h-12 w-auto hover:opacity-80 transition duration-300"
+                            />
+                            <span className="text-white font-bold text-xl">
+                                Risen Generation Church
+                            </span>
+                        </div>
+
                         <p className="text-gray-300 text-sm leading-relaxed">
                             The Risen Generation Church is a community dedicated to faith,
                             worship, and service.
                         </p>
+
                         <p className="text-gray-400 text-xs">
                             © 2023 The Risen Generation Church. All rights reserved.
                         </p>
                     </div>
+
 
                     {/* Quick Links */}
                     <div className="lg:col-span-1 space-y-4">
