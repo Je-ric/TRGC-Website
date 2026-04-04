@@ -104,11 +104,31 @@ export default function Leadership() {
         </p>
       </section>
 
-      {/* Timeline Section - Unchanged */}
       <section className="py-16 px-6 bg-slate-900 text-white">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 text-white">Our History</h2>
-          <div className="relative">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">Our History</h2>
+
+          {/* Mobile: single column stacked */}
+          <div className="flex flex-col gap-4 md:hidden">
+            {timeline.map((item, index) => (
+              <div key={index} className="flex items-start gap-4">
+                <div className="flex flex-col items-center">
+                  <div className="w-3 h-3 rounded-full bg-orange-500 mt-1.5 flex-shrink-0"></div>
+                  {index < timeline.length - 1 && <div className="w-0.5 flex-1 bg-orange-500/40 mt-1"></div>}
+                </div>
+                <div className="bg-white/10 p-4 rounded-lg flex-1 mb-2">
+                  <div className="flex items-center gap-3 mb-1">
+                    <span className="text-orange-400">{item.icon}</span>
+                    <h3 className="text-lg font-semibold text-white">{item.year}</h3>
+                  </div>
+                  <p className="text-gray-300 text-sm">{item.event}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Desktop: alternating left/right */}
+          <div className="relative hidden md:block">
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-orange-500 to-red-500"></div>
             {timeline.map((item, index) => (
               <div key={index} className={`flex items-center mb-8 ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
@@ -132,13 +152,13 @@ export default function Leadership() {
       <section className="space-y-0">
 
         {/* Foundation - Poster Style */}
-        <div className="relative h-screen flex items-center bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${leaders.foundation.image})` }}>
-          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-          <div className="relative z-10 max-w-6xl mx-auto px-6 flex items-center w-full">
-            <div className="w-full md:w-1/2 text-white space-y-6">
+        <div className="relative min-h-screen flex items-center bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${leaders.foundation.image})` }}>
+          <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+          <div className="relative z-10 max-w-6xl mx-auto px-6 py-24 flex items-center w-full">
+            <div className="w-full md:w-2/3 lg:w-1/2 text-white space-y-6">
               <div className="flex items-center gap-4">
                 <span className="text-orange-400">{leaders.foundation.icon}</span>
-                <h2 className="text-5xl md:text-6xl font-black uppercase tracking-wider bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-wider text-white">
                   Foundation
                 </h2>
               </div>
@@ -155,12 +175,12 @@ export default function Leadership() {
         </div>
 
         {/* Legacy - Poster Style */}
-        <div className="relative h-screen flex items-center bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${leaders.legacy.image})` }}>
-          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-transparent"></div>
-          <div className="relative z-10 max-w-6xl mx-auto px-6 flex items-center justify-end w-full">
-            <div className="w-full md:w-1/2 text-white space-y-6 text-right">
+        <div className="relative min-h-screen flex items-center bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${leaders.legacy.image})` }}>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
+          <div className="relative z-10 max-w-6xl mx-auto px-6 py-24 flex items-center justify-end w-full">
+            <div className="w-full md:w-2/3 lg:w-1/2 text-white space-y-6 text-left md:text-right">
               <div className="flex items-center justify-end gap-4">
-                <h2 className="text-5xl md:text-6xl font-black uppercase tracking-wider bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-wider text-white">
                   Legacy
                 </h2>
                 <span className="text-orange-400"><FaCrown className="w-12 h-12" /></span>
@@ -185,13 +205,13 @@ export default function Leadership() {
         </div>
 
         {/* Associates - Poster Style */}
-        <div className="relative h-screen flex items-center bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${leaders.associates.image})` }}>
-          <div className="absolute inset-0 bg-gradient-to-l from-black/60 via-black/40 to-transparent"></div>
-          <div className="relative z-10 max-w-6xl mx-auto px-6 flex items-center w-full">
-            <div className="w-full md:w-1/2 text-white space-y-6">
+        <div className="relative min-h-screen flex items-center bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${leaders.associates.image})` }}>
+          <div className="absolute inset-0 bg-gradient-to-l from-black/70 via-black/50 to-black/30"></div>
+          <div className="relative z-10 max-w-6xl mx-auto px-6 py-24 flex items-center w-full">
+            <div className="w-full md:w-2/3 lg:w-1/2 text-white space-y-6">
               <div className="flex items-center gap-4">
                 <span className="text-orange-400"><FaUsers className="w-12 h-12" /></span>
-                <h2 className="text-5xl md:text-6xl font-black uppercase tracking-wider bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-black uppercase tracking-wider text-white">
                   Associates
                 </h2>
               </div>

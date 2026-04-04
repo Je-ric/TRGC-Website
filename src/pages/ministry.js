@@ -85,19 +85,31 @@ export default function Ministry() {
 
   return (
     <div>
-      <div>
-        <HeaderBanner
-          title="Ministry"
-          image={`${process.env.PUBLIC_URL}/backgrounds/BG1.png`} />
+      <HeaderBanner
+        title="Ministry"
+        image={`${process.env.PUBLIC_URL}/backgrounds/BG1.png`} />
 
-        <div className="w-full py-1">
+      <section className="bg-white py-16 px-6 text-center">
+        <div className="max-w-3xl mx-auto space-y-4">
+          <p className="text-sm uppercase tracking-[0.3em] text-orange-500 font-raleway">Serving Together</p>
+          <h2 className="text-3xl md:text-4xl font-black text-slate-800 uppercase tracking-wide">
+            Our Ministries
+          </h2>
+          <p className="text-slate-600 text-base md:text-lg leading-relaxed">
+            Every ministry at TRGC exists to build up the body of Christ — equipping believers, reaching the lost, and serving our community with love and excellence.
+          </p>
+        </div>
+      </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
-            {ministries.map((ministry) => (
-              <div
-                key={ministry.title}
-                className="relative group w-full h-[28rem] overflow-hidden cursor-pointer"
-              >
+      <div className="w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-slate-200">
+          {ministries.map((ministry) => (
+            <div
+              key={ministry.title}
+              role="article"
+              aria-label={ministry.title}
+              className="relative group w-full h-80 md:h-96 overflow-hidden cursor-pointer bg-black"
+            >
                 {/* Image */}
                 <img
                   src={ministry.image}
@@ -123,25 +135,20 @@ export default function Ministry() {
 
 
 
-                {/* Default visible text (title + description) */}
-                <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-6 z-10 pointer-events-none
-                          transition-opacity duration-500 opacity-100 group-hover:opacity-0">
-                  <h2 className="text-3xl md:text-4xl font-bold">{ministry.title}</h2>
-                  <p className="text-white/90 mt-4 text-lg md:text-xl">{ministry.description}</p>
-                </div>
-
-                {/* Hover overlay - shows all info including leader */}
-                <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-6 bg-gradient-to-t from-black/60 via-red/40 to-blue/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
-                  <h2 className="text-3xl md:text-4xl font-bold">{ministry.title}</h2>
-                  <p className="text-white/90 mt-4 text-lg md:text-xl">{ministry.description}</p>
-                  <strong className="text-white font-bold text-2xl mt-6">Ministry Leader: {ministry.leader}</strong>
-                </div>
+              <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-6 z-10 pointer-events-none transition-opacity duration-500 opacity-100 group-hover:opacity-0">
+                <h2 className="text-2xl md:text-3xl font-bold">{ministry.title}</h2>
+                <p className="text-white/90 mt-3 text-sm md:text-base">{ministry.description}</p>
               </div>
-            ))}
-          </div>
+
+              <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white p-6 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-20">
+                <h2 className="text-2xl md:text-3xl font-bold">{ministry.title}</h2>
+                <p className="text-white/90 mt-3 text-sm md:text-base">{ministry.description}</p>
+                <p className="text-orange-400 font-semibold text-base mt-5">Ministry Leader: {ministry.leader}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-
     </div>
   );
 }

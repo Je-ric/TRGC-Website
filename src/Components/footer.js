@@ -9,7 +9,7 @@ export default function Footer() {
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(99,102,241,0.1)_0%,_transparent_70%)] opacity-30"></div>
 
             <div className="relative max-w-7xl mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-10">
                     {/* Logo */}
                     <div className="lg:col-span-1 space-y-4">
                         <div className="flex items-center gap-3">
@@ -29,7 +29,7 @@ export default function Footer() {
                         </p>
 
                         <p className="text-gray-400 text-xs">
-                            © 2023 The Risen Generation Church. All rights reserved.
+                            © {new Date().getFullYear()} The Risen Generation Church. All rights reserved.
                         </p>
                     </div>
 
@@ -38,12 +38,24 @@ export default function Footer() {
                     <div className="lg:col-span-1 space-y-4">
                         <h3 className="text-lg font-semibold text-white">Quick Links</h3>
                         <ul className="space-y-2">
-                            <li><a href="/" className="text-gray-300 hover:text-orange-400 transition duration-300">Home</a></li>
-                            <li><a href="/about" className="text-gray-300 hover:text-orange-400 transition duration-300">About</a></li>
-                            <li><a href="/leadership" className="text-gray-300 hover:text-orange-400 transition duration-300">Leadership</a></li>
-                            <li><a href="/ministry" className="text-gray-300 hover:text-orange-400 transition duration-300">Ministry</a></li>
-                            <li><a href="/give" className="text-gray-300 hover:text-orange-400 transition duration-300">Give</a></li>
-                            <li><a href="/events" className="text-gray-300 hover:text-orange-400 transition duration-300">Events</a></li>
+                            <li><a href="#/" className="text-gray-300 hover:text-orange-400 transition duration-300">Home</a></li>
+                            <li><a href="#/about" className="text-gray-300 hover:text-orange-400 transition duration-300">About</a></li>
+                            <li><a href="#/leadership" className="text-gray-300 hover:text-orange-400 transition duration-300">Leadership</a></li>
+                            <li><a href="#/ministry" className="text-gray-300 hover:text-orange-400 transition duration-300">Ministry</a></li>
+                            <li><a href="#/give" className="text-gray-300 hover:text-orange-400 transition duration-300">Give</a></li>
+                        </ul>
+                    </div>
+
+                    {/* Connect Links */}
+                    <div className="lg:col-span-1 space-y-4">
+                        <h3 className="text-lg font-semibold text-white">Connect</h3>
+                        <ul className="space-y-2">
+                            <li><a href="#/connect" className="text-gray-300 hover:text-orange-400 transition duration-300">Connect With Us</a></li>
+                            <li><a href="#/plan-visit" className="text-gray-300 hover:text-orange-400 transition duration-300">Plan a Visit</a></li>
+                            <li><a href="#/sermons" className="text-gray-300 hover:text-orange-400 transition duration-300">Watch Sermons</a></li>
+                            <li><a href="#/baptism" className="text-gray-300 hover:text-orange-400 transition duration-300">Baptism</a></li>
+                            <li><a href="#/prayer-request" className="text-gray-300 hover:text-orange-400 transition duration-300">Prayer Request</a></li>
+                            <li><a href="#/know-god" className="text-gray-300 hover:text-orange-400 transition duration-300">Know God</a></li>
                         </ul>
                     </div>
 
@@ -52,16 +64,16 @@ export default function Footer() {
                         <h3 className="text-lg font-semibold text-white">Contact Us</h3>
                         <div className="space-y-3 text-gray-300 text-sm">
                             <p className="flex items-center gap-2">
-                                <FiMapPin className="w-5 h-5 text-red-500" /> TRGC Worship Center, Philippines
+                                <FiMapPin className="w-4 h-4 flex-shrink-0 text-orange-500" /> TRGC Worship Center, Philippines
                             </p>
                             <p className="flex items-center gap-2">
-                                <FiMail className="w-5 h-5 text-red-500" /> info@risengenerationchurch.com
+                                <FiMail className="w-4 h-4 flex-shrink-0 text-orange-500" /> info@risengenerationchurch.com
                             </p>
                             <p className="flex items-center gap-2">
-                                <FiPhone className="w-5 h-5 text-red-500" /> +63 123 456 7890
+                                <FiPhone className="w-4 h-4 flex-shrink-0 text-orange-500" /> +63 123 456 7890
                             </p>
                             <p className="flex items-center gap-2">
-                                <FiClock className="w-5 h-5 text-red-500" /> Sundays: 9:30 AM
+                                <FiClock className="w-4 h-4 flex-shrink-0 text-orange-500" /> Sundays: 9:30 AM
                             </p>
                         </div>
                     </div>
@@ -92,13 +104,6 @@ export default function Footer() {
 
                 </div>
 
-                {/* <div className="mt-12 pt-8 border-t border-white/10 text-center">
-          <p className="text-gray-400 text-sm">
-            Designed with ❤️ for The Risen Generation Church |
-            <a href="#" className="hover:text-orange-400 transition duration-300"> Privacy Policy </a> |
-            <a href="#" className="hover:text-orange-400 transition duration-300"> Terms of Service</a>
-          </p>
-        </div> */}
             </div>
         </footer>
     );

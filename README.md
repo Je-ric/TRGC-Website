@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+# The Risen Generation Church — Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An informational React website for **The Risen Generation Church (TRGC)**, a local church based in the Philippines. The site presents the church's identity, leadership, ministries, programs, and giving options to the public.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🛠️ Tech Stack
 
-### `npm start`
+- **React** (Create React App)
+- **Tailwind CSS** — utility-first styling
+- **React Router DOM** (HashRouter) — client-side routing
+- **React Icons / Lucide React** — icon sets
+- **Google Fonts** — Oswald, Lato, Raleway
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📄 Pages
 
-### `npm test`
+| Route | Page | Purpose |
+|---|---|---|
+| `/` | Home | Landing page with hero, service schedule, programs, merch, and map |
+| `/about` | About | Church identity, mission/vision, beliefs, and logo symbolism |
+| `/leadership` | Leadership | Church history timeline and leadership team profiles |
+| `/ministry` | Ministry | Grid of all church ministries with hover details |
+| `/give` | Give | Tithing info, giving methods (GCash, Maya, PNB, In Person), and giving purpose |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🧩 Shared Components
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+| Component | Description |
+|---|---|
+| `App.js` | Root layout — fixed navbar with scroll glass effect, routing, footer |
+| `Footer.js` | Site-wide footer with logo, quick links, contact info, and social media |
+| `HeaderBanner.js` | Reusable page hero banner with animated title and decorative particles |
+| `Countdown.js` | Live countdown to the next Sunday 9:30 AM service |
+| `Mark.js` | Inline text highlight with brushstroke/marker style |
+| `Brushstroke.js` | Animated brushstroke text highlight |
+| `Heading.js` | Styled section heading component |
+| `PrismaticAurora.js` | Dark gradient background wrapper with aurora effect |
+| `DiagonalGrid.js` | Light background wrapper with diagonal grid pattern |
+| `CosmicNoise.js` | Noise/texture background wrapper |
+| `VolcanicEmber.js` | Ember particle background effect |
+| `ParallaxSection.js` | Parallax image section (available, partially used) |
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🖼️ Assets
 
-### `npm run eject`
+- `public/backgrounds/` — Full-page background images (BG1, BG2, TornPaper)
+- `public/img/` — Church photos, logo variants, merch images
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🚀 Running the Project
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm install
+npm start       # dev server at http://localhost:3000
+npm run build   # production build
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## ⚠️ Known Placeholders
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Leadership page uses placeholder names and missing images (`/img/foundation-group.jpg`, etc.)
+- Ministry page uses a single test image for all ministry cards
+- Footer copyright year is hardcoded as 2023
+- Some lorem ipsum text remains in the About page
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 🎨 Design Notes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+See `PAGES_AND_IMPROVEMENTS.md` for a detailed breakdown of every page's sections and suggested improvements in typography, color, responsiveness, and UI principles.

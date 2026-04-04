@@ -1,9 +1,9 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Countdown from "../Components/Helper/Countdown";
 import Mark from "../Components/ui/Mark";
 import Brushstroke from "../Components/ui/Brushstroke";
-// import PrismaticAurora from "../Components/ui/PrismaticAurora";
-import { FaChevronLeft, FaChevronRight, FaTimes } from 'react-icons/fa';
+import { FaChevronLeft, FaChevronRight, FaTimes, FaChevronDown } from 'react-icons/fa';
 
 export default function Home() {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -21,12 +21,44 @@ export default function Home() {
       <section className="min-h-screen flex items-center justify-center p-4 relative bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/backgrounds/BG1.png)` }}
       >
-
-
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="relative z-10 text-center text-white px-4 space-y-6 max-w-4xl mx-auto">
+          <p className="text-sm md:text-base uppercase tracking-[0.3em] text-orange-400 font-raleway">
+            Welcome to
+          </p>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight leading-tight">
+            The Risen Generation Church
+          </h1>
+          <p className="text-base md:text-xl font-raleway font-light text-white/80 max-w-2xl mx-auto leading-relaxed">
+            A community rooted in faith, united in purpose, and committed to spreading God's love.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
+            <Link
+              to="/about"
+              className="px-8 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold uppercase tracking-wider transition-colors duration-300"
+            >
+              Learn More
+            </Link>
+            <Link
+              to="/give"
+              className="px-8 py-3 border-2 border-white text-white hover:bg-white hover:text-black font-semibold uppercase tracking-wider transition-all duration-300"
+            >
+              Give
+            </Link>
+          </div>
+        </div>
+        <a
+          href="#sunday-service"
+          aria-label="Scroll to Sunday Service section"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/60 hover:text-white transition-colors duration-300 animate-bounce"
+        >
+          <FaChevronDown size={24} />
+        </a>
       </section>
 
 
       <section
+        id="sunday-service"
         className="min-h-screen flex items-center justify-center p-4 relative bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/backgrounds/BG2.png)` }}
       >
@@ -36,7 +68,7 @@ export default function Home() {
 
           <div className="w-24 h-1 bg-black mx-auto opacity-70"></div>
 
-          <h1 className="text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black tracking-tight text-shadow-heading">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight text-shadow-heading">
             SUNDAY SERVICE
           </h1>
 
@@ -214,20 +246,19 @@ export default function Home() {
           </h2>
 
           {/* Editorial Grid */}
-          <div className="
-  grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6
-">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             {merch.map((src, i) => (
               <button
                 key={i}
                 onClick={() => setActiveIndex(i)}
+                aria-label={`View merch item ${i + 1}`}
                 className={`
         group relative
-        w-full aspect-square  /* ensures square */
+        w-full aspect-square
         overflow-hidden rounded-3xl
-        focus:outline-none
+        focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500
         bg-neutral-100
-        ${i === 0 ? 'col-span-2 row-span-2' : ''}
+        ${i === 0 ? 'sm:col-span-2 sm:row-span-2' : ''}
       `}
               >
                 {/* Image Wrapper */}
@@ -313,6 +344,72 @@ export default function Home() {
         </div>
       )}
 
+
+      {/* Connect With Us */}
+      <section className="bg-white py-20 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12 space-y-3">
+            <p className="text-sm uppercase tracking-[0.3em] text-orange-500">Get Involved</p>
+            <h2 className="text-3xl md:text-4xl font-black text-slate-800 uppercase tracking-wide">
+              Connect With Us
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { title: 'Need Prayer?', desc: 'We invite you to join us at any of our prayer times. Our prayer team is here for you.', link: '/prayer-request', cta: 'Submit a Request' },
+              { title: "What's Happening", desc: 'Stay connected to the life of the church. See upcoming programs and gatherings.', link: '#programs', cta: 'See Programs' },
+              { title: 'Serve With Us', desc: 'Help us serve the needs of our church and community. Find your place in ministry.', link: '/ministry', cta: 'Explore Ministries' },
+              { title: 'Find Your Purpose', desc: 'Discover who God made you to be. Take the next step in your faith journey.', link: '/know-god', cta: 'Know God' },
+            ].map((card, i) => (
+              <div key={i} className="border border-slate-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col space-y-3">
+                <h3 className="text-base font-bold text-slate-800">{card.title}</h3>
+                <p className="text-slate-600 text-sm leading-relaxed flex-1">{card.desc}</p>
+                <a href={card.link} className="text-orange-500 hover:text-orange-600 text-sm font-semibold uppercase tracking-wider transition-colors duration-300">
+                  {card.cta} →
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Parallax — Service Times */}
+      <section
+        className="relative py-24 px-6 bg-fixed bg-cover bg-center"
+        style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/backgrounds/BG2.png)` }}
+      >
+        <div className="absolute inset-0 bg-black/65" />
+        <div className="relative z-10 max-w-4xl mx-auto text-center space-y-6">
+          <p className="text-sm uppercase tracking-[0.3em] text-orange-400">Join Us</p>
+          <h2 className="text-3xl md:text-4xl font-black text-white uppercase tracking-wider">
+            We Can't Wait to Meet You
+          </h2>
+          <p className="text-white/80 text-base md:text-lg leading-relaxed font-raleway max-w-2xl mx-auto">
+            We're excited to invite you to join us at church this Sunday. Our welcome team will be
+            there to greet you before you head into service!
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-xl mx-auto mt-4">
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-white space-y-1">
+              <p className="text-xs uppercase tracking-widest text-orange-400">In-Person</p>
+              <p className="text-2xl font-black">Sundays at 9:30 AM</p>
+              <p className="text-white/60 text-sm">TRGC Worship Center</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-white space-y-1">
+              <p className="text-xs uppercase tracking-widest text-orange-400">Online</p>
+              <p className="text-2xl font-black">Sundays at 9:30 AM</p>
+              <p className="text-white/60 text-sm">Live on Facebook</p>
+            </div>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
+            <Link to="/plan-visit" className="px-8 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold uppercase tracking-wider transition-colors duration-300">
+              Plan a Visit
+            </Link>
+            <Link to="/sermons" className="px-8 py-3 border-2 border-white text-white hover:bg-white hover:text-black font-semibold uppercase tracking-wider transition-all duration-300">
+              Watch Online
+            </Link>
+          </div>
+        </div>
+      </section>
 
       <h2 className="text-5xl font-semibold mb-8 text-center text-black drop-shadow-lg pt-24">
         Our <Mark>Location</Mark>

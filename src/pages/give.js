@@ -7,15 +7,15 @@ import Heading from "../Components/ui/Heading";
 import { Wallet, Landmark, Smartphone, HandCoins } from "lucide-react";
 
 const images = [
-  "https://csspicker.dev/api/image/?q=church+gathering+indoor&image_type=photo",
-  "https://csspicker.dev/api/image/?q=people+dancing+lights&image_type=photo",
-  "https://csspicker.dev/api/image/?q=stage+lights+concert&image_type=photo",
-  "https://csspicker.dev/api/image/?q=people+food+service&image_type=photo",
-  "https://csspicker.dev/api/image/?q=worship+dancing+church&image_type=photo",
-  "https://csspicker.dev/api/image/?q=church+community+gathering&image_type=photo",
-  "https://csspicker.dev/api/image/?q=group+volunteers+outdoor&image_type=photo",
-  "https://csspicker.dev/api/image/?q=worship+concert+crowd&image_type=photo",
-  "https://csspicker.dev/api/image/?q=church+presentation+screen&image_type=photo"
+  `${process.env.PUBLIC_URL}/img/Church.jpg`,
+  `${process.env.PUBLIC_URL}/img/Give-1.jpg`,
+  `${process.env.PUBLIC_URL}/img/Give-2.jpg`,
+  `${process.env.PUBLIC_URL}/img/Give.jpg`,
+  `${process.env.PUBLIC_URL}/img/Mission.jpg`,
+  `${process.env.PUBLIC_URL}/img/Vision.jpg`,
+  `${process.env.PUBLIC_URL}/img/Ministry.jpg`,
+  `${process.env.PUBLIC_URL}/img/Give-1.jpg`,
+  `${process.env.PUBLIC_URL}/img/Give-2.jpg`,
 ];
 
 export default function Give() {
@@ -153,7 +153,7 @@ export default function Give() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
             {/* Left Text Column */}
-            <div className="flex flex-col justify-center h-screen space-y-6">
+            <div className="flex flex-col justify-center space-y-6 py-8">
               <Heading>
                 WHY WE GIVE
               </Heading>
