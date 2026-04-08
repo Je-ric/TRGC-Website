@@ -34,17 +34,18 @@ export default function Baptism() {
       />
 
       {/* Intro */}
-      <section className="bg-white py-20 px-6">
+      <section className="bg-[#0a0a0a] py-20 px-6">
         <div className="max-w-3xl mx-auto text-center space-y-6">
-          <p className="text-sm uppercase tracking-[0.3em] text-orange-500">Next Steps</p>
-          <h2 className="text-3xl md:text-4xl font-black text-slate-800 uppercase tracking-wide">
+          <p className="text-xs uppercase tracking-[0.4em] text-orange-500 font-semibold">Next Steps</p>
+          <h2 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tight">
             Why Be Baptized?
           </h2>
-          <p className="text-slate-600 text-base md:text-lg leading-relaxed">
+          <div className="w-16 h-[2px] bg-orange-500 mx-auto" />
+          <p className="text-white/60 text-base md:text-lg leading-relaxed">
             Take the next step in your faith and make a public declaration of your commitment to Jesus.
             Baptism is not what saves you — it is your response to being saved.
           </p>
-          <blockquote className="border-l-4 border-orange-500 pl-6 text-left text-slate-700 italic text-base md:text-lg">
+          <blockquote className="border-l-4 border-orange-500 pl-6 text-left text-white/50 italic text-base md:text-lg">
             "Therefore go and make disciples of all nations, baptizing them in the name of the Father
             and of the Son and of the Holy Spirit." — Matthew 28:19
           </blockquote>
@@ -52,14 +53,15 @@ export default function Baptism() {
       </section>
 
       {/* 4 Reasons */}
-      <section className="bg-slate-50 py-20 px-6">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8">
+      <section className="bg-[#0a0a0a] py-20 px-6">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-px bg-white/10">
           {reasons.map((r, i) => (
-            <div key={i} className="bg-white rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300 flex gap-5">
+            <div key={i} className="group relative bg-[#0a0a0a] p-8 flex gap-5 hover:bg-[#111] transition-colors duration-300 overflow-hidden">
+              <div className="absolute top-0 left-0 w-full h-[2px] bg-orange-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
               <div className="text-orange-500 flex-shrink-0 mt-1">{r.icon}</div>
               <div>
-                <h3 className="text-lg font-bold text-slate-800 mb-2">{r.title}</h3>
-                <p className="text-slate-600 text-sm leading-relaxed">{r.desc}</p>
+                <h3 className="text-lg font-bold text-white mb-2">{r.title}</h3>
+                <p className="text-white/60 text-sm leading-relaxed">{r.desc}</p>
               </div>
             </div>
           ))}

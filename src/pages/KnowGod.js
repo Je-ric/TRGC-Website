@@ -8,19 +8,16 @@ const verseCards = [
     verse: '"For God so loved the world that He gave His one and only Son, that whoever believes in Him shall not perish but have eternal life."',
     ref: 'John 3:16',
     theme: 'You Are Loved',
-    bg: 'from-orange-500 to-red-500',
   },
   {
     verse: '"Come to me, all you who are weary and burdened, and I will give you rest."',
     ref: 'Matthew 11:28',
     theme: 'You Can Find Rest',
-    bg: 'from-slate-700 to-slate-900',
   },
   {
     verse: '"I have come that they may have life, and have it to the full."',
     ref: 'John 10:10',
     theme: 'You Were Made for More',
-    bg: 'from-amber-500 to-orange-600',
   },
 ];
 
@@ -155,18 +152,19 @@ export default function KnowGod() {
       />
 
       {/* Hero intro */}
-      <section className="bg-white py-20 px-6">
+      <section className="bg-[#0a0a0a] py-20 px-6">
         <div className="max-w-3xl mx-auto text-center space-y-5">
-          <p className="text-sm uppercase tracking-[0.3em] text-orange-500">Start Here</p>
-          <h2 className="text-3xl md:text-4xl font-black text-slate-800 uppercase tracking-wide">
+          <p className="text-xs uppercase tracking-[0.4em] text-orange-500 font-semibold">Start Here</p>
+          <h2 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tight">
             How to Begin a Relationship with Jesus
           </h2>
-          <p className="text-slate-600 text-base md:text-lg leading-relaxed">
+          <div className="w-16 h-[2px] bg-orange-500 mx-auto" />
+          <p className="text-white/60 text-base md:text-lg leading-relaxed">
             God is not a distant force or a set of rules. He is a Person who loves you deeply and
             wants a real relationship with you. This page is for anyone who wants to understand
             what that means — and how to take the first step.
           </p>
-          <p className="text-slate-700 font-semibold text-lg">Ready to follow Him?</p>
+          <p className="text-white font-semibold text-lg">Ready to follow Him?</p>
         </div>
       </section>
 
@@ -176,13 +174,22 @@ export default function KnowGod() {
           {verseCards.map((card, i) => (
             <div
               key={i}
-              className={`bg-gradient-to-br ${card.bg} rounded-2xl p-8 flex flex-col justify-between min-h-64 text-white shadow-lg hover:scale-[1.02] transition-transform duration-300`}
+              className="relative w-full overflow-hidden rounded-2xl shadow-lg transition-transform duration-300 hover:scale-[1.02] aspect-[1080/1920]"
+              style={{
+                backgroundImage: `url(${process.env.PUBLIC_URL}/backgrounds/Card-Verse-BG1.jpg)`,
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: '100% 100%',
+              }}
             >
-              <p className="text-sm uppercase tracking-widest text-white/70 mb-4">{card.theme}</p>
-              <blockquote className="text-base md:text-lg font-light leading-relaxed italic flex-1">
-                {card.verse}
-              </blockquote>
-              <p className="mt-6 text-sm font-bold tracking-wider text-white/90">{card.ref}</p>
+              <div className="absolute inset-0 bg-black/35" />
+              <div className="relative z-10 flex h-full flex-col justify-between p-8 text-white">
+                <p className="mb-4 text-sm uppercase tracking-widest text-white/75">{card.theme}</p>
+                <blockquote className="flex-1 text-base font-light leading-relaxed italic md:text-lg">
+                  {card.verse}
+                </blockquote>
+                <p className="mt-6 text-sm font-bold tracking-wider text-white/90">{card.ref}</p>
+              </div>
             </div>
           ))}
         </div>
@@ -205,25 +212,25 @@ export default function KnowGod() {
       </section>
 
       {/* 7 Teachings — Accordion */}
-      <section className="bg-white py-20 px-6">
-        <div className="max-w-3xl mx-auto space-y-4">
+      <section className="bg-[#0a0a0a] py-20 px-6">
+        <div className="max-w-3xl mx-auto space-y-px">
           {teachings.map((t, i) => (
-            <div key={i} className="border border-slate-200 rounded-xl overflow-hidden">
+            <div key={i} className="border-b border-white/10 overflow-hidden">
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                className="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-slate-50 transition-colors duration-200"
+                className="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-white/5 transition-colors duration-200"
                 aria-expanded={openIndex === i}
               >
                 <div className="flex items-center gap-3">
                   <span className="text-orange-500 flex-shrink-0">{t.icon}</span>
-                  <span className="text-base font-bold text-slate-800">{t.title}</span>
+                  <span className="text-base font-bold text-white">{t.title}</span>
                 </div>
-                <span className="text-slate-400 flex-shrink-0 ml-4">
+                <span className="text-white/40 flex-shrink-0 ml-4">
                   {openIndex === i ? <FaChevronUp /> : <FaChevronDown />}
                 </span>
               </button>
               {openIndex === i && (
-                <div className="px-6 pb-6 pt-2 border-t border-slate-100">
+                <div className="px-6 pb-6 pt-2 border-t border-white/10 [&_p]:text-white/60 [&_span.font-semibold]:text-orange-400 [&_.bg-orange-50]:bg-white/5 [&_.bg-orange-50]:border-orange-500 [&_.bg-orange-50_p]:text-white/70 [&_.bg-orange-50_.font-semibold]:text-white [&_ul]:text-white/60">
                   {t.content}
                 </div>
               )}
