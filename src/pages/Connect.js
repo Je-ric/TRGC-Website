@@ -42,25 +42,24 @@ export default function Connect() {
       />
 
       {/* Service Times */}
-      <section className="bg-[#0a0a0a] py-20 px-6">
+      <section className="bg-[#f9f9f9] py-20 px-6">
         <div className="max-w-5xl mx-auto text-center space-y-6">
           <p className="text-xs uppercase tracking-[0.4em] text-orange-500 font-semibold">Join Us</p>
-          <h2 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-black text-slate-900 uppercase tracking-tight">
             Service Times
           </h2>
           <div className="w-16 h-[2px] bg-orange-500 mx-auto" />
-          <p className="text-white/60 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
+          <p className="text-slate-600 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
             We can't wait to meet you! We're excited to invite you to join us at church this Sunday.
             Our welcome team will be there to greet you before you head into service!
           </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/10 mt-10">
-            <div className="group relative bg-[#0a0a0a] p-8 space-y-3 hover:bg-[#111] transition-colors duration-300 overflow-hidden">
-              <div className="absolute top-0 left-0 w-full h-[2px] bg-orange-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-slate-200 mt-10">
+            <div className="group relative bg-white p-8 space-y-3 hover:bg-orange-50 transition-colors duration-300 overflow-hidden">
+              <div className="absolute bottom-0 left-0 w-full h-[2px] bg-orange-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
               <FaMapMarkerAlt className="w-8 h-8 text-orange-500 mx-auto" />
-              <h3 className="text-xl font-bold text-white uppercase">In-Person</h3>
+              <h3 className="text-xl font-bold text-slate-900 uppercase">In-Person</h3>
               <p className="text-orange-500 font-semibold text-lg">Sundays at 9:30 AM</p>
-              <p className="text-white/50 text-sm">TRGC Worship Center, Philippines</p>
+              <p className="text-slate-500 text-sm">TRGC Worship Center, Philippines</p>
               <a
                 href="https://www.google.com/maps/place/TRGC+Worship+Center"
                 target="_blank"
@@ -70,13 +69,12 @@ export default function Connect() {
                 Get Directions
               </a>
             </div>
-
-            <div className="group relative bg-[#0a0a0a] p-8 space-y-3 hover:bg-[#111] transition-colors duration-300 overflow-hidden">
-              <div className="absolute top-0 left-0 w-full h-[2px] bg-orange-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+            <div className="group relative bg-white p-8 space-y-3 hover:bg-orange-50 transition-colors duration-300 overflow-hidden">
+              <div className="absolute bottom-0 left-0 w-full h-[2px] bg-orange-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
               <FaVideo className="w-8 h-8 text-orange-500 mx-auto" />
-              <h3 className="text-xl font-bold text-white uppercase">Online</h3>
+              <h3 className="text-xl font-bold text-slate-900 uppercase">Online</h3>
               <p className="text-orange-500 font-semibold text-lg">Sundays at 9:30 AM</p>
-              <p className="text-white/50 text-sm">Live on Facebook every Sunday</p>
+              <p className="text-slate-500 text-sm">Live on Facebook every Sunday</p>
               <Link
                 to="/sermons"
                 className="inline-block mt-2 px-5 py-2 bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold uppercase tracking-wider transition-colors duration-300"
@@ -84,12 +82,11 @@ export default function Connect() {
                 Watch Online
               </Link>
             </div>
-
-            <div className="group relative bg-[#0a0a0a] p-8 space-y-3 hover:bg-[#111] transition-colors duration-300 overflow-hidden">
-              <div className="absolute top-0 left-0 w-full h-[2px] bg-orange-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+            <div className="group relative bg-white p-8 space-y-3 hover:bg-orange-50 transition-colors duration-300 overflow-hidden">
+              <div className="absolute bottom-0 left-0 w-full h-[2px] bg-orange-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
               <FaMapMarkerAlt className="w-8 h-8 text-orange-500 mx-auto" />
-              <h3 className="text-xl font-bold text-white uppercase">Address</h3>
-              <p className="text-white/60 text-sm leading-relaxed">
+              <h3 className="text-xl font-bold text-slate-900 uppercase">Address</h3>
+              <p className="text-slate-600 text-sm leading-relaxed">
                 TRGC Worship Center<br />Philippines
               </p>
               <Link

@@ -152,19 +152,19 @@ export default function KnowGod() {
       />
 
       {/* Hero intro */}
-      <section className="bg-[#0a0a0a] py-20 px-6">
+      <section className="bg-[#f9f9f9] py-20 px-6">
         <div className="max-w-3xl mx-auto text-center space-y-5">
           <p className="text-xs uppercase tracking-[0.4em] text-orange-500 font-semibold">Start Here</p>
-          <h2 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-black text-slate-900 uppercase tracking-tight">
             How to Begin a Relationship with Jesus
           </h2>
           <div className="w-16 h-[2px] bg-orange-500 mx-auto" />
-          <p className="text-white/60 text-base md:text-lg leading-relaxed">
+          <p className="text-slate-600 text-base md:text-lg leading-relaxed">
             God is not a distant force or a set of rules. He is a Person who loves you deeply and
             wants a real relationship with you. This page is for anyone who wants to understand
             what that means — and how to take the first step.
           </p>
-          <p className="text-white font-semibold text-lg">Ready to follow Him?</p>
+          <p className="text-slate-900 font-semibold text-lg">Ready to follow Him?</p>
         </div>
       </section>
 
@@ -212,25 +212,25 @@ export default function KnowGod() {
       </section>
 
       {/* 7 Teachings — Accordion */}
-      <section className="bg-[#0a0a0a] py-20 px-6">
-        <div className="max-w-3xl mx-auto space-y-px">
+      <section className="bg-white py-20 px-6">
+        <div className="max-w-3xl mx-auto divide-y divide-slate-200">
           {teachings.map((t, i) => (
-            <div key={i} className="border-b border-white/10 overflow-hidden">
+            <div key={i} className="overflow-hidden">
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                className="w-full flex items-center justify-between px-6 py-5 text-left hover:bg-white/5 transition-colors duration-200"
+                className="w-full flex items-center justify-between px-2 py-5 text-left hover:bg-orange-50 transition-colors duration-200"
                 aria-expanded={openIndex === i}
               >
                 <div className="flex items-center gap-3">
                   <span className="text-orange-500 flex-shrink-0">{t.icon}</span>
-                  <span className="text-base font-bold text-white">{t.title}</span>
+                  <span className="text-base font-bold text-slate-900">{t.title}</span>
                 </div>
-                <span className="text-white/40 flex-shrink-0 ml-4">
+                <span className="text-slate-400 flex-shrink-0 ml-4">
                   {openIndex === i ? <FaChevronUp /> : <FaChevronDown />}
                 </span>
               </button>
               {openIndex === i && (
-                <div className="px-6 pb-6 pt-2 border-t border-white/10 [&_p]:text-white/60 [&_span.font-semibold]:text-orange-400 [&_.bg-orange-50]:bg-white/5 [&_.bg-orange-50]:border-orange-500 [&_.bg-orange-50_p]:text-white/70 [&_.bg-orange-50_.font-semibold]:text-white [&_ul]:text-white/60">
+                <div className="px-2 pb-6 pt-2 border-t border-slate-100">
                   {t.content}
                 </div>
               )}

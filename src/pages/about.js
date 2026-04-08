@@ -70,21 +70,21 @@ export default function About() {
         image={`${process.env.PUBLIC_URL}/backgrounds/BG1.png`}
       />
 
-      <section className="bg-[#0a0a0a] py-20 px-6">
+      <section className="bg-[#f9f9f9] py-20 px-6">
         <div className="max-w-6xl mx-auto text-center space-y-8">
           <div className="w-16 h-[2px] bg-orange-500 mx-auto"></div>
-          <h2 className="text-4xl md:text-5xl font-black text-white uppercase tracking-wider">
+          <h2 className="text-4xl md:text-5xl font-black text-slate-900 uppercase tracking-wider">
             Who We Are
           </h2>
-          <p className="text-lg md:text-xl font-light text-white/60 italic max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl font-light text-slate-500 italic max-w-4xl mx-auto leading-relaxed">
             A community rooted in faith, united in purpose, and committed to spreading God's love.
           </p>
           <div className="max-w-4xl mx-auto">
-            <p className="text-white/70 text-lg leading-relaxed">
+            <p className="text-slate-700 text-lg leading-relaxed">
               The Risen Generation Church is a Spirit-filled, Bible-based community of believers committed to equipping every saint for righteousness, rebuilding according to the original biblical pattern, and raising up a generation fully surrendered to Christ.
             </p>
           </div>
-          <blockquote className="text-white text-xl md:text-2xl font-semibold italic border-l-4 border-orange-500 pl-8 max-w-3xl mx-auto text-left">
+          <blockquote className="text-slate-900 text-xl md:text-2xl font-semibold italic border-l-4 border-orange-500 pl-8 max-w-3xl mx-auto text-left">
             "We are called to be the hands and feet of Jesus, building a kingdom that lasts."
           </blockquote>
           <div className="w-16 h-[2px] bg-orange-500 mx-auto"></div>
@@ -178,18 +178,18 @@ export default function About() {
             <p className="text-slate-600 font-raleway">Our faith is grounded in biblical truth</p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10 pb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-slate-200 pb-16">
             {beliefs.map((belief, idx) => (
               <div
                 key={idx}
-                className="group relative bg-[#0a0a0a] p-6 flex flex-col overflow-hidden hover:bg-[#111] transition-colors duration-300"
+                className="group relative bg-white p-6 flex flex-col overflow-hidden hover:bg-orange-50 transition-colors duration-300"
               >
-                <div className="absolute top-0 left-0 w-full h-[2px] bg-orange-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                <div className="absolute bottom-0 left-0 w-full h-[2px] bg-orange-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                 <div className="flex items-center mb-4 gap-3">
                   <div className="text-orange-500 text-2xl flex-shrink-0">{belief.icon}</div>
-                  <h3 className="text-lg font-bold text-white">{belief.title}</h3>
+                  <h3 className="text-lg font-bold text-slate-900 border-b-2 border-slate-200 pb-0.5 group-hover:border-orange-300 transition-colors duration-300">{belief.title}</h3>
                 </div>
-                <p className="text-white/60 text-sm md:text-base leading-relaxed">{belief.content}</p>
+                <p className="text-slate-600 text-sm md:text-base leading-relaxed">{belief.content}</p>
               </div>
             ))}
           </div>

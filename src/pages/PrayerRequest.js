@@ -24,19 +24,19 @@ export default function PrayerRequest() {
         image={`${process.env.PUBLIC_URL}/backgrounds/BG1.png`}
       />
 
-      <section className="bg-[#0a0a0a] py-20 px-6">
+      <section className="bg-[#f9f9f9] py-20 px-6">
         <div className="max-w-2xl mx-auto">
           <div className="text-center space-y-4 mb-12">
             <FaPray className="w-10 h-10 text-orange-500 mx-auto" />
             <p className="text-xs uppercase tracking-[0.4em] text-orange-500 font-semibold">We're Here For You</p>
-            <h2 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tight">
+            <h2 className="text-4xl md:text-5xl font-black text-slate-900 uppercase tracking-tight">
               Submit a Prayer Request
             </h2>
             <div className="w-16 h-[2px] bg-orange-500 mx-auto" />
-            <p className="text-white/60 text-base leading-relaxed">
+            <p className="text-slate-600 text-base leading-relaxed">
               Our prayer team reads every request and prays over each one. You are not alone.
             </p>
-            <blockquote className="border-l-4 border-orange-500 pl-5 text-left text-white/50 italic text-sm">
+            <blockquote className="border-l-4 border-orange-500 pl-5 text-left text-slate-500 italic text-sm">
               "Do not be anxious about anything, but in every situation, by prayer and petition,
               with thanksgiving, present your requests to God." — Philippians 4:6
             </blockquote>
@@ -45,8 +45,8 @@ export default function PrayerRequest() {
           {submitted ? (
             <div className="text-center py-16 space-y-4">
               <FaPray className="w-12 h-12 text-orange-500 mx-auto" />
-              <h3 className="text-2xl font-bold text-white">We've Received Your Request</h3>
-              <p className="text-white/60">Our prayer team will be lifting you up in prayer. God hears every word.</p>
+              <h3 className="text-2xl font-bold text-slate-900">We've Received Your Request</h3>
+              <p className="text-slate-600">Our prayer team will be lifting you up in prayer. God hears every word.</p>
               <button
                 onClick={() => { setSubmitted(false); setForm({ name: '', email: '', request: '', private: false }); }}
                 className="mt-4 px-6 py-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold uppercase tracking-wider text-sm transition-colors duration-300"
@@ -57,7 +57,7 @@ export default function PrayerRequest() {
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label className="block text-sm font-semibold text-white/70 mb-1">Your Name</label>
+                <label className="block text-sm font-semibold text-slate-700 mb-1">Your Name</label>
                 <input
                   type="text"
                   name="name"
@@ -65,22 +65,22 @@ export default function PrayerRequest() {
                   onChange={handleChange}
                   required
                   placeholder="Your name"
-                  className="w-full bg-white/5 border border-white/10 px-4 py-3 text-white text-sm placeholder-white/30 focus:outline-none focus:border-orange-500 transition"
+                  className="w-full bg-white border border-slate-300 px-4 py-3 text-slate-900 text-sm placeholder-slate-400 focus:outline-none focus:border-orange-500 transition"
                 />
               </div>
               <div>
-                <label className="block text-sm font-semibold text-white/70 mb-1">Email <span className="text-white/30 font-normal">(optional)</span></label>
+                <label className="block text-sm font-semibold text-slate-700 mb-1">Email <span className="text-slate-400 font-normal">(optional)</span></label>
                 <input
                   type="email"
                   name="email"
                   value={form.email}
                   onChange={handleChange}
                   placeholder="your@email.com"
-                  className="w-full bg-white/5 border border-white/10 px-4 py-3 text-white text-sm placeholder-white/30 focus:outline-none focus:border-orange-500 transition"
+                  className="w-full bg-white border border-slate-300 px-4 py-3 text-slate-900 text-sm placeholder-slate-400 focus:outline-none focus:border-orange-500 transition"
                 />
               </div>
               <div>
-                <label className="block text-sm font-semibold text-white/70 mb-1">Your Prayer Request</label>
+                <label className="block text-sm font-semibold text-slate-700 mb-1">Your Prayer Request</label>
                 <textarea
                   name="request"
                   value={form.request}
@@ -88,7 +88,7 @@ export default function PrayerRequest() {
                   required
                   rows={6}
                   placeholder="Share what's on your heart..."
-                  className="w-full bg-white/5 border border-white/10 px-4 py-3 text-white text-sm placeholder-white/30 focus:outline-none focus:border-orange-500 transition resize-none"
+                  className="w-full bg-white border border-slate-300 px-4 py-3 text-slate-900 text-sm placeholder-slate-400 focus:outline-none focus:border-orange-500 transition resize-none"
                 />
               </div>
               <div className="flex items-center gap-3">
@@ -100,7 +100,7 @@ export default function PrayerRequest() {
                   onChange={handleChange}
                   className="w-4 h-4 accent-orange-500"
                 />
-                <label htmlFor="private" className="text-sm text-white/50">
+                <label htmlFor="private" className="text-sm text-slate-600">
                   Keep this request private (only seen by the prayer team)
                 </label>
               </div>

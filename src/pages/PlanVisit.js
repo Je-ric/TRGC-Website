@@ -17,14 +17,14 @@ export default function PlanVisit() {
       />
 
       {/* Intro */}
-      <section className="bg-[#0a0a0a] py-20 px-6">
+      <section className="bg-[#f9f9f9] py-20 px-6">
         <div className="max-w-3xl mx-auto text-center space-y-5">
           <p className="text-xs uppercase tracking-[0.4em] text-orange-500 font-semibold">We're Expecting You</p>
-          <h2 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-black text-slate-900 uppercase tracking-tight">
             Your First Visit
           </h2>
           <div className="w-16 h-[2px] bg-orange-500 mx-auto" />
-          <p className="text-white/60 text-base md:text-lg leading-relaxed">
+          <p className="text-slate-600 text-base md:text-lg leading-relaxed">
             We're so glad you're considering joining us! Here's everything you need to know
             before your first Sunday at The Risen Generation Church.
           </p>
@@ -32,19 +32,19 @@ export default function PlanVisit() {
       </section>
 
       {/* What to Expect */}
-      <section className="bg-[#0a0a0a] py-16 px-6">
+      <section className="bg-white py-16 px-6">
         <div className="max-w-5xl mx-auto">
-          <h3 className="text-3xl md:text-4xl font-black text-white uppercase tracking-tight text-center mb-12">
+          <h3 className="text-3xl md:text-4xl font-black text-slate-900 uppercase tracking-tight text-center mb-12">
             What to Expect
           </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-white/10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-slate-200">
             {expectations.map((item, i) => (
-              <div key={i} className="group relative bg-[#0a0a0a] p-6 flex gap-4 hover:bg-[#111] transition-colors duration-300 overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-[2px] bg-orange-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+              <div key={i} className="group relative bg-white p-6 flex gap-4 hover:bg-orange-50 transition-colors duration-300 overflow-hidden">
+                <div className="absolute bottom-0 left-0 w-full h-[2px] bg-orange-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                 <div className="text-orange-500 flex-shrink-0 mt-1">{item.icon}</div>
                 <div>
-                  <h4 className="text-base font-bold text-white mb-1">{item.title}</h4>
-                  <p className="text-white/60 text-sm leading-relaxed">{item.desc}</p>
+                  <h4 className="text-base font-bold text-slate-900 mb-1">{item.title}</h4>
+                  <p className="text-slate-600 text-sm leading-relaxed">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -53,7 +53,7 @@ export default function PlanVisit() {
       </section>
 
       {/* Service Times */}
-      <section className="bg-[#111] py-16 px-6">
+      <section className="bg-[#0a0a0a] py-16 px-6">
         <div className="max-w-3xl mx-auto text-center space-y-4">
           <FaClock className="w-10 h-10 text-orange-500 mx-auto" />
           <h3 className="text-2xl font-black text-white uppercase tracking-wide">Service Times</h3>
