@@ -89,22 +89,23 @@ export default function Leadership() {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-slate-50 to-slate-100 min-h-screen">
+    <div className="bg-[#0a0a0a] min-h-screen">
       <HeaderBanner
         title="Leadership"
         image={`${process.env.PUBLIC_URL}/backgrounds/BG1.png`} />
 
       {/* Hero Section */}
-      <section className="py-20 px-6 text-center">
-        <h1 className="text-5xl md:text-6xl font-black text-slate-800 mb-6 bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent uppercase tracking-wider">
-          Our Leadership Team
+      <section className="py-20 px-6 text-center bg-[#0a0a0a]">
+        <h1 className="text-5xl md:text-6xl font-black text-white mb-6 uppercase tracking-tight">
+          Our <span className="text-orange-500">Leadership</span> Team
         </h1>
-        <p className="text-slate-600 text-lg max-w-2xl mx-auto font-light italic">
+        <div className="w-16 h-[2px] bg-orange-500 mx-auto mb-6" />
+        <p className="text-white/60 text-lg max-w-2xl mx-auto font-light italic">
           Meet the visionaries guiding our church, from its foundation to its future.
         </p>
       </section>
 
-      <section className="py-16 px-6 bg-slate-900 text-white">
+      <section className="py-16 px-6 bg-[#0a0a0a] text-white">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">Our History</h2>
 

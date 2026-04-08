@@ -89,13 +89,14 @@ export default function Ministry() {
         title="Ministry"
         image={`${process.env.PUBLIC_URL}/backgrounds/BG1.png`} />
 
-      <section className="bg-white py-16 px-6 text-center">
+      <section className="bg-[#0a0a0a] py-16 px-6 text-center">
         <div className="max-w-3xl mx-auto space-y-4">
-          <p className="text-sm uppercase tracking-[0.3em] text-orange-500 font-raleway">Serving Together</p>
-          <h2 className="text-3xl md:text-4xl font-black text-slate-800 uppercase tracking-wide">
+          <p className="text-xs uppercase tracking-[0.4em] text-orange-500 font-semibold">Serving Together</p>
+          <h2 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tight">
             Our Ministries
           </h2>
-          <p className="text-slate-600 text-base md:text-lg leading-relaxed">
+          <div className="w-16 h-[2px] bg-orange-500 mx-auto" />
+          <p className="text-white/60 text-base md:text-lg leading-relaxed">
             Every ministry at TRGC exists to build up the body of Christ — equipping believers, reaching the lost, and serving our community with love and excellence.
           </p>
         </div>

@@ -39,23 +39,23 @@ export default function Footer() {
                         <h3 className="text-lg font-semibold text-white">Quick Links</h3>
                         <ul className="space-y-2">
                             <li><a href="#/" className="text-gray-300 hover:text-orange-400 transition duration-300">Home</a></li>
+                            <li><a href="#/plan-visit" className="text-gray-300 hover:text-orange-400 transition duration-300">Plan a Visit</a></li>
                             <li><a href="#/about" className="text-gray-300 hover:text-orange-400 transition duration-300">About</a></li>
-                            <li><a href="#/leadership" className="text-gray-300 hover:text-orange-400 transition duration-300">Leadership</a></li>
-                            <li><a href="#/ministry" className="text-gray-300 hover:text-orange-400 transition duration-300">Ministry</a></li>
+                            <li><a href="#/know-god" className="text-gray-300 hover:text-orange-400 transition duration-300">Know God</a></li>
+                            <li><a href="#/ministry" className="text-gray-300 hover:text-orange-400 transition duration-300">Ministries</a></li>
                             <li><a href="#/give" className="text-gray-300 hover:text-orange-400 transition duration-300">Give</a></li>
                         </ul>
                     </div>
 
-                    {/* Connect Links */}
+                    {/* More Links */}
                     <div className="lg:col-span-1 space-y-4">
-                        <h3 className="text-lg font-semibold text-white">Connect</h3>
+                        <h3 className="text-lg font-semibold text-white">More</h3>
                         <ul className="space-y-2">
                             <li><a href="#/connect" className="text-gray-300 hover:text-orange-400 transition duration-300">Connect With Us</a></li>
-                            <li><a href="#/plan-visit" className="text-gray-300 hover:text-orange-400 transition duration-300">Plan a Visit</a></li>
-                            <li><a href="#/sermons" className="text-gray-300 hover:text-orange-400 transition duration-300">Watch Sermons</a></li>
+                            <li><a href="#/sermons" className="text-gray-300 hover:text-orange-400 transition duration-300">Sermons</a></li>
                             <li><a href="#/baptism" className="text-gray-300 hover:text-orange-400 transition duration-300">Baptism</a></li>
                             <li><a href="#/prayer-request" className="text-gray-300 hover:text-orange-400 transition duration-300">Prayer Request</a></li>
-                            <li><a href="#/know-god" className="text-gray-300 hover:text-orange-400 transition duration-300">Know God</a></li>
+                            <li><a href="#/leadership" className="text-gray-300 hover:text-orange-400 transition duration-300">Leadership</a></li>
                         </ul>
                     </div>
 

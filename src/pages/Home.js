@@ -34,16 +34,16 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
             <Link
-              to="/about"
+              to="/plan-visit"
               className="px-8 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold uppercase tracking-wider transition-colors duration-300"
             >
-              Learn More
+              Plan a Visit
             </Link>
             <Link
-              to="/give"
+              to="/know-god"
               className="px-8 py-3 border-2 border-white text-white hover:bg-white hover:text-black font-semibold uppercase tracking-wider transition-all duration-300"
             >
-              Give
+              Know God
             </Link>
           </div>
         </div>
@@ -346,28 +346,38 @@ export default function Home() {
 
 
       {/* Connect With Us */}
-      <section className="bg-white py-20 px-6">
+      <section className="bg-[#0a0a0a] py-24 px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12 space-y-3">
-            <p className="text-sm uppercase tracking-[0.3em] text-orange-500">Get Involved</p>
-            <h2 className="text-3xl md:text-4xl font-black text-slate-800 uppercase tracking-wide">
+          <div className="text-center mb-16 space-y-3">
+            <p className="text-xs uppercase tracking-[0.4em] text-orange-500 font-semibold">Get Involved</p>
+            <h2 className="text-4xl md:text-5xl font-black text-white uppercase tracking-tight">
               Connect With Us
             </h2>
+            <div className="w-16 h-[2px] bg-orange-500 mx-auto mt-4" />
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10">
             {[
-              { title: 'Need Prayer?', desc: 'We invite you to join us at any of our prayer times. Our prayer team is here for you.', link: '/prayer-request', cta: 'Submit a Request' },
-              { title: "What's Happening", desc: 'Stay connected to the life of the church. See upcoming programs and gatherings.', link: '#programs', cta: 'See Programs' },
-              { title: 'Serve With Us', desc: 'Help us serve the needs of our church and community. Find your place in ministry.', link: '/ministry', cta: 'Explore Ministries' },
-              { title: 'Find Your Purpose', desc: 'Discover who God made you to be. Take the next step in your faith journey.', link: '/know-god', cta: 'Know God' },
+              { num: '01', title: 'Need Prayer?', desc: 'We invite you to join us at any of our prayer times. Our prayer team is here for you.', link: '/prayer-request', cta: 'Submit a Request' },
+              { num: '02', title: 'Ways to Connect', desc: 'See the clearest next steps at TRGC, from visiting on Sunday to finding ongoing church life.', link: '/connect', cta: 'Explore More' },
+              { num: '03', title: 'Serve With Us', desc: 'Help us serve the needs of our church and community. Find your place in ministry.', link: '/ministry', cta: 'Explore Ministries' },
+              { num: '04', title: 'Find Your Purpose', desc: 'Discover who God made you to be. Take the next step in your faith journey.', link: '/know-god', cta: 'Know God' },
             ].map((card, i) => (
-              <div key={i} className="border border-slate-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col space-y-3">
-                <h3 className="text-base font-bold text-slate-800">{card.title}</h3>
-                <p className="text-slate-600 text-sm leading-relaxed flex-1">{card.desc}</p>
-                <a href={card.link} className="text-orange-500 hover:text-orange-600 text-sm font-semibold uppercase tracking-wider transition-colors duration-300">
+              <a
+                key={i}
+                href={card.link}
+                className="group relative bg-[#0a0a0a] p-8 flex flex-col space-y-4 hover:bg-[#111] transition-colors duration-300 overflow-hidden"
+              >
+                {/* Accent line on hover */}
+                <div className="absolute top-0 left-0 w-full h-[2px] bg-orange-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                <span className="text-5xl font-black text-white/5 group-hover:text-white/10 transition-colors duration-300 leading-none select-none">
+                  {card.num}
+                </span>
+                <h3 className="text-lg font-black text-white uppercase tracking-wide">{card.title}</h3>
+                <p className="text-white/50 text-sm leading-relaxed flex-1">{card.desc}</p>
+                <span className="text-orange-500 group-hover:text-orange-400 text-xs font-bold uppercase tracking-widest transition-colors duration-300">
                   {card.cta} →
-                </a>
-              </div>
+                </span>
+              </a>
             ))}
           </div>
         </div>
@@ -404,8 +414,8 @@ export default function Home() {
             <Link to="/plan-visit" className="px-8 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold uppercase tracking-wider transition-colors duration-300">
               Plan a Visit
             </Link>
-            <Link to="/sermons" className="px-8 py-3 border-2 border-white text-white hover:bg-white hover:text-black font-semibold uppercase tracking-wider transition-all duration-300">
-              Watch Online
+            <Link to="/connect" className="px-8 py-3 border-2 border-white text-white hover:bg-white hover:text-black font-semibold uppercase tracking-wider transition-all duration-300">
+              More Ways to Connect
             </Link>
           </div>
         </div>
