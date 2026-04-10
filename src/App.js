@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { HashRouter as Router, Routes, Route, NavLink, Link, useLocation } from 'react-router-dom';
 import { FaBars, FaTimes, FaChevronDown } from 'react-icons/fa';
 import Home from './pages/Home';
-import About from './pages/About';
+import About from './pages/about';
 import Leadership from './pages/Leadership';
 import Ministry from './pages/Ministry';
 import Give from './pages/Give';
